@@ -11,7 +11,7 @@
 <div id="head" class="layout"></div>
 <div id="bodydiv" class="layout">
 <div id="left" class="layout"><ul> <div id="div1" class="div_menu">
-    <li class="main_li" >传统算命</li>
+    <li class="main_li" ><a href="<?php echo U('home/ctsm/index');?>">传统算命</a></li>
             <div id="div_li1">
        <li class="second_li">生辰八字</li>
        <li class="second_li">八字测算</li>
@@ -88,8 +88,7 @@
       </div>
   </ul></div>
 <div id="mid" class="layout">
-
-<div>查询输入</div></div>
+</div>
 <div id="right" class="layout"></div>
 </div>
 <div id="foot" class="layout"></div>
