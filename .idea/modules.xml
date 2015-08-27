@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Think_zdmj.iml" filepath="$PROJECT_DIR$/Think_zdmj.iml" />
       <module fileurl="file://$PROJECT_DIR$/thinkphp_zhidianmijin.iml" filepath="$PROJECT_DIR$/thinkphp_zhidianmijin.iml" />
     </modules>
   </component>
