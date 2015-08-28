@@ -10,7 +10,7 @@
 <body id="body">
 <div id="head" class="layout"></div>
 <div id="bodydiv" class="layout">
-<div id="left" class="layout"><ul> <div id="div1" class="div_menu">
+<div id="left" class="layout"><ul> <div id="div1" class="menu">
     <li class="main_li" ><a href="<?php echo U('home/ctsm/index');?>">传统算命</a></li>
             <div id="div_li1">
        <li class="second_li"><a  href="<?php echo U('home/ctsm/scbz');?>">生辰八字</a></li>
@@ -25,7 +25,7 @@
    </div>
 </ul>
 <ul>
-   <div id="div2"  class="div_menu">
+   <div id="div2"  class="menu">
     <li class="main_li">生肖/星座/血型</li>
    <div id="div_li2">
        <li class="second_li">星座保健</li>
@@ -40,7 +40,7 @@
       </div>
 </ul>
 <ul>
-       <div id="div3"  class="div_menu">
+       <div id="div3"  class="menu">
     <li class="main_li">抽签/测字/解梦</li>
     <div id="div_li3" >
        <li class="second_li">关帝神签</li>
@@ -54,12 +54,12 @@
           </div>
 </ul>
 <ul>
-   <div class="div_menu">
+   <div class="menu">
     <li class="main_li">婚姻系数</li>
       </div>
 </ul>
 <ul>
-       <div id="div4"  class="div_menu" >
+       <div id="div4"  class="menu" >
     <li class="main_li">恋爱指南</li>
    <div id="div_li4">
        <li class="second_li">星座组合</li>
@@ -71,7 +71,7 @@
           </div>
 </ul>
 <ul>
-   <div id="div5"  class="div_menu" >
+   <div id="div5"  class="menu" >
     <li class="main_li">民俗预测</li>
    <div id="div_li5">
        <li class="second_li">耳鸣</li>
