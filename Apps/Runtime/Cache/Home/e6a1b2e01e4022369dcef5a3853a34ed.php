@@ -14,7 +14,7 @@
     <li class="main_li" ><a href="<?php echo U('home/ctsm/index');?>">传统算命</a></li>
             <div id="div_li1">
        <li class="second_li"><a  href="<?php echo U('home/ctsm/scbz');?>">生辰八字</a></li>
-       <li class="second_li">八字测算</li>
+       <li class="second_li"><a  href="<?php echo U('home/ctsm/bzcs');?>">八字测算</a></li>
        <li class="second_li">八字测算</li>
        <li class="second_li">称骨论命</li>
        <li class="second_li">姓名测试</li>
