@@ -15,9 +15,9 @@
             <div id="div_li1">
        <li class="second_li"><a  href="<?php echo U('home/ctsm/scbz');?>">生辰八字</a></li>
        <li class="second_li"><a  href="<?php echo U('home/ctsm/bzcs');?>">八字测算</a></li>
-       <li class="second_li">八字测算</li>
-       <li class="second_li">称骨论命</li>
-       <li class="second_li">姓名测试</li>
+       <li class="second_li"><a  href="<?php echo U('home/ctsm/rglm');?>">日干论命</a></li>
+       <li class="second_li"><a  href="<?php echo U('home/ctsm/cglm');?>"> 称骨论命</a></li>
+       <li class="second_li"><a  href="<?php echo U('home/ctsm/xmcs');?>">姓名测试</a></li>
        <li class="second_li">姓命配对</li>
        <li class="second_li">上辈为人</li>
        <li class="second_li">姓氏起源</li>
