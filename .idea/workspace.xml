@@ -77,10 +77,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="other.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="other.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/sxxzxx/other.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.78449905" vertical-offset="136" max-vertical-offset="779">
+            <state vertical-scroll-proportion="-14.821428" vertical-offset="136" max-vertical-offset="779">
               <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
               <folding>
                 <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
@@ -88,6 +88,30 @@
                 <element signature="n#style#0;n#select#0;n#form#0;n#TD#0;n#tr#0;n#TBODY#0;n#table#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#select#1;n#form#0;n#TD#0;n#tr#0;n#TBODY#0;n#table#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#select#2;n#form#0;n#TD#0;n#tr#0;n#TBODY#0;n#table#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="xsqy.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/ctsm/xsqy.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.571428" vertical-offset="387" max-vertical-offset="931">
+              <caret line="33" column="92" selection-start-line="33" selection-start-column="92" selection-end-line="33" selection-end-column="92" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="xmpd.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/ctsm/xmpd.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.07364341" vertical-offset="285" max-vertical-offset="3040">
+              <caret line="168" column="43" selection-start-line="168" selection-start-column="43" selection-end-line="168" selection-end-column="43" />
+              <folding>
+                <element signature="n#SCRIPT#0;n#!!top" expanded="false" />
+                <element signature="e#1694#1746#0" expanded="false" />
+                <element signature="n#tbody#0;n#table#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -137,14 +161,14 @@
         <option value="$PROJECT_DIR$/Apps/Tpl/Home/ctsm/xmpdjg.html" />
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/Apps/Tpl/Home/ctsm/sbwr.html" />
-        <option value="$PROJECT_DIR$/Apps/Tpl/Home/ctsm/xsqy.html" />
-        <option value="$PROJECT_DIR$/Apps/Tpl/Home/ctsm/xmpd.html" />
         <option value="$PROJECT_DIR$/Apps/Tpl/Home/ctsm/index.html" />
         <option value="$PROJECT_DIR$/Apps/Tpl/Home/sxxzxx/content.html" />
         <option value="$PROJECT_DIR$/Apps/Tpl/Home/sxxzxx/xzbj.html" />
         <option value="$PROJECT_DIR$/Apps/Tpl/Home/sxxzxx/index.html" />
         <option value="$PROJECT_DIR$/Apps/Tpl/Layout/left.html" />
         <option value="$PROJECT_DIR$/Apps/Tpl/Home/sxxzxx/other.html" />
+        <option value="$PROJECT_DIR$/Apps/Tpl/Home/ctsm/xsqy.html" />
+        <option value="$PROJECT_DIR$/Apps/Tpl/Home/ctsm/xmpd.html" />
       </list>
     </option>
   </component>
@@ -152,7 +176,7 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-15" />
+    <option name="x" value="-2" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -276,6 +300,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Think_zdmj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Think_zdmj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tpl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ctsm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -582,16 +632,16 @@
       <workItem from="1441501956391" duration="29956000" />
       <workItem from="1441588600462" duration="28235000" />
       <workItem from="1441674145090" duration="22165000" />
-      <workItem from="1441760795223" duration="11652000" />
+      <workItem from="1441760795223" duration="12713000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="218245000" />
+    <option name="totallyTimeSpent" value="219306000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-15" y="0" width="1382" height="744" extended-state="1" />
-    <editor active="true" />
+    <frame x="-2" y="0" width="1382" height="744" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -992,30 +1042,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/ctsm/xsqy.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.012474013" vertical-offset="450" max-vertical-offset="931">
-          <caret line="24" column="83" selection-start-line="24" selection-start-column="83" selection-end-line="24" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/ctsm/xmpd.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7775468" vertical-offset="1311" max-vertical-offset="2451">
-          <caret line="296" column="20" selection-start-line="296" selection-start-column="20" selection-end-line="296" selection-end-column="20" />
-          <folding>
-            <element signature="n#SCRIPT#0;n#!!top" expanded="false" />
-            <element signature="e#1694#1746#0" expanded="false" />
-            <element signature="n#tbody#0;n#table#0;n#!!top" expanded="false" />
-            <element signature="n#tr#0;n#tbody#0;n#table#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#if#0;n#!!top" expanded="false" />
-            <element signature="n#tr#1;n#tbody#0;n#table#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#if#0;n#!!top" expanded="false" />
-            <element signature="n#tr#0;n#if#0;n#tbody#0;n#table#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#if#0;n#!!top" expanded="false" />
-            <element signature="n#tr#2;n#tbody#0;n#table#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#if#0;n#!!top" expanded="false" />
-            <element signature="n#tr#0;n#if#1;n#tbody#0;n#table#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#if#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/sxxzxx/content.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.7142856" vertical-offset="0" max-vertical-offset="323">
@@ -1082,7 +1108,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/sxxzxx/other.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78449905" vertical-offset="136" max-vertical-offset="779">
+        <state vertical-scroll-proportion="-14.821428" vertical-offset="136" max-vertical-offset="779">
           <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
           <folding>
             <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
@@ -1090,6 +1116,26 @@
             <element signature="n#style#0;n#select#0;n#form#0;n#TD#0;n#tr#0;n#TBODY#0;n#table#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#select#1;n#form#0;n#TD#0;n#tr#0;n#TBODY#0;n#table#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#select#2;n#form#0;n#TD#0;n#tr#0;n#TBODY#0;n#table#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/ctsm/xsqy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.571428" vertical-offset="387" max-vertical-offset="931">
+          <caret line="33" column="92" selection-start-line="33" selection-start-column="92" selection-end-line="33" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/ctsm/xmpd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07364341" vertical-offset="285" max-vertical-offset="3040">
+          <caret line="168" column="43" selection-start-line="168" selection-start-column="43" selection-end-line="168" selection-end-column="43" />
+          <folding>
+            <element signature="n#SCRIPT#0;n#!!top" expanded="false" />
+            <element signature="e#1694#1746#0" expanded="false" />
+            <element signature="n#tbody#0;n#table#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
