@@ -1,5 +1,6 @@
 <?php
 class SxxzxxAction extends Action{
+    /*生肖/星座/血型主页  */
     public function index(){
         /* 如果已经写过资料 */
        $xing=$_SESSION['xing'];//姓名，年月日
@@ -31,7 +32,10 @@ class SxxzxxAction extends Action{
         $thisDay= Date('d');
         $this->assign('_thisYear',$thisYear)->assign('_thisMonth',$thisMonth)->assign('_thisDay',$thisDay);
         /*查询  */
-
+        if (isset($_POST['y'])){
+            $myxz1=Constellation($_POST['y']."-".$_POST['m']."-".$_POST['d']);
+            $this->assign("myxz1",$myxz1);
+        }
         /* 判断链接查询 */
         if ( isset($_REQUEST['flag'])) {
             $flag=$_REQUEST['flag'];
@@ -75,12 +79,14 @@ class SxxzxxAction extends Action{
             $this->display('content');
             return ;
     }
-        var_dump($_POST);
 
     $this->display();
  }
- /* 星座保健 */
+ /* 星座保健页面到星座5大建议页面 */
  public function other(){
+     $nian1=$_SESSION['nian'];
+     $yue1=$_SESSION['yue'];
+     $ri1=$_SESSION['ri'];
      /* 年 */
      $year = getYear ();
      $years = array ();
@@ -95,10 +101,51 @@ class SxxzxxAction extends Action{
      /* 日 */
      $days = days ();
      $this->assign ( 'days', $days );
+     $myxz=Constellation($nian1."-".$yue1."-".$ri1);//星座查询
+     if (isset($_POST['y'])){
+         $myxz=Constellation($_POST['y']."-".$_POST['m']."-".$_POST['d']);
+         $_SESSION['myxz']=$myxz;
+     }
+     if(isset($_SESSION['myxz'])){
+         $myxz=$_SESSION['myxz'];
+     }
+
+     $this->assign("myxz",$myxz);
+     /* 星座保健页面 */
    if ($_REQUEST['str']=='bj'){
+       $rs=xz_bj($myxz);
+       $this->assign("title",$rs['1'])->assign('content',$rs['0']);
+   }
+   elseif($_REQUEST['str']=='eq'){
+       $rs=xz_eq($myxz);
+       $this->assign("title",$rs['1'])->assign('content',$rs['0']);
 
    }
+   elseif($_REQUEST['str']=='iq'){
+       $rs=xz_iq($myxz);
+       $this->assign("title",$rs['1'])->assign('content',$rs['0']);
 
+   }
+   elseif($_REQUEST['str']=='mr'){
+       $rs=xz_mr($myxz);
+       $this->assign("title",$rs['1'])->assign('content',$rs['0']);
+
+   }
+   elseif($_REQUEST['str']=='sy'){
+       $rs=xz_sy($myxz);
+       $this->assign("title",$rs['1'])->assign('content',$rs['0']);
+
+   }
+   elseif($_REQUEST['str']=='sl'){
+       $rs=xz_sl($myxz);
+       $this->assign("title",$rs['1'])->assign('content',$rs['0']);
+
+   }
+   elseif($_REQUEST['str']=='jy'){
+       $rs=xz_jy($myxz);
+       $this->assign("title",$rs['1'])->assign('content',$rs['0']);
+
+   }
      $this->display();
 
  }

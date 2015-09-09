@@ -29,13 +29,13 @@
     <li class="main_li"><a href="<?php echo U('home/sxxzxx/index');?>"> 生肖/星座/血型</a></li>
    <div id="div_li2">
        <li class="second_li"><a href="index.php?g=home&m=sxxzxx&a=other&str=bj">星座保健</a></li>
-       <li class="second_li"><a href="<?php echo U('home/sxxzxx/other');?>">星座EQ</a></li>
-       <li class="second_li"><a href="<?php echo U('home/sxxzxx/other');?>">星座IQ</a></li>
-       <li class="second_li"><a href="<?php echo U('home/sxxzxx/other');?>">星座名人</a></li>
-       <li class="second_li"><a href="<?php echo U('home/sxxzxx/other');?>">星座失败教训</a></li>
-       <li class="second_li"><a href="<?php echo U('home/sxxzxx/other');?>">星座实力</a></li>
-       <li class="second_li"><a href="<?php echo U('home/sxxzxx/other');?>">星座5大建议</a></li>
-       <li class="second_li"><a href="<?php echo U('home/sxxzxx/other');?>">星座运程</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=sxxzxx&a=other&str=eq">星座EQ</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=sxxzxx&a=other&str=iq">星座IQ</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=sxxzxx&a=other&str=mr">星座名人</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=sxxzxx&a=other&str=sy">星座失败教训</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=sxxzxx&a=other&str=sl">星座实力</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=sxxzxx&a=other&str=jy">星座5大建议</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=sxxzxx&a=other&str=bj">星座运程</a></li>
       </div>
       </div>
 </ul>
@@ -108,7 +108,7 @@
                 </select>日(公历生日)
                 <input name="Input2" type="submit" value="查询" class="bot01"   />
                 <input name="act" type="hidden" value="xzcx">
-                <?php if($myxz1 != ''): ?>&nbsp;查询结果:<?php echo ($myxz); endif; ?>
+                <?php if($myxz1 != ''): ?>&nbsp;查询结果:<?php echo ($myxz1); endif; ?>
             </form>
            </TD>
     </tr>

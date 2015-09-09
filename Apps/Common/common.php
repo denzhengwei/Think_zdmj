@@ -1,8 +1,8 @@
 <?php
 header('Content-Type: text/html;charset=utf-8');
-include_once dirname(__FILE__) . '/bz.php';
-//include_once dirname(__FILE__) . '/bz1.php';
-include_once dirname(__FILE__) . '/function.php';
+include_once dirname(__FILE__) . '/bz.php';//八字定义
+include_once dirname(__FILE__) . '/function.php';//未修改的方法
+include_once dirname(__FILE__) . '/astro.php';//星座的方法
 global $a;
 /*活取现在年份  */
 function getYear ()
@@ -841,19 +841,7 @@ function smtf($dgz,$tgz){
     }
 
 }
-/* 星座，血型，属性 ，查询*/
-function xxs ($str){
-    $user=M('astro');
-    $rs=$user->where(array('title'=>$str))->select();
-    if(false!==$rs){
-        return $rs[0]['content'];
-    }
-    else {
 
-        return '';
-    }
-
-}
 /* 上辈为人 */
 function sbwr($num){
     $user=M('sbwr');
@@ -919,17 +907,3 @@ function sx($y,$m,$d){
     $sx = explode('|',$sx);
     return $sx[3];
 }
-/* 星座保健 */
-function xz_bj($xingzuo){
-    $user=M('baojian');
-    $rs=$user->where(array('title'=>$xingzuo))->select();
-    if(false!==$rs){
-        return array($rs[0]['content'],$xingzuo."之身体保健");
-    }
-    else {
-
-        return '';
-    }
-    }
-
-

@@ -1061,19 +1061,5 @@ function getsancai($sc)
     return $sctxt;
 
 }
-/* 通过日期得到星座 */
-function Constellation($mDate)
-{
-    $time = strtotime($mDate);
-    if(false===$time) {
-        echo "非日期";
-        return;
-    }
-    $a= date("j", $time) - (19 + intval(substr("102123444423", date("n", $time)-1, 1)));
-    $a = $a>=0? 0:-1;
 
-    //'星座
-    $Constellation = mb_substr("魔羯水瓶双鱼白羊金牛双子巨蟹狮子处女天秤天蝎射手魔羯", (date("n", $time) + $a)*4 , 2,'utf-8') . "座" ;
-    return $Constellation;
-}
 

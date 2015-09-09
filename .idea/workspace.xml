@@ -29,8 +29,8 @@
       <file leaf-file-name="left.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Apps/Tpl/Layout/left.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="16.285715" vertical-offset="798" max-vertical-offset="1558">
-              <caret line="18" column="78" selection-start-line="18" selection-start-column="78" selection-end-line="18" selection-end-column="78" />
+            <state vertical-scroll-proportion="-10.178572" vertical-offset="0" max-vertical-offset="1558">
+              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -46,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/sxxzxx/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.135659" vertical-offset="1653" max-vertical-offset="8170">
-              <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+            <state vertical-scroll-proportion="-12.214286" vertical-offset="285" max-vertical-offset="8170">
+              <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
               <folding>
                 <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#TD#0;n#tr#0;n#TBODY#0;n#table#0;n#!!top" expanded="true" />
@@ -77,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="other.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="other.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/sxxzxx/other.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.178572" vertical-offset="0" max-vertical-offset="760">
-              <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
+            <state vertical-scroll-proportion="0.78449905" vertical-offset="136" max-vertical-offset="779">
+              <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
               <folding>
                 <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#TD#0;n#tr#0;n#TBODY#0;n#table#0;n#!!top" expanded="true" />
@@ -142,9 +142,9 @@
         <option value="$PROJECT_DIR$/Apps/Tpl/Home/ctsm/index.html" />
         <option value="$PROJECT_DIR$/Apps/Tpl/Home/sxxzxx/content.html" />
         <option value="$PROJECT_DIR$/Apps/Tpl/Home/sxxzxx/xzbj.html" />
+        <option value="$PROJECT_DIR$/Apps/Tpl/Home/sxxzxx/index.html" />
         <option value="$PROJECT_DIR$/Apps/Tpl/Layout/left.html" />
         <option value="$PROJECT_DIR$/Apps/Tpl/Home/sxxzxx/other.html" />
-        <option value="$PROJECT_DIR$/Apps/Tpl/Home/sxxzxx/index.html" />
       </list>
     </option>
   </component>
@@ -582,15 +582,15 @@
       <workItem from="1441501956391" duration="29956000" />
       <workItem from="1441588600462" duration="28235000" />
       <workItem from="1441674145090" duration="22165000" />
-      <workItem from="1441760795223" duration="7437000" />
+      <workItem from="1441760795223" duration="11652000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214030000" />
+    <option name="totallyTimeSpent" value="218245000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-15" y="0" width="1382" height="744" extended-state="0" />
+    <frame x="-15" y="0" width="1382" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1016,14 +1016,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Apps/Tpl/Layout/left.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="16.285715" vertical-offset="798" max-vertical-offset="1558">
-          <caret line="18" column="78" selection-start-line="18" selection-start-column="78" selection-end-line="18" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/sxxzxx/content.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.7142856" vertical-offset="0" max-vertical-offset="323">
@@ -1051,24 +1043,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/sxxzxx/other.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.178572" vertical-offset="0" max-vertical-offset="760">
-          <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#TD#0;n#tr#0;n#TBODY#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#form#0;n#TD#0;n#tr#0;n#TBODY#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#1;n#form#0;n#TD#0;n#tr#0;n#TBODY#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#2;n#form#0;n#TD#0;n#tr#0;n#TBODY#0;n#table#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/sxxzxx/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.135659" vertical-offset="1653" max-vertical-offset="8170">
-          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+        <state vertical-scroll-proportion="-12.214286" vertical-offset="285" max-vertical-offset="8170">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
           <folding>
             <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#TD#0;n#tr#0;n#TBODY#0;n#table#0;n#!!top" expanded="true" />
@@ -1090,6 +1068,28 @@
             <element signature="n#style#0;n#select#1;n#form#0;n#td#0;n#tr#11;n#tbody#0;n#table#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#select#0;n#form#0;n#td#0;n#tr#13;n#tbody#0;n#table#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#select#0;n#form#0;n#td#1;n#tr#13;n#tbody#0;n#table#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apps/Tpl/Layout/left.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.178572" vertical-offset="0" max-vertical-offset="1558">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/sxxzxx/other.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78449905" vertical-offset="136" max-vertical-offset="779">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#TD#0;n#tr#0;n#TBODY#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#form#0;n#TD#0;n#tr#0;n#TBODY#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#1;n#form#0;n#TD#0;n#tr#0;n#TBODY#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#2;n#form#0;n#TD#0;n#tr#0;n#TBODY#0;n#table#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

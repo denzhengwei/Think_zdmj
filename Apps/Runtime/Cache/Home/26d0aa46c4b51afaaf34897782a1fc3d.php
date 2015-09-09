@@ -28,14 +28,14 @@
    <div id="div2"  class="menu">
     <li class="main_li"><a href="<?php echo U('home/sxxzxx/index');?>"> 生肖/星座/血型</a></li>
    <div id="div_li2">
-       <li class="second_li">星座保健</li>
-       <li class="second_li">星座EQ</li>
-       <li class="second_li">星座IQ</li>
-       <li class="second_li">星座名人</li>
-       <li class="second_li">星座失败教训</li>
-       <li class="second_li">星座实力</li>
-       <li class="second_li">星座5大建议</li>
-       <li class="second_li">星座运程</li>
+       <li class="second_li"><a href="index.php?g=home&m=sxxzxx&a=other&str=bj">星座保健</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=sxxzxx&a=other&str=eq">星座EQ</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=sxxzxx&a=other&str=iq">星座IQ</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=sxxzxx&a=other&str=mr">星座名人</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=sxxzxx&a=other&str=sy">星座失败教训</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=sxxzxx&a=other&str=sl">星座实力</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=sxxzxx&a=other&str=jy">星座5大建议</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=sxxzxx&a=other&str=bj">星座运程</a></li>
       </div>
       </div>
 </ul>
