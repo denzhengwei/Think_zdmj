@@ -1,0 +1,35 @@
+<layout name="../Layout/mid" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="b1" style="table-layout:fixed;word-wrap:break-word;">
+    <TBODY>
+    <tr>
+        <TD align="left" class=new style="PADDING-BOTTOM: 1px">
+            <if condition="$myxz neq ''" >
+            {$xing}{$ming}({$nian1}-{$yue1}-{$ri1}) 当前查询的星座：{$myxz}
+
+        </if>
+            <form action="" method="post">查询星座:
+                <select name="y" size="1" id="y" style="font-size: 9pt">
+                    <volist name='years' id='vo' key='k'>
+                        <option value={$vo}>{$vo}</option>
+                    </volist>
+                </select>年
+                <select name="m" size="1" id="_m" style="font-size: 9pt">
+                    <volist name='months' id='vo'>
+                        <option value={$vo}>{$vo}</option>
+                    </volist>
+                </select>月
+                <select name="d" size="1" id="_d" style="font-size: 9pt">
+                    <volist name='days' id='vo'>
+                        <option value={$vo}>{$vo}</option>
+                    </volist>
+                </select>日(公历生日)
+                <input name="Input2" type="submit" value="查询" class="bot01"   />
+                <input name="act" type="hidden" value="xzcx">
+                <if condition="$myxz neq ''">&nbsp;查询结果:{$myxz}</if>
+            </form>
+        </TD>
+    </tr>
+    <tr>
+
+    </tr>
+    </TBODY>
