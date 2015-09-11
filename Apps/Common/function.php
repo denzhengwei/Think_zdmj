@@ -1509,5 +1509,29 @@ function GbToBig($content)
 
     return $content;
 }
+/*星座查询链接新浪获取内容  */
+function getUrlContent ($url)
+{
+    $urlInfo = parse_url($url);
+    $hostName = $urlInfo['host'];
+    $port = isset($urlInfo['port'])?$urlInfo['port']:80;
+    $path = $urlInfo['path'];
 
+    $ret = '';
+
+    $fp = @fsockopen($hostName, $port, $errno, $errstr, 15);
+    if ($fp) {
+        $out = "GET $path HTTP/1.1\r\n";
+        $out .= "Host: $hostName\r\n";
+        $out .= "Connection: Close\r\n\r\n";
+
+        fwrite($fp, $out);
+        while (!feof($fp)) {
+            $ret .= fgets($fp);
+        }
+        fclose($fp);
+    }
+    $ret=mb_convert_encoding($ret, "UTF-8", "GBK");
+    return $ret;
+}
 

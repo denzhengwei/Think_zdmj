@@ -9,6 +9,8 @@ return array(
         'URL_CASE_INSENSITIVE' => true, //忽略大小写
         'DB_NAME'               => 'zhidianmijin',          // 数据库名
         'DB_PREFIX'             => '',    // 数据库表前缀
+        // 调试模式
+        'SHOW_PAGE_TRACE' => true,
 
 
 );

@@ -1,5 +1,6 @@
 <?php
 class SxxzxxAction extends Action{
+
     /*生肖/星座/血型主页  */
     public function index(){
         /* 如果已经写过资料 */
@@ -146,6 +147,96 @@ class SxxzxxAction extends Action{
        $this->assign("title",$rs['1'])->assign('content',$rs['0']);
 
    }
+     $this->display();
+
+ }
+ public function xzyc(){
+     global $astroInfo;
+     $xing=$_SESSION['xing'];//姓名，年月日
+     $ming=$_SESSION['ming'];
+     $nian1=$_SESSION['nian'];
+     $yue1=$_SESSION['yue'];
+     $ri1=$_SESSION['ri'];
+     $this->assign('xing',$xing)->assign('ming',$ming)->assign('nian1',$nian1)->assign('yue1',$yue1)->assign('ri1',$ri1);
+     $yctype=strtolower(isset($_REQUEST['type'])?$_REQUEST['type']:'today');
+     $xz= isset($_REQUEST['xz'])?$_REQUEST['xz']:'';
+     if ($xing<>"") {
+         $myxz=Constellation($nian1 . '-' . $yue1 . '-' . $ri1);
+
+              } else{
+         $myxz="牡羊座";
+     }
+     switch (strtolower($yctype)) {
+         case "nextday":
+             $table = 'xzysnextday';
+             $update_date = date('Y-m-d 00:00:00', $nowTime);
+             $inc_file = 'sinaUpdateTomorrow.php';
+             break;
+         case "week":
+             $table = 'xzysweek';
+             $update_date = date('Y-m-d 00:00:W', $nowTime);
+             $inc_file = 'sinaUpdateWeek.php';
+             break;
+         case "month":
+             $table = 'xzysmonth';
+             $update_date = date('Y-m-01 00:00:00', $nowTime);
+             $inc_file = 'sinaUpdateMonth.php';
+             break;
+         case "year":
+             $table = 'xzysyear';
+             $update_date = date('Y-01-01 00:00:00', $nowTime);
+             $inc_file = 'sinaUpdateYear.php';
+             break;
+         case "yearlove":
+             $table = 'xzysaqyear';
+             $update_date = date('Y-01-01 00:00:00', $nowTime);
+             $inc_file = 'sinaUpdateYearLove.php';
+             break;
+         default:
+             $table = 'xzysday';
+             $update_date = date('Y-m-d 00:00:00', $nowTime);
+             $inc_file = 'sinaUpdateToday.php';
+             break;
+     }
+
+     $loop=2;
+     while($loop-->0)
+
+     {
+     if($xz<>"") {
+         $user=M("$table");
+         $rs=$user->where(array('id'=>$xz))->select();
+         $rs=$rs[0];
+
+     } else {
+         $user=M("$table");
+         $rs=$user->where(array('xzmc'=>$myxz))->select();
+         $rs=$rs[0];
+
+
+     }
+     $goToUpdate = true;
+     if(!$rs || $rs[0]['update_date']!=$update_date && $goToUpdate)
+
+      {
+         $goToUpdate = false;
+         if ($xz<>"" && isset($astroInfo[$xz-1])){
+             $update_xz = $xz-1;
+         } elseif (false===($update_xz =array_search($myxz, $astroInfo))) {
+             unset($update_xz);
+         }
+
+         include_once(APP_PATH.'Common/' . $inc_file);
+
+     } else {
+         break;
+     }
+     }
+     var_dump($xing);
+     $this->assign('myxz',$myxz);
+     $this->assign('yctype', $yctype);
+     $this->assign('xz', $xz);
+     $this->assign('rs', $rs);
      $this->display();
 
  }

@@ -3,6 +3,7 @@ header('Content-Type: text/html;charset=utf-8');
 include_once dirname(__FILE__) . '/bz.php';//八字定义
 include_once dirname(__FILE__) . '/function.php';//未修改的方法
 include_once dirname(__FILE__) . '/astro.php';//星座的方法
+
 global $a;
 /*活取现在年份  */
 function getYear ()

@@ -125,3 +125,7 @@ function xz_jy($xingzuo){
 
 }
 
+global $astroInfo;
+$astroInfo = array('牡羊座', '金牛座', '双子座', '巨蟹座'
+        , '狮子座', '处女座', '天秤座', '天蝎座'
+        , '射手座', '魔羯座', '水瓶座', '双鱼座');
