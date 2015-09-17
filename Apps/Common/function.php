@@ -1534,4 +1534,9 @@ function getUrlContent ($url)
     $ret=mb_convert_encoding($ret, "UTF-8", "GBK");
     return $ret;
 }
+/*替换换行符的过滤函数*/
+function rep($content)
+{
+    return str_replace(array("\n", "\r\n"), "<br>", $content);
+}
 

@@ -1,0 +1,12 @@
+[ 2015-09-16T12:46:06+08:00 ] 127.0.0.1 /index.php?g=home&m=cqczjm&a=index&sm=8
+ERR: XML标签语法错误 : key=i name=name item=item from=$list 
+
+[ 2015-09-16T13:12:04+08:00 ] 127.0.0.1 /index.php?g=home&m=cqczjm&a=index&sm=8
+ERR: XML标签语法错误 : key=i name=name item=item from=$list 
+
+[ 2015-09-16T13:12:06+08:00 ] 127.0.0.1 /index.php?g=home&m=cqczjm&a=index&sm=8
+ERR: XML标签语法错误 : key=i name=name item=item from=$list 
+
+[ 2015-09-16T13:12:11+08:00 ] 127.0.0.1 /index.php?g=home&m=cqczjm&a=index&sm=8
+ERR: XML标签语法错误 : key=i name=name item=item from=$list 
+

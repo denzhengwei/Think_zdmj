@@ -36,6 +36,10 @@ class SxxzxxAction extends Action{
         if (isset($_POST['y'])){
             $myxz1=Constellation($_POST['y']."-".$_POST['m']."-".$_POST['d']);
             $this->assign("myxz1",$myxz1);
+              $user=M("xzysday");//将提交查询的星座带入星座运程方法中。
+         $rs=$user->where(array('xzmc'=>$myxz1))->select();
+         $xz=$rs[0]['id'];
+         $this->assign("xz",$xz);
         }
         /* 判断链接查询 */
         if ( isset($_REQUEST['flag'])) {
@@ -152,21 +156,21 @@ class SxxzxxAction extends Action{
  }
  public function xzyc(){
      global $astroInfo;
-     $xing=$_SESSION['xing'];//姓名，年月日
+     $xing=$_SESSION['xing'];//session中的姓名，年月日
      $ming=$_SESSION['ming'];
      $nian1=$_SESSION['nian'];
      $yue1=$_SESSION['yue'];
      $ri1=$_SESSION['ri'];
      $this->assign('xing',$xing)->assign('ming',$ming)->assign('nian1',$nian1)->assign('yue1',$yue1)->assign('ri1',$ri1);
-     $yctype=strtolower(isset($_REQUEST['type'])?$_REQUEST['type']:'today');
-     $xz= isset($_REQUEST['xz'])?$_REQUEST['xz']:'';
-     if ($xing<>"") {
+     $yctype=strtolower(isset($_REQUEST['type'])?$_REQUEST['type']:'today');//是否设置'type'(今天，明日，。。。。。)
+     $xz= isset($_REQUEST['xz'])?$_REQUEST['xz']:'';//是否设置‘xz‘——选择的星座。
+     if ($xing<>"") {  //判断用户是否填写过资料 填写计算星座 否则默认为“牡羊座”
          $myxz=Constellation($nian1 . '-' . $yue1 . '-' . $ri1);
 
               } else{
          $myxz="牡羊座";
      }
-     switch (strtolower($yctype)) {
+     switch (strtolower($yctype)) {//判断用户提交的选项 今天  明天 月 年。。。。
          case "nextday":
              $table = 'xzysnextday';
              $update_date = date('Y-m-d 00:00:00', $nowTime);
@@ -212,8 +216,6 @@ class SxxzxxAction extends Action{
          $user=M("$table");
          $rs=$user->where(array('xzmc'=>$myxz))->select();
          $rs=$rs[0];
-
-
      }
      $goToUpdate = true;
      if(!$rs || $rs[0]['update_date']!=$update_date && $goToUpdate)
@@ -232,7 +234,6 @@ class SxxzxxAction extends Action{
          break;
      }
      }
-     var_dump($xing);
      $this->assign('myxz',$myxz);
      $this->assign('yctype', $yctype);
      $this->assign('xz', $xz);

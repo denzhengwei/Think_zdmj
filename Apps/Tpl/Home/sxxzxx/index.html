@@ -97,13 +97,14 @@
         <td colspan="2" class="ttop">星座预测</td>
     </tr>
     <tr>
-        <td colspan="2" class="new"><a href="?g=home&m=sxxzxx&a=index&type=today">今日运程</a>
-            | <a href="?m=2&sm=9&type=nextday">明日运程</a>
-            | <A href="?m=2&sm=9&type=week">本周运程</A>
-            | <a href="?m=2&sm=9&type=month">本月运程</a>
-            | <a href="?m=2&sm=9&type=year">今年运程</a>
-            | <a href="?m=2&sm=9&type=yearlove">今年爱情运势</a>
-        </td>
+        <td colspan="2" class="new">
+           |<a href="index.php?g=home&m=sxxzxx&a=xzyc&type=today&xz={$xz}">今日运程</a>
+            | <a href="index.php?g=home&m=sxxzxx&a=xzyc&type=today&xz={$xz}">今日运程</a>
+            |<a href="index.php?g=home&m=sxxzxx&a=xzyc&type=nextday&xz={$xz}">明日运程</a>
+            |<a href="index.php?g=home&m=sxxzxx&a=xzyc&type=week&xz={$xz}">本周运程</a>
+            |<a href="index.php?g=home&m=sxxzxx&a=xzyc&type=month&xz={$xz}">本月运程</a>
+            |<a href="index.php?g=home&m=sxxzxx&a=xzyc&type=year&xz={$xz}">今年运程</a>
+            |<a href="index.php?g=home&m=sxxzxx&a=xzyc&type=yearlove&xz={$xz}">今年爱情运势</a>|
     </tr>
     <tr>
         <td colspan="2" class="new"><span class="red">星座查询:</span></td>
@@ -137,7 +138,6 @@
             <input type=hidden name=flag value=7>
             <select name="astro">
                 <option>白羊座</option>		<option>金牛座</option>		<option>双子座</option>
-
                 <option>巨蟹座</option>		<option>狮子座</option>		<option>处女座</option>
                 <option>天秤座</option>		<option>天蝎座</option>		<option>射手座</option>
                 <option>魔羯座</option>		<option>水瓶座</option>		<option>双鱼座</option>
