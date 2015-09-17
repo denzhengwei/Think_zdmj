@@ -10,8 +10,7 @@
 <body id="body">
 <div id="head" class="layout"></div>
 <div id="bodydiv" class="layout">
-<div id="left" class="layout">
-<ul> <div id="div1" class="menu">
+<div id="left" class="layout"><ul> <div id="div1" class="menu">
     <li class="main_li" ><a href="<?php echo U('home/ctsm/index');?>">传统算命</a></li>
             <div id="div_li1">
        <li class="second_li"><a  href="<?php echo U('home/ctsm/scbz');?>">生辰八字</a></li>
@@ -61,7 +60,7 @@
 </ul>
 <ul>
        <div id="div4"  class="menu" >
-    <li class="main_li"><a href="<?php echo U('home/qinglv/index');?>" >恋爱指南</a></li>
+    <li class="main_li">恋爱指南</li>
    <div id="div_li4">
        <li class="second_li">星座组合</li>
        <li class="second_li">姓名配对</li>
@@ -88,60 +87,69 @@
       </div>
       </div>
   </ul></div>
-<div id="mid" class="layout"><SCRIPT language=javascript>
-    <!--
-    function valid_checkdream(){
-        if(  document.form1.word.value.length==""  )
-        {window.alert("对不起，请输入梦的关键字！");
-            document.form1.word.focus();
-            return false;
-        } ;
-        if(  document.form1.word.value.length>20  )
-        {window.alert("对不起，请将描述控制在20个字以内！");
-            document.form1.word.focus();
-            return false;
-        } ;
-        win = window.open('','dream','scrollbars=yes,top=0,left=0,width=580,height=510');
-        form1.submit();
-        return ;
-    }
-    //-->
-</SCRIPT>
+<div id="mid" class="layout">
+<table cellspacing="1" cellpadding="0" border="0" class="tablebgcolor4">
+    <TBODY>
+    <?php if(!isset($list) and !count($list)): ?><script>
+        alert('没有找到相关解梦内容');window.close()</script>
+    <?php else: ?>
+    <TR class="tdbgcolor">
+        <TD height="25" align="right" width="100%">
+            共找到<FONT COLOR="#FF0000">
+            <?php echo ($allshu); ?></FONT>
+            个解梦结果，分为<font color="#FF0000">
+            <?php echo ($mpage); ?></font>
+            页，目前是第<font color="#FF0000">
+            <?php echo ($currentPage); ?></font>
+            页</TD>
+    </TR>
+    <TR class="tdbgcolor2">
+        <TD>
+            <div align="center">
+                <table border="0" width="100%" cellspacing="0" cellpadding="0">
+                    <tbody>
+                    <?php if(is_array($list)): foreach($list as $i=>$vo): if($vo["content"] != ''): ?><tr>
+                        <td style="line-height:200%">
+                            <font color="green">
+                              [  <?php echo ( $i+1);?>.<?php echo ($vo["jmlb"]); ?>]</font>
+                            <font color="red">
+                                （<?php echo ($vo["title"]); ?>）</font>
+                            <br />
+                       <?php echo ($vo["content"]); ?>
+                        </td>
+                    </tr><?php endif; endforeach; endif; ?>
 
-<table width="100%" border="0" cellspacing="0" cellpadding="0" class="b1" style="table-layout:fixed;word-wrap:break-word;">
-    <tbody><tr>
-        <td width="79%" class="ttd"><span class="red">周公解梦:</span><br>
-            <br>
-            周公，即周公旦，他是周成王的叔父，对于建立和完善周代的封建制度他有很大贡献。周公在儒家文化中享有崇高的地位，孔子以“吾不复梦见周公矣”之言，隐喻周代礼仪文化的失落。
-            　　周公是一个在孔子梦中频频出现的人物，在儒教长期主导文化的中国，周公也就不可避免的直接与梦联系起来。梦，经常被成为“周公之梦”,或“梦见周公”。因此，周公解梦中的周公，即是周公旦。</td>
-        <td width="21%" class="ttd"><img src="./Public/images/zg.gif" width="150" height="218"></td>
-    </tr>
-    <form method="post" action=index.php?g=home&m=cqczjm&a=index&sm=8" name="form1" onSubmit="return valid_checkdream()" target="dream">
-        <input type="hidden" name="act" value="ok" />
-        <tr>
-            <td colspan="2" class="new">
-                请输入做梦内容的关键字 ：<input name="word" type="text" id="word" size="20" onKeyUp="value=value.replace(/[^\u4E00-\u9FA5]/g,'')" maxLength="20">
-                <select size="1" name="act">
-                    <option selected="" value="1">简明</option>
-                    <option value="2">详细</option>
-                </select>  <input type="submit" name="Submit1" value="开始解梦" style="cursor:hand;">
-    </form></td>
-    </tr>
-    </tbody>
+                    </tbody>
+                </table>
+            </div>
+            <hr size="1" color="#d2d0d0" />
+
+            <!--分页开始-->
+            <div align="center">
+                <script>
+                     PageCount=<?php echo ($mpage); ?> ;//总页数r
+                     topage=<?php echo ($currentPage); ?> ;  //当前停留页
+                    if (topage>1){document.write("<a href='index.php?g=home&m=cqczjm&a=index&sm=8&act=<?php echo $_REQUEST["act"] ?>&word=<?php echo $word ?>&page=<?php echo $currentPage-1 ?>' title='上一页'> 上一页</a>");}
+                    for (var i=1; i <= PageCount; i++) {
+                        if (i <= topage+6 && i >= topage-6 || i==1 || i==PageCount){
+                            if (i > topage+7 || i < topage-5 && i!=1 && i!=2 ){document.write(" ... ");}
+                            if (topage==i){document.write("<font color=#d2d0d0> "+ i +" </font> ");}
+                            else{
+                                document.write(" <a href='index.php?g=home&m=cqczjm&a=index&sm=8&act=<?php echo ($_REQUEST['act']); ?>&word=<?php echo ($word); ?>&page="+i+"'> ["+ i +"]</a> ");
+                            }
+                        }
+                    }
+                   if (PageCount-topage>=1){document.write("<a href='index.php?g=home&m=cqczjm&a=index&sm=8&act=<?php echo $_REQUEST["act"]?>&word=<?php echo $word ?>&page=<?php echo $currentPage+1 ?>' title='下一页'>下一页</a>");}
+                </script>
+            </div>
+            <!--分页结束-->
+        </TD>
+    </TR><?php endif; ?>
+    </TBODY>
 </table>
-<table width="100%" border="0" cellspacing="0" cellpadding="0" class="b1" style="table-layout:fixed;word-wrap:break-word;">
-    <tbody>
-    <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-        <td width="12%" class="new">&nbsp;<strong><?php echo ($vo[0]); ?></strong></td>
-        <td width="88%" class="new">
-        <?php if(is_array($vo[1])): $i = 0; $__LIST__ = $vo[1];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo2): $mod = ($i % 2 );++$i;?><A onClick="window.open(this.href,'','location=no,menu=no,scrollbars=yes,resizable=no,top=0,left=0,width=580,height=510');return false;" href="index.php?g=home&m=cqczjm&a=index&sm=8&act=1&word=<?php echo ($vo2); ?>" target="_blank">
-            <?php echo ($vo2); ?></A>&nbsp;<?php endforeach; endif; else: echo "" ;endif; ?>
-        </td>
-    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-    </tbody>
-</table>
-
-
+<br />
+<a href="javascript:window.close()">
+    [关闭页面]</a>
 </div>
 <div id="right" class="layout"></div>
 </div>
