@@ -1,6 +1,4 @@
 <?php
-$smarty->assign('includePage', 'qinglv/pd_qq.php');
-
 if (isset($_REQUEST['act']) && $_REQUEST['act']=="ok") {
     $strname1=$_REQUEST['qq1'];
     $qqsz1=0;
@@ -17,16 +15,21 @@ if (isset($_REQUEST['act']) && $_REQUEST['act']=="ok") {
 
     $qqsz= $qqsz % 101;
 
-    //'¼ÆËã
-    $sql="select * from qlpdbh where bihua like ?";
-    $db->query($sql, array('%' . $qqsz . '%'));
-	echo $sql.$qqsz;
-    if ($rs=$db->fetchArray()) {
-        $intro = $rs['intro'];
-		$smarty->assign('intro', $intro);
+    //'è®¡ç®—
+    $user=M('qlpdbh');
+    $where['bihua']=array('like','%' . $qqsz . '%');
+    $rs=$user->where($where)->select();//ç»“æžœrs
+   /*  $sql="select * from qlpdbh where bihua like ?";
+    $db->query($sql, array('%' . $qqsz . '%')); */
+	//echo $sql.$qqsz;
+    if ($rs!='') {
+        $intro = $rs[0]['intro'];
+		$this->assign('intro', $intro);
     }
 
-    $smarty->assign('strname1', $strname1);
-    $smarty->assign('strname2', $strname2);
+    $this->assign('strname1', $strname1);
+    $this->assign('strname2', $strname2);
+
 }
+$this->display('pd_qq');
 ?>

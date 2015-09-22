@@ -1,0 +1,9 @@
+[ 2015-09-21T15:27:23+08:00 ] 127.0.0.1 /index.php?g=home&m=qinglv&a=index&sm=5
+ERR: Action:assing您所请求的方法不存在！
+
+[ 2015-09-21T17:27:37+08:00 ] 127.0.0.1 /index.php?g=home&m=qinglv&a=index&sm=4
+ERR: 模板不存在[./Apps/Tpl/Home/Qinglv/qd_sxxx.html]
+
+[ 2015-09-21T17:28:21+08:00 ] 127.0.0.1 /index.php?g=home&m=qinglv&a=index&sm=4
+ERR: 模板不存在[./Apps/Tpl/Home/Qinglv/qd_sxxx.html]
+

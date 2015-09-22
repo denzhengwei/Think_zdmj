@@ -63,11 +63,11 @@
        <div id="div4"  class="menu" >
     <li class="main_li"><a href="<?php echo U('home/qinglv/index');?>" >恋爱指南</a></li>
    <div id="div_li4">
-       <li class="second_li">星座组合</li>
-       <li class="second_li">姓名配对</li>
-       <li class="second_li">QQ缘分</li>
-       <li class="second_li">生肖血型</li>
-       <li class="second_li">姓名五格</li>
+       <li class="second_li"><a href="index.php?g=home&m=qinglv&a=index&sm=1"> 星座组合</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=qinglv&a=index&sm=2">姓名配对</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=qinglv&a=index&sm=3">QQ缘分</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=qinglv&a=index&sm=4">生肖血型</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=qinglv&a=index&sm=5">姓名五格</a></li>
       </div>
           </div>
 </ul>
@@ -141,8 +141,10 @@
     //-->
 </SCRIPT>
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b1" style="table-layout:fixed;word-wrap:break-word;">
+    <?php echo ($wgjx); ?>
     <tbody><tr>
-        <td width="81%" class="ttd"><span class="red">姓名五格配对评分:</span><br>
+        <td width="81%" class="ttd">
+            <span class="red">姓名五格配对评分:</span><br>
             根据《易经》的"象"、"数"理论，依据姓名的笔画数和一定规则建立起来天格、地格、人格、总格、外格等五格数理关系，并运用阴阳五行相生相克理论，来推算的各方面运势。 </td>
         <td width="19%" class="ttd"><img src="./Public/images/xmpd.jpg" width="105" height="140"></td>
     </tr>
@@ -150,9 +152,10 @@
         <input type="hidden" name="act" value="ok" />
         <tr>
             <td colspan="2" class="new">
-                请输入您的姓名：<input name="name1" type="text" id="name1" size="20" onKeyUp="value=value.replace(/[^\u4E00-\u9FA5]/g,'')" maxLength="4">&nbsp;
+                请输入您的姓名：
+                <input name="name1" type="text" id="name1" size="20"  onKeyUp="value=value.replace(/[^\u4E00-\u9FA5]/g,'')" maxLength="4">&nbsp;
                 <select size="1" name="xing1">
-                <?php if( $xing2 == ''): ?><option value="1"selected="selected">单姓</option>
+                <?php if($xingtype == ''): ?><option value="1"selected="selected">单姓</option>
                     <option value="2">复姓</option>
                 <?php else: ?>
                     <option value="2"selected="selected">复姓</option>
@@ -160,7 +163,7 @@
 
             </select>&nbsp;
                 <select size="1" name="sex1">
-                <?php if( $xingbie == '男'): ?><option value="男" selected="selected" >男性</option>
+                <?php if($xingbie == '男'): ?><option value="男" selected="selected" >男性</option>
                     <option value="女"  >女性</option>
                     <?php else: ?>
                 <option value="男" >男性</option>
@@ -182,8 +185,7 @@
     </form>
     </tr></tbody>
 </table>
-<if condition="isset($_REQUEST['act']) and $_REQUEST['act'] eq  'ok'" >
-<table width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#5391EE"  style="MARGIN-BOTTOM: 10px; table-layout:fixed;word-wrap:break-word;">
+<?php if(isset($_REQUEST['act']) and $_REQUEST['act'] == 'ok'): ?><table width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#5391EE"  style="MARGIN-BOTTOM: 10px; table-layout:fixed;word-wrap:break-word;">
     <tbody>    <tr>
         <td colspan="3" class=new bgcolor="#FFFFFF">姓名：<?php echo ($name1); ?>  性别：<?php echo ($sex1); ?>  </td>
     </tr>
@@ -204,48 +206,48 @@
                 <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo ($bihua1); ?></td>
                 <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo (getzywh($nxing11)); ?></td>
             </tr>
-            <tr>
-                <? if ($nxing2<>"") ?>   <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo ($nxing2); ?></td>
+            <?php if( $nxing2 != ''): ?><tr>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo ($nxing2); ?></td>
                 <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?php echo (gbtobig($nxing2)); ?></font></td>
                 <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?php echo (pinyin($nxing22)); ?></font></td>
                 <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo ($bihua2); ?></td>
                 <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo (getzywh($nxing22)); ?></td>
-            </tr><? /if ?>
+            </tr><?php endif; ?>
             <tr>
                 <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo ($nming1); ?></td>
                 <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?php echo (gbtobig($nming1)); ?></font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa">{ $nming12|c }</font></td>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?php echo (pinyin($nming12)); ?></font></td>
                 <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo ($bihua3); ?></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{ $nming12|getzywh }</td>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo (getzywh($nming12)); ?></td>
             </tr>
-            <? if ($nming2<>"") ?><tr>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{ $nming2}</td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa">{ $nming2|GbToBig }</font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa">{ $nming22|c }</font></td>
+            <?php if($nming2 != '' ): ?><tr>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo ($nming2); ?></td>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"> <?php echo (gbtobig($nming2)); ?></font></td>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?php echo (pinyin($nming22)); ?></font></td>
                 <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo ($bihua4); ?></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{ $nming22|getzywh}</td>
-            </tr>< /if >
+                <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo (getzywh($nming22)); ?></td>
+            </tr><?php endif; ?>
             </tbody>
         </table></td>
-        <td width="25%" colspan="-3" align="center" bgcolor="#FFFFFF"  class="new2">天格-&gt; <?php echo ($tiange1); ?> (<?php echo (getsancai($tiange1)); ?>)
-            ->(<font color=red>{ $tgjx }</font>)<br />
-            <p>人格-&gt; { $renge1} ({ $renge1|getsancai })
-                ->(<font color=red>{ $rgjx}</font>)</p>        <p>地格-&gt; <?php echo ($dige1); ?> ({ $dige1|getsancai])
-                ->(<font color=red><{ $dgjx}</font>)</p></td>
-        <td width="25%"  class="new2" align="center" bgcolor="#FFFFFF">外格-&gt; <?php echo ($waige1); ?> ({ $waige1|getsancai })
-            ->(<font color=red>{ $wgjx}</font>)<br />
-            <p>　</p>        <p>总格-&gt; { $zhongge1 } ({ $zhongge1|getsancai })
+        <td width="25%" colspan="-3" align="center" bgcolor="#FFFFFF"  class="new2">天格-&gt;<?php echo ($tiange1); ?>(<?php echo (getsancai($tiange1)); ?>)
+            ->(<font color=red><?php echo ($tgjx); ?></font>)<br />
+            <p>人格-&gt; <?php echo ($renge1); ?> (<?php echo (getsancai($renge1)); ?>)
+                ->(<font color=red><?php echo ($rgjx); ?></font>)</p><p>地格-&gt; <?php echo ($dige1); ?>(<?php echo (getsancai($dige1)); ?>)
+                ->(<font color=red><?php echo ($dgjx); ?></font>)</p></td>
+        <td width="25%"  class="new2" align="center" bgcolor="#FFFFFF">外格-&gt;<?php echo ($waige1); ?> (<?php echo (getsancai($waige1)); ?>)
+            ->(<font color=red> <?php echo ($wgjx); ?> </font>)<br />
+            <p>　</p>        <p>总格-&gt; <?php echo ($zhongge1); ?> (<?php echo (getsancai($zhongge1)); ?>)
                 ->(<font color=red><?php echo ($zgjx); ?></font>)</p></td>
     </tr>
     <tr>
-        <td colspan="3" class=new bgcolor="#FFFFFF">姓名蕴含的个性分析：<?  $xg1 ?><? $tiangee1 ?>=<? $rengee1 ?>=<? $digee1 ?></td>
+        <td colspan="3" class=new bgcolor="#FFFFFF">姓名蕴含的个性分析：<?php echo ($xg1); ?></td>
     </tr>
     </tbody>
 </table>
 
 <table width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#5391EE"  style="MARGIN-BOTTOM: 10px; table-layout:fixed;word-wrap:break-word;">
     <tbody> <tr>
-        <td colspan="3" class=new bgcolor="#FFFFFF">姓名：<?  $name2 ?>  性别：<?  $sex2 ?>  </td>
+        <td colspan="3" class=new bgcolor="#FFFFFF">姓名：<?php echo ($name2); ?>  性别：<?php echo ($sex2); ?>  </td>
     </tr>
     <tr>
         <td bgcolor="#FFFFFF"><table width="100%" border="0" cellpadding="2" cellspacing="1"  style="MARGIN-BOTTOM: 10px; table-layout:fixed;word-wrap:break-word;">
@@ -258,72 +260,65 @@
                 <td align="center" bgcolor="#FFFFFF"><font color="ababab">五行</font></td>
             </tr>
             <tr>
-                <td  align="center" bgcolor="#FFFFFF" class="new2"><?  $n2xing1 ?></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?  $n2xing1|GbToBig ?></font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?  $n2xing11|truncate:2|c ?></font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><?  $nbihua1 ?></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><?  $n2xing11|getzywh ?></td>
+                <td  align="center" bgcolor="#FFFFFF" class="new2"><?php echo ($n2xing1); ?></td>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?php echo (gbtobig($n2xing1)); ?></font></td>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?php echo (pinyin($n2xing11)); ?></font></td>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo ($nbihua1); ?></td>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo (getzywh($n2xing11)); ?></td>
             </tr>
             <tr>
-                <? if ($n2xing2<>"") ?>   <td align="center" bgcolor="#FFFFFF" class="new2"><?  $n2xing2 ?></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?  $n2xing2|GbToBig ?></font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?  $n2xing22|c ?></font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><?  $nbihua2 ?></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><?  $n2xing22|getzywh ?></td>
-            </tr><? /if ?>
-            <tr>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><?  $n2ming1 ?></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?  $n2ming1|GbToBig ?></font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?  $n2ming12|c ?></font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><?  $nbihua3 ?></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><?  $n2ming12|getzywh ?></td>
+                <?php if($n2xing2 != ''): ?><td align="center" bgcolor="#FFFFFF" class="new2"><?php echo ($n2xing2); ?></td>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?php echo (gbtobig($n2xing2)); ?></font></td>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?php echo (pinyin($n2xing22)); ?></font></td>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo ($nbihua2); ?></td>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo (getzywh($n2xing22)); ?></td><?php endif; ?>
             </tr>
-            <? if ($n2ming2<>"") ?><tr>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><?  $n2ming2 ?></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?  $n2ming2|GbToBig ?></font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?  $n2ming22|c ?></font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><?  $nbihua4 ?></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><?  $n2ming22|getzywh ?></td>
-            </tr><? /if ?>
+            <tr>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo ($n2ming1); ?></td>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?php echo (gbtobig($n2ming1)); ?></font></td>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?php echo (pinyin($n2ming12)); ?></font></td>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo ($nbihua3); ?></td>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo (getzywh($n2ming12)); ?></td>
+            </tr>
+            <?php if($n2ming2 != ''): ?><tr>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo ($n2ming2); ?></td>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?php echo (gbtobig($n2ming2)); ?></font></td>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?php echo (pinyin($n2ming22)); ?></font></td>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo ($nbihua4); ?></td>
+                <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo (getzywh($n2ming22)); ?></td>
+            </tr><?php endif; ?>
             </tbody>
         </table></td>
-        <td width="25%" colspan="-3" align="center" bgcolor="#FFFFFF"  class="new2">天格-&gt; <?  $ntiange1 ?> (<?  $ntiange1|getsancai ?>)
-            ->(<font color=red><?  $tgjx ?></font>)<br />
-            <p>人格-&gt; <?  $nrenge1 ?> (<?  $nrenge1|getsancai ?>)
-                ->(<font color=red><?  $rgjx ?></font>)</p>        <p>地格-&gt; <?  $ndige1 ?> (<?  $ndige1|getsancai ?>)
-                ->(<font color=red><?  $dgjx ?></font>)</p></td>
-        <td width="25%"  class="new2" align="center" bgcolor="#FFFFFF">外格-&gt; <?  $nwaige1 ?> (<?  $nwaige1|getsancai ?>)
-            ->(<font color=red><?  $wgjx ?></font>)<br />
-            <p>　</p>        <p>总格-&gt; <?  $nzhongge1 ?> (<?  $nzhongge1|getsancai ?>)
-                ->(<font color=red><?  $zgjx ?></font>)</p></td>
+        <td width="25%" colspan="-3" align="center" bgcolor="#FFFFFF"  class="new2">天格-&gt; <?php echo ($ntiange1); ?> (<?php echo (getsancai($ntiange1)); ?>)
+            ->(<font color=red><?php echo ($tgjx2); ?></font>)<br />
+            <p>人格-&gt; <?php echo ($nrenge1); ?> (<?php echo (getsancai($nrenge1)); ?>)
+                ->(<font color=red><?php echo ($rgjx2); ?></font>)</p>        <p>地格-&gt;<?php echo ($ndige1); ?>(<?php echo (getsancai($ndige1)); ?>)
+                ->(<font color=red><?php echo ($dgjx2); ?></font>)</p></td>
+        <td width="25%"  class="new2" align="center" bgcolor="#FFFFFF">外格-&gt; <?php echo ($nwaige1); ?>(<?php echo (getsancai($nwaige1)); ?>)
+            ->(<font color=red><?php echo ($wgjx2); ?></font>)<br />
+            <p>　</p>        <p>总格-&gt; <?php echo ($nzhongge1); ?> (<?php echo (getsancai($nzhongge1)); ?>)
+                ->(<font color=red><?php echo ($zgjx2); ?></font>)</p></td>
     </tr>
     <tr>
-        <td colspan="3" class=new bgcolor="#FFFFFF">姓名蕴含的个性分析：<?  $xg1 ?></td>
+        <td colspan="3" class=new bgcolor="#FFFFFF">姓名蕴含的个性分析<?php echo ($xg2); ?></td>
     </tr>
     </tbody>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b1" style="table-layout:fixed;word-wrap:break-word;">
     <TBODY>
     <tr>
-        <TD class=ttd>经过分析，[<?  $name1 ?>]和[<?  $name2 ?>]的姓名配对评分如下：</TD>
+        <TD class=ttd>经过分析，[<?php echo ($name1); ?>]和[<?php echo ($name2); ?>]的姓名配对评分如下：</TD>
     </tr>      <tr>
-        <TD class=new>姓名缘份指数：<span class="pf"><?  $zf  ?></span></TD>
+        <TD class=new>姓名缘份指数：<span class="pf"><?php echo ($zf); ?></span></TD>
     </tr>  <tr>
-        <TD class=new><? if ($sex1==$sex2) ?><font color=red>本站是按中国民俗学的一些测算方法来计算的，暂时不支持同性缘份的测试</font><?  else ?><font color=green>
-            <? if ($zf<60) ?>你们的姓名五格可能不是太合，不过八字配合所起的作用更大，另外彼此的努力也会让你们改善关系，记住：事在人为！
-            <? elseif ($zf<70 and $zf>=60) ?>
-            你们的姓名五格相合程度马马虎虎，不过八字配合所起的作用更大，继续努力改善关系，会对你们的关系有帮助的！
-            <?  elseif ( $zf<80 and $zf>=70) ?>你们的姓名五格相合一般！
-            <?  elseif ( $zf<80 and $zf>=70) ?>你们的姓名五格相合程度还不错哟！
-            <?  elseif ($zf<90 and $zf>=80) ?>
-            你们的姓名五格相合程度相当棒！
-            <?  elseif ( $zf>=90) ?>
-            你们的姓名五格相合程度太棒了！！恭喜！</font><? if ($name1==$name2) ?><br /><font color=#0000ff>^_^ 你们俩同名同姓嘛，真巧哟！</font> <? /if ?><? /if ?>
-            <? /if ?></TD>
+        <TD class=new>
+            <?php if($sex1 == $sex2): echo ($resault); ?>
+            </font><?php endif; ?>
+            <?php if($name1 == $name2): ?><br /><font color=#0000ff>^_^ 你们俩同名同姓嘛，真巧哟！</font><?php endif; ?>
+        </TD>
     </tr>
     </TBODY>
-</TABLE>
-<? /if ?>
+</TABLE><?php endif; ?>
 
 </div>
 <div id="right" class="layout"></div>

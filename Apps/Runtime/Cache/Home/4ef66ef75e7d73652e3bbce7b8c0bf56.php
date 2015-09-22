@@ -10,7 +10,8 @@
 <body id="body">
 <div id="head" class="layout"></div>
 <div id="bodydiv" class="layout">
-<div id="left" class="layout"><ul> <div id="div1" class="menu">
+<div id="left" class="layout">
+<ul> <div id="div1" class="menu">
     <li class="main_li" ><a href="<?php echo U('home/ctsm/index');?>">传统算命</a></li>
             <div id="div_li1">
        <li class="second_li"><a  href="<?php echo U('home/ctsm/scbz');?>">生辰八字</a></li>
@@ -60,13 +61,13 @@
 </ul>
 <ul>
        <div id="div4"  class="menu" >
-    <li class="main_li">恋爱指南</li>
+    <li class="main_li"><a href="<?php echo U('home/qinglv/index');?>" >恋爱指南</a></li>
    <div id="div_li4">
-       <li class="second_li">星座组合</li>
-       <li class="second_li">姓名配对</li>
-       <li class="second_li">QQ缘分</li>
-       <li class="second_li">生肖血型</li>
-       <li class="second_li">姓名五格</li>
+       <li class="second_li"><a href="index.php?g=home&m=qinglv&a=index&sm=1"> 星座组合</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=qinglv&a=index&sm=2">姓名配对</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=qinglv&a=index&sm=3">QQ缘分</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=qinglv&a=index&sm=4">生肖血型</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=qinglv&a=index&sm=5">姓名五格</a></li>
       </div>
           </div>
 </ul>

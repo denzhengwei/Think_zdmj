@@ -23,7 +23,6 @@ if (isset($_REQUEST['act']) && $_REQUEST['act']=="ok") {
     $sbihua4=getnum($sstr4);
     $bihuaname2=$sbihua1 + $sbihua2 + $sbihua3 + $sbihua4;
     $bihuac=$bihuaname1 + $bihuaname2;
-    $bihuac= $bihuac % 100;
 
     //'计算
     $user=M('qlpdbh');
@@ -37,6 +36,7 @@ if (isset($_REQUEST['act']) && $_REQUEST['act']=="ok") {
     $this->assign('strname1', $strname1);
     $this->assign('strname2', $strname2);
     $this->assign('intro', $intro);
-    $this->display('pd_name');
+
 }
+$this->display('pd_name');
 ?>
