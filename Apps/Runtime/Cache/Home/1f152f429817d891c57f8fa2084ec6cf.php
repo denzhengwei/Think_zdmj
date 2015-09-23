@@ -17,7 +17,7 @@
        <li class="second_li"><a  href="<?php echo U('home/ctsm/scbz');?>">生辰八字</a></li>
        <li class="second_li"><a  href="<?php echo U('home/ctsm/bzcs');?>">八字测算</a></li>
        <li class="second_li"><a  href="<?php echo U('home/ctsm/rglm');?>">日干论命</a></li>
-       <li class="second_li"><a  href="<?php echo U('home/ctsm/cglm');?>"> 称骨论命</a></li>
+       <li class="second_li"><a  href="<?php echo U('home/ctsm/cglm');?>">称骨论命</a></li>
        <li class="second_li"><a  href="<?php echo U('home/ctsm/xmcs');?>">姓名测试</a></li>
        <li class="second_li"><a  href="<?php echo U('home/ctsm/xmpd');?>">姓命配对</a></li>
        <li class="second_li"><a  href="<?php echo U('home/ctsm/sbwr');?>">上辈为人</a></li>
@@ -73,18 +73,18 @@
 </ul>
 <ul>
    <div id="div5"  class="menu" >
-    <li class="main_li">民俗预测</li>
+    <li class="main_li"><a href=" <?php echo U('home/yuce/index');?>">民俗预测</a></li>
    <div id="div_li5">
-       <li class="second_li">耳鸣</li>
-       <li class="second_li">面热</li>
-       <li class="second_li">面热</li>
-       <li class="second_li">眼跳</li>
-       <li class="second_li">心惊</li>
-       <li class="second_li">黄道吉日</li>
-       <li class="second_li">QQ/手机号码吉凶</li>
-       <li class="second_li" >三世财运</li>
-       <li class="second_li">生男生女</li>
-       <li class="second_li">指纹</li>
+       <li class="second_li"><a href="index.php?g=home&m=yuce&a=index&sm=1" >耳鸣</a</li>
+       <li class="second_li"><a href="index.php?g=home&m=yuce&a=index&sm=2" >面热</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=yuce&a=index&sm=3" >面热</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=yuce&a=index&sm=4" >眼跳</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=yuce&a=index&sm=5" >心惊</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=yuce&a=index&sm=6" >黄道吉日</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=yuce&a=index&sm=7" >QQ/手机号码吉凶</a></li>
+       <li class="second_li" ><a href="index.php?g=home&m=yuce&a=index&sm=8" >三世财运</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=yuce&a=index&sm=9" >生男生女</a></li>
+       <li class="second_li"><a href="index.php?g=home&m=yuce&a=index&sm=10" >指纹</a></li>
       </div>
       </div>
   </ul></div>

@@ -17,7 +17,7 @@
        <li class="second_li"><a  href="<?php echo U('home/ctsm/scbz');?>">生辰八字</a></li>
        <li class="second_li"><a  href="<?php echo U('home/ctsm/bzcs');?>">八字测算</a></li>
        <li class="second_li"><a  href="<?php echo U('home/ctsm/rglm');?>">日干论命</a></li>
-       <li class="second_li"><a  href="<?php echo U('home/ctsm/cglm');?>"> 称骨论命</a></li>
+       <li class="second_li"><a  href="<?php echo U('home/ctsm/cglm');?>">称骨论命</a></li>
        <li class="second_li"><a  href="<?php echo U('home/ctsm/xmcs');?>">姓名测试</a></li>
        <li class="second_li"><a  href="<?php echo U('home/ctsm/xmpd');?>">姓命配对</a></li>
        <li class="second_li"><a  href="<?php echo U('home/ctsm/sbwr');?>">上辈为人</a></li>
@@ -73,7 +73,7 @@
 </ul>
 <ul>
    <div id="div5"  class="menu" >
-    <li class="main_li">民俗预测</li>
+    <li class="main_li"><a href=" <?php echo U('home/yuce/index');?>">民俗预测</a></li>
    <div id="div_li5">
        <li class="second_li">耳鸣</li>
        <li class="second_li">面热</li>
@@ -89,54 +89,66 @@
       </div>
   </ul></div>
 <div id="mid" class="layout">
+
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b1" style="table-layout:fixed;word-wrap:break-word;">
-    <tbody>
-    <?php if($gdlqid != '' and $_REQUEST['act'] == jq ): ?><tr>
-        <td align="center" class="new">
-        <img src="./Public/images/guandimg/<?php echo ($_REQUEST['gdlqid']); ?>.gif">
-        </td></tr><tr><td class="new">
-        <A href="index.php?g=home&m=cqczjm&a=index">
-            <font color=red>点击这里返回抽签首页！</font></A> </td>
+    <tbody><tr>
+        <td width="78%" class="ttd"><span class="red">生男生女:</span>
+            <br> <br>想预测一下，你们会生个男宝宝或是女宝宝吗？<br>
+            测算数据来自《清宫珍藏的生男生女预测表》，仅供参考，请勿太信！
+            怀孕月份以农历为准。遇闰月，上半月以上个月份计算，下半月以下个月份计算。  </td>
+        <td width="22%" class="ttd"><img src="./Public/images/snsn.jpg" width="140" height="80"></td>
     </tr>
+    <?php if(isset($_REQUEST['act']) and $_REQUEST['act'] == 'ok'): ?><tr>
+        <td colspan="2" class="new"><font color="#0000FF"><?php echo ($mqname); ?></font>，您好<br>
+            <?php if($_REQUEST['cs'] == 1): ?>恭喜您，根据推算，你很可能会有一个&nbsp;<font color="#FF0000"><?php echo ($baby); ?></font>
+            <?php else: ?>
+            您如果想生个<font color="#FF0000"><?php echo ($baby); ?></font>，那么建议您在农历 <font color="#0000FF">今年 :<?php echo ($yuef); ?>&nbsp;&nbsp;明年:<?php echo ($nyuef); ?></font> 怀孕的话机会比较大！<?php endif; ?>
+            <br>
+            <br>
+            <a class="red" href="index.php?g=home&m=yuce&a=index&sm=9">重新测试</a>  </td>
         <?php else: ?>
     <tr>
-        <td align="center" class="new">
-            <img src="./Public/images/gd2.gif" width="160" height="240">
+        <td colspan="2" class="ttd"><font color="#FF0000">*年龄为母亲虚岁年龄，月份指怀孕月份，以农历为准。遇闰月，上半月以上个月份计算，下半月以下个月份计算。</font>
         </td>
-        <td width="50%" align="center" class="new">
-            <?php if($_REQUEST['act'] == ok and $gdlqid == '' ): ?>您刚抽了第&nbsp;<font style="color: #FF0000;FONT-SIZE: 26px;font-weight: bold;">
-                <?php echo ($num); ?></font>&nbsp;签
-                <br><?php endif; ?>
-                <br>
-            <?php if( $gdclicknum < 3 and $gysmile != 4 and $num != ''): ?><a href="index.php?g=home&m=cqczjm&a=index&sm=1&act=ok&gdclicknum=<?php echo ($gdclicknum+1); ?>&gdlqid=<?php echo ($num); ?>" title="首先请您心无杂念，然后点这里开始擲出聖杯">
-                <img src=./Public/images/sign<?php echo ($picnum); ?>.gif width=100 height=77 border=0>
-            </a>
-
-                <br>
-                第<?php echo ($gdclicknum); ?>次
-            <br>需连续掷出三次圣杯，才是灵签！请点上面图标开始掷出圣杯。<?php endif; ?>
-         <br>
-            <?php if( $gdclicknum == 3 and $gysmile != 4 and $num != ''): ?><a href="index.php?g=home&m=cqczjm&a=index&sm=1&act=jq&gdlqid=<?php echo ($num); ?>">
-        <font color=blue>恭喜，您连续掷出了三次圣杯，请点这里察看签词！</font></a><?php endif; ?>
-            <?php if($gysmile == 4): ?><br>
-            <a href="index.php?g=home&m=cqczjm&a=index&sm=1">
-                <font color=red>您掷出笑杯了，此签不准，请点这里重新抽签！</font></a><br><?php endif; ?>
-            <br>
-            <br>
-            <?php if($num == ''and $jieqian == '' ): ?><a href="index.php?g=home&m=cqczjm&a=index&sm=1&act=ok" title="首先请您心无杂念，然后点这里开始抽签">
-                <img src="./Public/images/qian.gif" width="97" height="189" border="0" /></a>
-            <br />
-            <DIV align="left" class="new2">1.抽签前先向关老爷拜三拜，建议您闭着眼睛抽签。<BR>
-                2.默念自己姓名、出生时辰、年龄、现在居住地址。 <BR>
-                3.请求指点事情，如婚姻、事业、运程、流年、工作、财运......等。   <BR>
-                4.点上面的签筒开始抽签。   </DIV>
-            </td>
-        <td class="new" align="center">
-            <img src="./Public/images/gd1.gif" width="160" height="240" border="0" /></td>
-    </tr><?php endif; endif; ?>
+    </tr>
+        <tr>
+        <td colspan="2" class="ttd"><font color="#0000ff">*我要预测宝宝性别：</font>
+        </td>
+    </tr>
+        <form name="theform" method="post" action="">
+        <input type="hidden" name="act" value="ok" />
+        <input type="hidden" name="cs" value="1" /><tr>
+        <td colspan="2" class="ttd">我的芳名叫：
+            <input name="mqname" type="text">&nbsp;,今年芳龄(虚岁)是:
+            <select name="nn" size="1" style="font-size: 9pt">
+                <?php if(is_array($hyyear)): $i = 0; $__LIST__ = $hyyear;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value=<?php echo ($vo); ?>><?php echo ($vo); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+        </select>&nbsp;,怀孕的月份(农历)是:
+                <select name="yue" size="1" style="font-size: 9pt">
+                    <?php if(is_array($months)): $i = 0; $__LIST__ = $months;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value=<?php echo ($vo); ?>><?php echo ($vo); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+        </select>月 &nbsp;
+                <input name="sub" type="submit" value="开始推算">
+        </td></form>
+    </tr> <tr>
+        <td colspan="2" class="ttd"><font color="#0000ff">*我要查询适合怀孕的月份：</font>
+        </td>
+    </tr><form name="theform" method="post" action="">
+        <input type="hidden" name="act" value="ok" />
+        <input type="hidden" name="cs" value="2" /><tr>
+        <td colspan="2" class="new">我的芳名叫：
+            <input name="mqname" type="text">&nbsp;,今年芳龄(虚岁)是:
+            <select name="nn" size="1" style="font-size: 9pt">
+                <?php if(is_array($hyyear)): $i = 0; $__LIST__ = $hyyear;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value=<?php echo ($vo); ?>><?php echo ($vo); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+        </select>&nbsp;,我计划生个:<select name="snsn" size="1" style="font-size: 9pt">
+            <option value="男">小王子</option>
+            <option value="女">小公主</option>
+        </select>
+            &nbsp;
+            <input name="sub" type="submit" value="开始推算">
+        </td></form>
+    </tr><?php endif; ?>
     </tbody>
 </table>
-</div>
+ </div>
 <div id="right" class="layout"></div>
 </div>
 <div id="foot" class="layout"></div>

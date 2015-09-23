@@ -39,5 +39,5 @@ if(isset($_REQUEST['act']) && $_REQUEST['act']=="jq") {
     }
 
 }
-
+$this->display('guanyin');
 ?>

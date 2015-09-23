@@ -17,7 +17,7 @@
        <li class="second_li"><a  href="<?php echo U('home/ctsm/scbz');?>">生辰八字</a></li>
        <li class="second_li"><a  href="<?php echo U('home/ctsm/bzcs');?>">八字测算</a></li>
        <li class="second_li"><a  href="<?php echo U('home/ctsm/rglm');?>">日干论命</a></li>
-       <li class="second_li"><a  href="<?php echo U('home/ctsm/cglm');?>"> 称骨论命</a></li>
+       <li class="second_li"><a  href="<?php echo U('home/ctsm/cglm');?>">称骨论命</a></li>
        <li class="second_li"><a  href="<?php echo U('home/ctsm/xmcs');?>">姓名测试</a></li>
        <li class="second_li"><a  href="<?php echo U('home/ctsm/xmpd');?>">姓命配对</a></li>
        <li class="second_li"><a  href="<?php echo U('home/ctsm/sbwr');?>">上辈为人</a></li>
@@ -73,7 +73,7 @@
 </ul>
 <ul>
    <div id="div5"  class="menu" >
-    <li class="main_li">民俗预测</li>
+    <li class="main_li"><a href=" <?php echo U('home/yuce/index');?>">民俗预测</a></li>
    <div id="div_li5">
        <li class="second_li">耳鸣</li>
        <li class="second_li">面热</li>
@@ -89,69 +89,80 @@
       </div>
   </ul></div>
 <div id="mid" class="layout">
-<SCRIPT language=javascript>
-    <!--
-    function Check(theForm)
-    {
-        var name1 = theForm.name1.value;
-        if (name1 == "")
-        {
-            alert("请输入您的姓名！");
-            theForm.name1.value="";
-            theForm.name1.focus();
-            return false;
-        }
-        if (name1.search(/[`1234567890-=\~!@#$%^&*()_+|<>;':",.?/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz]/) != -1)
-        {
-            alert("请务必输入简体汉字！");
-            theForm.name1.value = "";
-            theForm.name1.focus();
-            return false;
-        }
-        var name2 = theForm.name2.value;
-        if (name2 == "")
-        {
-            alert("请输入您爱人的名字！");
-            theForm.name2.value="";
-            theForm.name2.focus();
-            return false;
-        }
-        if (name2.search(/[`1234567890-=\~!@#$%^&*()_+|<>;':",.?/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz]/) != -1)
-        {
-            alert("请务必输入简体汉字！");
-            theForm.name2.value = "";
-            theForm.name2.focus();
-            return false;
-        }
-
-    }
-
-    //-->
-</SCRIPT>
-
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b1" style="table-layout:fixed;word-wrap:break-word;">
-    <tbody><tr>
-        <td width="79%" class="ttd"><span class="red">姓名配对关系提示:</span><br>
-            姓名当中究竟隐藏了多少奥秘，可能至今也没有人能完全说破，这里有个趣味游戏，通过姓名笔划数看看你和爱人的关系究竟怎样——</td>
-        <td width="21%" class="ttd"><img src="./Public/images/pd_name.jpg" width="139" height="104"></td>
-    </tr>
-    <form name="form1" onSubmit="return Check(this)" method="post" action="">
-        <input type="hidden" name="act" value="ok" />
-        <tr>
-            <td colspan="2" class="new">
-                请输入您的姓名：
-                <input name="name1" type="text" id="name1" size="20" onKeyUp="value=value.replace(/[^\u4E00-\u9FA5]/g,'')" maxLength="4">
-                请输入您爱人的名字:
-                <input name="name2" type="text" id="name2" size="20" onKeyUp="value=value.replace(/[^\u4E00-\u9FA5]/g,'')" maxLength="4">
-                <input type="submit" name="Submit1" value="开始测试" style="cursor:hand;"></form></td>
-    </tr>
-    <?php if(isset($_REQUEST['act']) and $_REQUEST['act'] == 'ok'): ?><tr bgcolor="#EFF8FE">
-        <td class="new" colspan="2" valign="middle">
-            <br>双方姓名：<font color=blue><?php echo ($strname1); ?>&nbsp;<?php echo ($strname2); ?> </font><br><br>
-            <font color=cc6600>关系揭密：</font><?php echo ($intro); ?><font color=red>(仅供娱乐)</font><br><br>
+    <tbody>
+<?php if($jieqian != ''): ?><tr>
+        <td align="center" class="new">
+            <img src="./Public/images/gy/<?php echo ($gyqid); ?>.gif">
+            <br>
+            <hr>
         </td>
+    </tr>
+    <tr>
+        <td class="new">
+            观音解签：<?php echo ($jieqian); ?>
+            <br>
+            <br>
+            <A href="index.php?g=home&m=cqczjm&a=index&sm=2">
+                <font color=red>
+                    点击这里返回抽签首页！</font>
+            </A>
+        </td>
+    </tr>
+   <?php else: ?>
+    <tr>
+        <td align="center" class="new">
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="152" height="240">
+                <param name="movie" value="./Public/images/gy.swf" />
+                <param name="quality" value="high" />
+                <embed src="./Public/images/gy.swf" quality="high" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="152" height="240">
+                </embed>
+            </object>
+        </td>
+        <td width="50%" align="center" class="new">
+              <?php if($_REQUEST['act'] == ok and $jieqian == ''): ?>您刚抽了第&nbsp;<font style="color: #FF0000;FONT-SIZE: 26px;font-weight: bold;">
+            <?php echo ($num); ?></font>
+            &nbsp;签<br>
+            <br><?php endif; ?>
+                      <?php if( $gyclicknum < 3 and $gysmile != 4 and $num != '' and $jieqian == ''): ?><a href="index.php?g=home&m=cqczjm&a=index&sm=2&act=ok&gyclicknum=<?php echo ($gyclicknum+1); ?>&gyqid=<?php echo ($num); ?>" title="首先请您心无杂念，然后点这里开始擲出聖杯">
+                <img src=./Public/images/sign<?php echo ($picnum); ?>.gif width=100 height=77 border=0>
+            </a>
+            <br>
+                          第<?php echo ($gyclicknum); ?>次
+            <br>
+            需连续掷出三次圣杯，才是灵签！请点上面图标开始掷出圣杯<?php endif; ?>
+            <br>
+                   <?php if( $gyclicknum == 3 and $gysmile != 4 and $jieqian == ''): ?><a href="index.php?g=home&m=cqczjm&a=index&sm=2&act=jq&gyqid=<?php echo ($num); ?>">
+            <font color=blue>
+                恭喜，您连续掷出了三次圣杯，请点这里察看签词！</font>
+        </a>
+
+            需连续掷出三次圣杯，才是灵签！<?php endif; ?>
+              <?php if($gysmile == 4): ?><a href=/index.php?g=home&m=cqczjm&a=index&sm=2">
+                <font color=red>
+                    您掷出笑杯了，此签不准，请点这里重新抽签！</font>
+            </a>
+            <br><?php endif; ?>
+             <?php if($num == ''and $jieqian == '' ): ?><br>
+            <a href="index.php?g=home&m=cqczjm&a=index&sm=2&act=ok" title="首先请您心无杂念，然后点这里开始抽签">
+                <img src="./Public/images/qian.gif" width="97" height="189" border="0" />
+            </a>
+            <DIV align="left" class="new2">
+                1.抽签前先合手默念“救苦救难 观音菩萨”三遍。
+                <br />
+                2.默念自己姓名，出生时辰，年龄，现在居住地址。<br />
+                3.请求指点事情，如婚姻、事业、运程、流年、工作、财运......等。
+                <br />
+                4.点上面的签筒开始抽签！</DIV>
+
+       </td>
+
+        <td class="new" align="center">
+            <img src="./Public/images/guanyin.jpg" width="145" height="240" border="0" />
+        </td><?php endif; ?>
     </tr><?php endif; ?>
     </tbody>
+
 </table>
 </div>
 <div id="right" class="layout"></div>

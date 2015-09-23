@@ -228,7 +228,7 @@ class SxxzxxAction extends Action{
              unset($update_xz);
          }
 
-         include_once(APP_PATH.'Common/' . $inc_file);
+         include_once(APP_PATH.'Common/xzyc/' . $inc_file);
 
      } else {
          break;
