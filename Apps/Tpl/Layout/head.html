@@ -5,28 +5,23 @@
 <div style="float:left;margin: 10px">
     <table id="top_menu_table" style="font-family: 楷体 " >
         <tr>
-            <td style="background-color: transparent ; border: none ">公历:{$_SESSION[jinrihuangli]['gongli']}&nbsp</td>
-            <td style="background-color: transparent ; border: none">农历:{$_SESSION[jinrihuangli]['nongli']}&nbsp</td>
+            <td style="background-color: transparent ; border: none ">公历:{$_SESSION[jinrihuangli]['gongli']}&nbsp农历:{$_SESSION[jinrihuangli]['nongli']}&nbsp</td>
+            <td style="background-color: transparent ; border: none">{$_SESSION[jinrihuangli]['suici']}&nbsp</td>
         </tr>
     <tr>
         <td class="green" style="background-color: transparent ; border: none;"  >宜:{$_SESSION[jinrihuangli]['yi']}&nbsp</td>
-        <td style="background-color: transparent ; border: none">{$_SESSION[jinrihuangli]['suici']}&nbsp</td>
+        <td class="red"style="background-color: transparent ; border: none" >忌:{$_SESSION[jinrihuangli]['ji']}&nbsp</td>
     </tr>
         <tr>
-            <td class="red"style="background-color: transparent ; border: none" >忌:{$_SESSION[jinrihuangli]['ji']}&nbsp</td>
-            <td style="border: none"><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=120286418&site=qq&menu=yes">
-                <img border="0" src="http://wpa.qq.com/pa?p=2:120286418:51" alt="联系站长" title="联系站长" style="border: none"/>
-            </a></td>
-            </td>
-        </tr>
-        <tr>
             <td class="red"style="background-color: transparent ; border: none">冲:{$_SESSION[jinrihuangli]['cong']}&nbsp</td>
-
             <td class="red"style="background-color: transparent ; border: none">
                 <A href="javascript:" class="red" onClick="window.external.AddFavorite('http://www.zhidianmijin.com','免费算命')">
                     [<u class="red">将【本站】在线算命加入收藏夹！</u>]</A>
             </td>
-            </td>
+
+        </tr>
+        <tr>
+
 
         </tr>
 

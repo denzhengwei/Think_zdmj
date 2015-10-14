@@ -1,9 +1,7 @@
 <?php
 class SxxzxxAction extends Action{
-
     /*生肖/星座/血型主页  */
     public function index(){
-
         /* 如果已经写过资料 */
        $xing=$_SESSION['xing'];//姓名，年月日
        $ming=$_SESSION['ming'];
@@ -14,7 +12,8 @@ class SxxzxxAction extends Action{
        $sx=sx(nian1, $yue1, $ri1);//获取属性
        $this->assign('sx',$sx)->assign("xuexing",$xuexing);
        $myxz=Constellation($nian1."-".$yue1."-".$ri1);//日期计算星座
-       $this->assign('xing',$xing)->assign('ming',$ming)->assign('nian1',$nian1) ->assign('yue1',$yue1)->assign('ri1',$ri1)->assign('myxz',$myxz);
+       $this->assign('xing',$xing)->assign('ming',$ming)->assign('nian1',$nian1)
+        ->assign('yue1',$yue1)->assign('ri1',$ri1)->assign('myxz',$myxz);
         /* 年 */
         $year = getYear ();
         $years = array ();
@@ -37,7 +36,7 @@ class SxxzxxAction extends Action{
         if (isset($_POST['y'])){
             $myxz1=Constellation($_POST['y']."-".$_POST['m']."-".$_POST['d']);
             $this->assign("myxz1",$myxz1);
-              $user=M("xzysday");//将提交查询的星座带入星座运程方法中。
+            $user=M("xzysday");//将提交查询的星座带入星座运程方法中。
          $rs=$user->where(array('xzmc'=>$myxz1))->select();
          $xz=$rs[0]['id'];
          $this->assign("xz",$xz);
@@ -85,7 +84,6 @@ class SxxzxxAction extends Action{
             $this->display('content');
             return ;
     }
-
     $this->display();
  }
  /* 星座保健页面到星座5大建议页面 */
@@ -153,7 +151,6 @@ class SxxzxxAction extends Action{
 
    }
      $this->display();
-
  }
  public function xzyc(){
      global $astroInfo;

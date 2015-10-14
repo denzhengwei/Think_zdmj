@@ -235,9 +235,9 @@ class CtsmAction extends Action
         $this->assign('yue1',get_yue());//公历月
         $this->assign('ri1',get_ri());//公里日
         $this->assign('hh1',get_hh());//小时
-        $this->assign('xing1',mb_substr(get_xing(),0,1,'utf-8'));//姓名第一个字
-        $this->assign('ming1',mb_substr(get_ming(),1,1,'utf-8'));//姓名第二个字
-        $this->assign('xing2',mb_substr(get_xing(),0,1,'utf-8'));//名第一个字
+        $this->assign('xing1',mb_substr(get_xing(),0,1,'utf-8'));//姓第一个字
+        $this->assign('ming1',mb_substr(get_ming(),0,1,'utf-8'));//名第一个字
+        $this->assign('xing2',mb_substr(get_xing(),1,1,'utf-8'));//姓第二个字
         $this->assign('ming2',mb_substr(get_ming(),1,1,'utf-8'));//名第二个字
         $caltime= caltime();//设置时间格式，获取时间戳；
         $nonglist= hhcal($caltime);//获取农历数据

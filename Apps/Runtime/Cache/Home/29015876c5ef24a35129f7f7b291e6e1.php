@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>index</title>
+<title>1</title>
 <link rel="stylesheet" type="text/css" href="__ROOT__/Public/css/css.css" />
   <script src="__ROOT__/Public/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
   <script src="__ROOT__/Public/js/main.js" type="text/javascript"></script>

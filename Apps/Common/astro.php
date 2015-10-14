@@ -4,7 +4,7 @@ function Constellation($mDate)
 {
     $time = strtotime($mDate);
     if(false===$time) {
-        echo "非日期";
+       // echo "非日期";
         return;
     }
     $a= date("j", $time) - (19 + intval(substr("102123444423", date("n", $time)-1, 1)));
