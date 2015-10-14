@@ -1,1 +1,389 @@
 <layout name="../Layout/mid" />
+<script>
+/*首页菜单的滑行*/
+$(function (){
+$("#top_menu_1").mouseenter(function menu1(){
+if($('#hidval1').val()==0) {
+$('#hidval1').val(1);
+$("#div_li1").show();
+$("#div_li1").css({"color": "#999900"});
+$("#div_li1").animate({
+left: "+=100px",
+height: "+=20px"
+}
+)
+if($('#hidval2').val()==1){
+$("#div_li2").css({"color": "black"});
+$("#div_li2").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval2').val(0);
+
+}
+
+if($('#hidval3').val()==1){
+$("#div_li3").css({"color":"black"});
+$("#div_li3").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval3').val(0);
+}
+if($('#hidval4').val()==1){
+$("#div_li4").css({"color":"black"});
+$("#div_li4").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval4').val(0);
+}
+if($('#hidval5').val()==1){
+$("#div_li5").css({"color":"black"});
+$("#div_li5").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval5').val(0);
+}
+$("#div_li2").hide(500);
+$("#div_li3").hide(500);
+$("#div_li4").hide(500);
+$("#div_li5").hide(500);
+
+
+}
+}
+
+);
+/**/
+$("#top_menu_2").mouseenter(function(){
+if($("#hidval2").val()==0) {
+$("#hidval2").val(1);
+$("#div_li2").show();
+$("#div_li2").css({"color": "#999900"});
+$("#div_li2").animate({
+left: "+=100px",
+height: "+=20px"
+}
+)
+if($('#hidval1').val()==1){
+$("#div_li1").css({"color":"black"});
+$("#div_li1").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval1').val(0);
+}
+
+if($('#hidval3').val()==1){
+$("#div_li3").css({"color":"black"});
+$("#div_li3").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval3').val(0);
+}
+if($('#hidval4').val()==1){
+$("#div_li4").css({"color":"black"});
+$("#div_li4").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval4').val(0);
+}
+if($('#hidval5').val()==1){
+$("#div_li5").css({"color":"black"});
+$("#div_li5").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval5').val(0);
+}
+$("#div_li1").hide(500);
+$("#div_li3").hide(500);
+$("#div_li4").hide(500);
+$("#div_li5").hide(500);
+
+}
+}
+)
+/**/
+$("#top_menu_3").mouseenter(function(){
+if($('#hidval3').val()==0) {
+$('#hidval3').val(1);
+$("#div_li3").show();
+$("#div_li3").css({"color": "#999900"});
+$("#div_li3").animate({
+left: "+=100px",
+height: "+=20px"
+}
+)
+if($('#hidval1').val()==1){
+$("#div_li1").css({"color":"black"});
+$("#div_li1").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval3').val(0);
+}
+if($('#hidval2').val()==1){
+$("#div_li2").css({"color": "black"});
+$("#div_li2").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval2').val(0);
+
+}
+
+
+if($('#hidval4').val()==1){
+$("#div_li4").css({"color":"black"});
+$("#div_li4").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval4').val(0);
+}
+if($('#hidval5').val()==1){
+$("#div_li5").css({"color":"black"});
+$("#div_li5").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval5').val(0);
+}
+$("#div_li1").hide(500);
+$("#div_li2").hide(500);
+$("#div_li4").hide(500);
+$("#div_li5").hide(500);
+
+}
+}
+)
+/**/
+$("#top_menu_4").mouseenter(function(){
+if($('#hidval4').val()==0) {
+$('#hidval4').val(1);
+$("#div_li4").show();
+$("#div_li4").css({"color": "#999900"});
+$("#div_li4").animate({
+left: "+=100px",
+height: "+=20px"
+}
+)
+if($('#hidval1').val()==1){
+$("#div_li1").css({"color":"black"});
+$("#div_li1").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval1').val(0);
+}
+if($('#hidval2').val()==1){
+$("#div_li2").css({"color": "black"});
+$("#div_li2").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval2').val(0);
+
+}
+
+if($('#hidval3').val()==1){
+$("#div_li3").css({"color":"black"});
+$("#div_li3").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval3').val(0);
+}
+
+if($('#hidval5').val()==1){
+$("#div_li5").css({"color":"black"});
+$("#div_li5").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval5').val(0);
+}
+$("#div_li1").hide(500);
+$("#div_li2").hide(500);
+$("#div_li3").hide(500);
+$("#div_li5").hide(500);
+
+}
+}
+)
+/**/
+$("#top_menu_5").mouseenter(function(){
+if($('#hidval5').val()==0) {
+$('#hidval5').val(1);
+$("#div_li5").show();
+$("#div_li5").css({"color": "#999900"});
+$("#div_li5").animate({
+left: "+=100px",
+height: "+=20px"
+}
+)
+if($('#hidval1').val()==1){
+$("#div_li1").css({"color":"black"});
+$("#div_li1").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval1').val(0);
+}
+if($('#hidval2').val()==1){
+$("#div_li2").css({"color": "black"});
+$("#div_li2").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval2').val(0);
+
+}
+
+if($('#hidval3').val()==1){
+$("#div_li3").css({"color":"black"});
+$("#div_li3").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval3').val(0);
+}
+if($('#hidval4').val()==1){
+$("#div_li4").css({"color":"black"});
+$("#div_li4").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval4').val(0);
+}
+
+$("#div_li1").hide(500);
+$("#div_li2").hide(500);
+$("#div_li3").hide(500);
+$("#div_li4").hide(500);
+
+}
+}
+)
+/**/
+$("#top_menu_x").mouseenter(function(){
+if($('#hidval5').val()==0) {
+$('#hidval5').val(1);
+$("#div_li5").show();
+$("#div_li5").css({"color": "#999900"});
+$("#div_li5").animate({
+left: "+=100px",
+height: "+=20px"
+}
+)
+$("#left_hdjr").css({"color":"red","border":"1px"});
+if($('#hidval1').val()==1){
+$("#div_li1").css({"color":"black"});
+$("#div_li1").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval1').val(0);
+}
+if($('#hidval2').val()==1){
+$("#div_li2").css({"color": "black"});
+$("#div_li2").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval2').val(0);
+
+}
+
+if($('#hidval3').val()==1){
+$("#div_li3").css({"color":"black"});
+$("#div_li3").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval3').val(0);
+}
+if($('#hidval4').val()==1){
+$("#div_li4").css({"color":"black"});
+$("#div_li4").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval4').val(0);
+}
+
+$("#div_li1").hide(500);
+$("#div_li2").hide(500);
+$("#div_li3").hide(500);
+$("#div_li4").hide(500);
+
+}
+}
+)
+
+/**/
+$("#top_menu_main").mouseenter(function(){
+if($('#hidval1').val()==1){
+$("#div_li1").css({"color":"black"});
+$("#div_li1").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval1').val(0);
+}
+if($('#hidval2').val()==1){
+$("#div_li2").css({"color": "black"});
+$("#div_li2").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval2').val(0);
+
+}
+
+if($('#hidval3').val()==1){
+$("#div_li3").css({"color":"black"});
+$("#div_li3").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval3').val(0);
+}
+if($('#hidval4').val()==1){
+$("#div_li4").css({"color":"black"});
+$("#div_li4").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval4').val(0);
+}
+if($('#hidval5').val()==1){
+$("#div_li5").css({"color":"black"});
+$("#div_li5").animate({
+left: "-=100px",
+height: "-=20px"
+});
+$('#hidval5').val(0);
+}
+$("#div_li1").show();
+$("#div_li2").show();
+$("#div_li3").show();
+$("#div_li4").show();
+$("#div_li5").show();
+})
+}
+)
+</script>
+<p style="padding: 0px;margin: 0px"><h3 style="color: #991F1F;margin: 0px;padding: 0">免费在线算命测算项目：</h3>
+  <span class="green" style="font-size: 15px"> 本站目前可以进行：姓名测试、姓氏起源、周公解梦、号码吉凶分析、每日运程、今日命理、今日运程、本周运程、
+      本月运程、本年运程、心理测试、婚姻试配、属相配对、事业测试、爱情测试、财运测试、观音灵签（观音神签）、
+      吕祖灵签、诸葛神算（诸葛神签、诸葛灵签）、关公灵签、黄历查询、EQ测试、个性、人际关系、
+      特性、性格、优缺点、心智、休闲、大师点拨、小建议、在线抽签、生日密码、
+      身体保健、血型属相、血型特性、星座运程、星座名人、星座分析、生男生女、指纹测算、八字分析、称骨论命、上辈为人、
+      星相命理、八字排盘、眼跳预测、耳鸣预测、面热预测、喷嚏预测、心惊预测等与您命运休戚相关的内容。</p></span>
+ <p align="center" style="margin: 0px;padding: 0px"><img src="./public/images/bg/bagua.png" width="40%"></p>

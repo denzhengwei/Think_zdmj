@@ -1,6 +1,7 @@
 <?php
 class YuceAction extends Action{
     public function index(){
+
         $_REQUEST['sm'] = isset($_REQUEST['sm']) ? (int)$_REQUEST['sm'] : 0;
         switch ($_REQUEST['sm']) {
             case 1:

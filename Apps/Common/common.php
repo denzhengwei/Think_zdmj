@@ -3,8 +3,29 @@ header('Content-Type: text/html;charset=utf-8');
 include_once dirname(__FILE__) . '/bz.php';//八字定义
 include_once dirname(__FILE__) . '/function.php';//未修改的方法
 include_once dirname(__FILE__) . '/astro.php';//星座的方法
+/* 把今日的黄历写进session */
+function jinrihuangli(){
+    if($_SESSION[jinrihuangli]=='' || $_SESSION[jinrihuangli][gongli]!=Date('Y-m-d') ){
+        $time=Date('Y-m-d');
+        $user=M('hdrl');
+        $rs=$user->where(array('gn'=>$time))->select();
+        $rs=$rs[0];
+        $_SESSION[jinrihuangli]=array();
+        $_SESSION[jinrihuangli]['gongli']=mb_substr($rs['gn'],0,10);//公历
+        $_SESSION[jinrihuangli]['nongli']=$rs['nn'];//农历
+        $_SESSION[jinrihuangli]['yi']=$rs['yi'];//宜
+        $_SESSION[jinrihuangli]['ji']=$rs['ji'];//忌
+        $_SESSION[jinrihuangli]['cong']=$rs['cong'];//冲
+        $_SESSION[jinrihuangli]['suici']=$rs['suici'];//岁词
+    }
 
+}
 global $a;
+function mokuai(){
+    $mokuai=__URL__;
+    $str=explode("/",$mokuai);
+    return $str[2];
+}
 /*活取现在年份  */
 function getYear ()
 {

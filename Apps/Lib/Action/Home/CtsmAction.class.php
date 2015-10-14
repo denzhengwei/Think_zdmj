@@ -4,6 +4,7 @@ class CtsmAction extends Action
 {
     /* 传统算命首页 */
     public function index () {
+
         /* 年 */
         $year = getYear ();
         $years = array ();
@@ -79,8 +80,8 @@ class CtsmAction extends Action
             $this->assign('ri1',get_ri());//公里日
             $this->assign('hh1',get_hh());//小时
             $this->assign('xing1',mb_substr(get_xing(),0,1,'utf-8'));//姓名第一个字
-            $this->assign('ming1',mb_substr(get_ming(),1,1,'utf-8'));//姓名第二个字
-            $this->assign('xing2',mb_substr(get_xing(),0,1,'utf-8'));//名第一个字
+            $this->assign('ming1',mb_substr(get_ming(),0,1,'utf-8'));//姓名第二个字
+            $this->assign('xing2',mb_substr(get_xing(),1,1,'utf-8'));//名第一个字
             $this->assign('ming2',mb_substr(get_ming(),1,1,'utf-8'));//名第二个字
             $caltime= caltime();//设置时间格式，获取时间戳；
             $nonglist= hhcal($caltime);//获取农历数据
@@ -192,7 +193,7 @@ class CtsmAction extends Action
            $this->display();
         }
         else {
-            $this->success('算命人资料填写不完整！，将跳转到主页', 'index.php?g=home&m=ctsm&a=index');
+            $this->success('算命人资料填写不完整，请填写完整后进入！将跳转到主页', 'index.php?g=home&m=ctsm&a=index');
         }
 
 
@@ -224,7 +225,7 @@ class CtsmAction extends Action
       $this->display('');
     }
       else{
-       $this->success('算命人资料填写不完整！，将跳转到主页', 'index.php?g=home&m=ctsm&a=index');
+       $this->success('算命人资料填写不完整，请填写完整后进入！将跳转到主页', 'index.php?g=home&m=ctsm&a=index');
       }
 }
     /* 日干论命页面 */
@@ -329,7 +330,7 @@ class CtsmAction extends Action
         $this->display('');
         }
         else{
-            $this->success('算命人资料填写不完整！，将跳转到主页', 'index.php?g=home&m=ctsm&a=index');
+            $this->success('算命人资料填写不完整，请填写完整后进入！将跳转到主页', 'index.php?g=home&m=ctsm&a=index');
         }
     }
 
@@ -351,7 +352,7 @@ class CtsmAction extends Action
         $this->assign('intro',$cglm[2]);//结果2
      $this->display('');
         }else{
-            $this->success('算命人资料填写不完整！，将跳转到主页', 'index.php?g=home&m=ctsm&a=index');
+         $this->success('算命人资料填写不完整，请填写完整后进入！将跳转到主页', 'index.php?g=home&m=ctsm&a=index');
         }
     }
     /* 姓名测试页面 */
@@ -474,7 +475,7 @@ class CtsmAction extends Action
 
   $this->display("");
        }else{
-           $this->success('算命人资料填写不完整！，将跳转到主页', 'index.php?g=home&m=ctsm&a=index');
+            $this->success('算命人资料填写不完整，请填写完整后进入！将跳转到主页', 'index.php?g=home&m=ctsm&a=index');
        }
 
     }
@@ -837,7 +838,7 @@ else {
 }
         }
         else{
-            $this->success('算命人资料填写不完整！，将跳转到主页', 'index.php?g=home&m=ctsm&a=index');
+            $this->success('算命人资料填写不完整，请填写完整后进入！将跳转到主页', 'index.php?g=home&m=ctsm&a=index');
         }
     }
     /* 姓氏起源页面 */

@@ -2,6 +2,7 @@
 header('Content-Type: text/html;charset=utf-8');
 class CqczjmAction extends Action{
 public function Index(){
+
 $_REQUEST['sm'] = isset($_REQUEST['sm']) ? (int)$_REQUEST['sm'] : 0;
 switch ((int)$_REQUEST['sm']) {
     case 1:

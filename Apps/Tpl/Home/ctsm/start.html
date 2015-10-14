@@ -1,6 +1,22 @@
 <layout name="../Layout/mid" />
 <p>{$message}</p>
+
+<p>姓：{$_SESSION ['xing']}</p>
+<p>名：{$_SESSION ['ming']}</p>
+<p>出生日期：{$_SESSION ['nian']}年{$_SESSION ['yue']}月{$_SESSION ['ri']}日{$_SESSION ['hh']}时</p>
+<table id="start_ctsm">
+    <tr><td><a  href="{:U('home/ctsm/scbz')}">生辰八字</a></td>
+    <td><a  href="{:U('home/ctsm/bzcs')}">八字测算</a></td>
+    <td><a  href="{:U('home/ctsm/rglm')}">日干论命</a></td>
+    <td><a  href="{:U('home/ctsm/cglm')}">称骨论命</a></td>
+    <td><a  href="{:U('home/ctsm/xmcs')}">姓名测试</a></td>
+    <td><a  href="{:U('home/ctsm/xmpd')}">姓命配对</a></td>
+    <td><a  href="{:U('home/ctsm/sbwr')}">上辈为人</a></td>
+    <td><a  href="{:U('home/ctsm/xsqy')}">姓氏起源</a></td>
+    </tr>
+</table>
 <form action="" method="post">
     <input type="hidden" name="restart" value="1">
-    <input type="submit" value="重新算命">
+    <input type="submit" value="(换人)重新算命">
 </form>
+<p align="center"><img src="./public/images/bg/bagua.png" width="40%"></p>

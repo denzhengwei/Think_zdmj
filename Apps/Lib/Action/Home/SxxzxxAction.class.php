@@ -3,6 +3,7 @@ class SxxzxxAction extends Action{
 
     /*生肖/星座/血型主页  */
     public function index(){
+
         /* 如果已经写过资料 */
        $xing=$_SESSION['xing'];//姓名，年月日
        $ming=$_SESSION['ming'];

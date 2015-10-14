@@ -8,12 +8,23 @@
     <script src="__ROOT__/Public/js/main.js" type="text/javascript"></script>
 </head>
 <body id="body">
-<div id="head" class="layout"></div>
+<div id="head" class="layout">
+<iframe allowtransparency="true" frameborder="0" width="290" height="80" scrolling="no" src="http://tianqi.2345.com/plugin/widget/index.htm?s=1&z=1&t=0&v=0&d=2&bd=0&k=&f=&q=1&e=1&a=1&c=54511&w=290&h=96&align=center">
+</iframe>
+</div>
+<div id="topmenu" class="layout"><table id="top_menu">
+    <tr>
+        <td class="top"><a href="<?php echo U('home/index/index');?>">网站首页</a></td>
+        <td class="top"><a href="<?php echo U('home/ctsm/index');?>">传统算命</a></td>
+        <td class="top" ><a href="<?php echo U('home/sxxzxx/index');?>"> 生肖/星座/血型</a></td>
+        <td class="top"><a href="<?php echo U('home/cqczjm/index');?>" >抽签/测字/解梦</a></td>
+        <td class="top"><a href="<?php echo U('home/qinglv/index');?>" >恋爱指南</a></td>
+        <td class="top"><a href=" <?php echo U('home/yuce/index');?>">民俗预测</a></td>
+    </tr>
+</table></div>
 <div id="bodydiv" class="layout">
 <div id="left" class="layout">
 <ul> <div id="div1" class="menu">
-    <li class="main_li" ><a href="<?php echo U('home/ctsm/index');?>">传统算命</a></li>
-            <div id="div_li1">
        <li class="second_li"><a  href="<?php echo U('home/ctsm/scbz');?>">生辰八字</a></li>
        <li class="second_li"><a  href="<?php echo U('home/ctsm/bzcs');?>">八字测算</a></li>
        <li class="second_li"><a  href="<?php echo U('home/ctsm/rglm');?>">日干论命</a></li>
@@ -23,11 +34,8 @@
        <li class="second_li"><a  href="<?php echo U('home/ctsm/sbwr');?>">上辈为人</a></li>
        <li class="second_li"><a  href="<?php echo U('home/ctsm/xsqy');?>">姓氏起源</a></li>
    </div>
-   </div>
 </ul>
 <ul>
-   <div id="div2"  class="menu">
-    <li class="main_li"><a href="<?php echo U('home/sxxzxx/index');?>"> 生肖/星座/血型</a></li>
    <div id="div_li2">
        <li class="second_li"><a href="index.php?g=home&m=sxxzxx&a=other&str=bj">星座保健</a></li>
        <li class="second_li"><a href="index.php?g=home&m=sxxzxx&a=other&str=eq">星座EQ</a></li>
@@ -38,11 +46,7 @@
        <li class="second_li"><a href="index.php?g=home&m=sxxzxx&a=other&str=jy">星座5大建议</a></li>
        <li class="second_li"><a href="<?php echo U('home/sxxzxx/xzyc');?>">星座运程</a></li>
       </div>
-      </div>
 </ul>
-<ul>
-       <div id="div3"  class="menu">
-    <li class="main_li"><a href="<?php echo U('home/cqczjm/index');?>" >抽签/测字/解梦</a></li>
     <div id="div_li3" >
        <li class="second_li"><a href="index.php?g=home&m=cqczjm&a=index&sm=1" >关帝神签</a></li>
        <li class="second_li"><a href="index.php?g=home&m=cqczjm&a=index&sm=2" >观音灵签</a></li>
@@ -52,16 +56,8 @@
        <li class="second_li"><a href="index.php?g=home&m=cqczjm&a=index&sm=6" >诸葛神算</a></li>
        <li class="second_li"><a href="index.php?g=home&m=cqczjm&a=index&sm=7" >周公解梦</a></li>
       </div>
-          </div>
 </ul>
 <ul>
-   <div class="menu">
-    <li class="main_li">婚姻系数</li>
-      </div>
-</ul>
-<ul>
-       <div id="div4"  class="menu" >
-    <li class="main_li"><a href="<?php echo U('home/qinglv/index');?>" >恋爱指南</a></li>
    <div id="div_li4">
        <li class="second_li"><a href="index.php?g=home&m=qinglv&a=index&sm=1"> 星座组合</a></li>
        <li class="second_li"><a href="index.php?g=home&m=qinglv&a=index&sm=2">姓名配对</a></li>
@@ -69,13 +65,10 @@
        <li class="second_li"><a href="index.php?g=home&m=qinglv&a=index&sm=4">生肖血型</a></li>
        <li class="second_li"><a href="index.php?g=home&m=qinglv&a=index&sm=5">姓名五格</a></li>
       </div>
-          </div>
 </ul>
 <ul>
-   <div id="div5"  class="menu" >
-    <li class="main_li"><a href=" <?php echo U('home/yuce/index');?>">民俗预测</a></li>
    <div id="div_li5">
-       <li class="second_li"><a href="index.php?g=home&m=yuce&a=index&sm=1" >耳鸣</a</li>
+       <li class="second_li"><a href="index.php?g=home&m=yuce&a=index&sm=1" >耳鸣</a></li>
        <li class="second_li"><a href="index.php?g=home&m=yuce&a=index&sm=2" >面热</a></li>
        <li class="second_li"><a href="index.php?g=home&m=yuce&a=index&sm=3" >面热</a></li>
        <li class="second_li"><a href="index.php?g=home&m=yuce&a=index&sm=4" >眼跳</a></li>
@@ -86,9 +79,8 @@
        <li class="second_li"><a href="index.php?g=home&m=yuce&a=index&sm=9" >生男生女</a></li>
        <li class="second_li"><a href="index.php?g=home&m=yuce&a=index&sm=10" >指纹</a></li>
       </div>
-      </div>
   </ul></div>
-<div id="mid" class="layout">
+<div id="mid" class="layout">nm
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b1" style="table-layout:fixed;word-wrap:break-word;">
     <tbody><tr>
@@ -181,9 +173,9 @@
     </tr><?php endif; ?>
     </tbody>
 </table>
+mmmmmmmmmmmmmmmmmmmmm</div>
+<div id="right" class="layout">rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr</div>
 </div>
-<div id="right" class="layout"></div>
-</div>
-<div id="foot" class="layout"></div>
+<div id="foot" class="layout">ffffffffffffffffffffffffffffffffffffffffff</div>
 </body>
 </html>
