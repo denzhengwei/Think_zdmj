@@ -12,6 +12,7 @@ return array(
         // 调试模式
         'SHOW_PAGE_TRACE' => true,
         'TAG_NESTED_LEVEL' =>5,
+        'TMPL_ACTION_SUCCESS' => APP_PATH.'Tpl/Layout/jump.html',//自定义跳转模板
 
 
 );

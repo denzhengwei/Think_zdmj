@@ -1,10 +1,8 @@
 <?php
-//$content = file_get_contents('http://astro.sina.com.cn/pc/west/frame4_11.html');
-//$content = file_get_contents('frame4_11.html');
-if (isset($update_xz) && ($content = getUrlContent('http://astro.sina.com.cn/pc/west/frame4_'.$update_xz.'.html'))) {
+if (isset($update_xz) &&
+        ($content = getUrlContent('http://vip.astro.sina.com.cn/astro/view/'.$update_xz.'/year_love/'))) {
 preg_match("/<li class=\"date\">有效日期:(.*)<\/li>/i", $content, $dates);
 $yxqx = $dates[1];
-
 $content = str_replace("\n", '', $content);
 $content = str_replace("</div>", "</div>\n", $content);
 preg_match("/<div class=\"lotconts\">(.*)<\/div>/i", $content, $zhpg);
@@ -27,8 +25,9 @@ $data=array(
   ztzk => $ztzk,
   nv  => $nv,
   nan  => $nan,
-        update_date=>$update_xz+1
+        update_date=>$update_date
 );
-$user->where(array('id'=>$update_xz+1))->save();
+$_id=array_search($update_xz, $astroInfoEN)+1;
+$user->where(array('id'=>$_id))->setField($data);
 }
 ?>

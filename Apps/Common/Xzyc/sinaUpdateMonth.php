@@ -1,20 +1,15 @@
 <?php
-
-if (isset($update_xz) && ($content = getUrlContent('http://astro.sina.com.cn/pc/west/frame2_'.$update_xz.'.html'))) {
-
-//echo $content;
+if (isset($update_xz) &&
+        ($content = getUrlContent('http://vip.astro.sina.com.cn/astro/view/'.$update_xz.'/monthly/')))
+{
 preg_match("/<!-- SUDA_CODE_END -->.*<!-- Start  Wrating  -->/si", $content, $match);
-
 preg_match("/<li class=\"date\">有效日期:(.*)<\/li>/i", $content, $dates);
-
 $yxqx = $dates[1];
-
 $match[0] = str_replace("\n", '', $match[0]);
 $match[0] = str_replace("</div>", "\n", $match[0]);
 preg_match_all("/<h4>(.*)<\/h4>(.*)/i", $match[0], $match1);
-
 foreach($match1[1] as $k=>$m) {
-    switch(substr($m, 0, 8)) {
+    switch(mb_substr($m, 0, 4,'utf-8')) {
         case '整体运势':
             $ztzs = substr_count($match1[1][$k], '<img');
 		    $ztys = $match1[2][$k];
@@ -36,9 +31,11 @@ foreach($match1[1] as $k=>$m) {
 
     }
 }
+echo $ztys;
 $user=M('xzysmonth');
 $data=array(
        ztzs=>$ztzs,
+                 yxqx=>$yxqx,
 				 ztys=>$ztys,
 				 aqzs=>$aqzs,
 				 aqys=>$aqys,
@@ -46,9 +43,10 @@ $data=array(
 				 tzys=>$tzys,
 				 jyfs=>$jyfs,
 				 xyw=>$xyw,
-        update_date=>$update_xz+1
+        update_date=>$update_date
 );
-$user->where(array('id'=>$update_xz+1))->save();
+$_id=array_search($update_xz, $astroInfoEN)+1;
+$user->where(array('id'=>$_id))->setField($data);
 
 /* $db->query("update xzysmonth set yxqx =?
                  , ztzs=?

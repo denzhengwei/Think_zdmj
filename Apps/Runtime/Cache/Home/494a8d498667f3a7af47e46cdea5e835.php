@@ -110,28 +110,71 @@
        <li class="second_li"><a href="index.php?g=home&m=yuce&a=index&sm=10" >指纹</a></li>
       </div><?php endif; ?></div>
 <div id="mid" class="layout">
+<SCRIPT language=javascript>
+    <!--
+    function Check(theForm)
+    {
+        var name1 = theForm.name1.value;
+        if (name1 == "")
+        {
+            alert("请输入您的姓名！");
+            theForm.name1.value="";
+            theForm.name1.focus();
+            return false;
+        }
+        if (name1.search(/[`1234567890-=\~!@#$%^&*()_+|<>;':",.?/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz]/) != -1)
+        {
+            alert("请务必输入简体汉字！");
+            theForm.name1.value = "";
+            theForm.name1.focus();
+            return false;
+        }
+        var name2 = theForm.name2.value;
+        if (name2 == "")
+        {
+            alert("请输入您爱人的名字！");
+            theForm.name2.value="";
+            theForm.name2.focus();
+            return false;
+        }
+        if (name2.search(/[`1234567890-=\~!@#$%^&*()_+|<>;':",.?/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz]/) != -1)
+        {
+            alert("请务必输入简体汉字！");
+            theForm.name2.value = "";
+            theForm.name2.focus();
+            return false;
+        }
+
+    }
+
+    //-->
+</SCRIPT>
+
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b1" style="table-layout:fixed;word-wrap:break-word;">
-    <TBODY>
-    <tr>
-        <TD class=new style="PADDING-BOTTOM: 8px" vAlign=top><p>
-            袁天罡称骨算命</p>
-            <p><?php echo ($cf); ?><span style="PADDING-BOTTOM: 1px"><?php echo ($xing); echo ($ming); ?></span>,根据您的生辰八字,经过测算，您的骨重为：<span class="red"><?php echo ($weight); ?></span> 两 命书如下(仅供参考)：</p>
-            <hr>
-            <div align="center" style="font-size:16px; font-weight:bold; color:#FF0000; line-height:40px">
-                <?php echo ($chenggucontent); ?>
-            </div>
-            <hr>
-            命书解释：<br>
-            <br> <font color="#0000FF">
-                <?php echo ($intro); ?></font><br>
-
-
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-
+    <tbody><tr>
+        <td width="79%" class="ttd"><span class="red">姓名配对关系提示:</span><br>
+            姓名当中究竟隐藏了多少奥秘，可能至今也没有人能完全说破，这里有个趣味游戏，通过姓名笔划数看看你和爱人的关系究竟怎样——</td>
+        <td width="21%" class="ttd"><img src="./Public/images/pd_name.jpg" width="139" height="104"></td>
     </tr>
-    </TBODY>
-</TABLE></div>
+    <form name="form1" onSubmit="return Check(this)" method="post" action="">
+        <input type="hidden" name="act" value="ok" />
+        <tr>
+            <td colspan="2" class="new">
+                请输入您的姓名：
+                <input name="name1" type="text" id="name1" size="20" onKeyUp="value=value.replace(/[^\u4E00-\u9FA5]/g,'')" maxLength="4">
+                请输入您爱人的名字:
+                <input name="name2" type="text" id="name2" size="20" onKeyUp="value=value.replace(/[^\u4E00-\u9FA5]/g,'')" maxLength="4">
+                <input type="submit" name="Submit1" value="开始测试" style="cursor:hand;"></form></td>
+    </tr>
+    <?php if(isset($_REQUEST['act']) and $_REQUEST['act'] == 'ok'): ?><tr bgcolor="#EFF8FE">
+        <td class="new" colspan="2" valign="middle">
+            <br>双方姓名：<font color=blue><?php echo ($strname1); ?>&nbsp;<?php echo ($strname2); ?> </font><br><br>
+            <font color=cc6600>关系揭密：</font><?php echo ($intro); ?><font color=red>(仅供娱乐)</font><br><br>
+        </td>
+    </tr><?php endif; ?>
+    </tbody>
+</table>
+</div>
 <div id="right" class="layout"></div>
 </div>
 <div id="foot" class="layout">

@@ -2,9 +2,70 @@
 header('Content-Type: text/html;charset=utf-8');
 class CtsmAction extends Action
 {
-    /* 传统算命首页 */
-    public function index () {
+  /*资料检查判断  */
+    public function check(){
 
+            /* 检验资料 */
+            if($_POST ['xing']==''){
+                $error_message="【姓】不能为空！";
+                $check_status=false;
+            }
+            elseif(!preg_match("/^[\x{4e00}-\x{9fa5}]+$/u",$_POST ['xing'])){
+                $error_message="请输入中文【姓】！";
+                $check_status=false;
+            }
+            elseif (mb_strlen($_POST ['xing'],'UTF8')>2 ){
+                $error_message="【姓】最多为2个字！";
+                $check_status=false;
+            }
+            elseif($_POST ['ming']==''){
+                $error_message="【名】不能为空！";
+                $check_status=false;
+            }
+            elseif(!preg_match("/^[\x{4e00}-\x{9fa5}]+$/u",$_POST ['xing'])){
+                $error_message="请输入中文【名】！";
+                $check_status=false;
+            }
+            elseif (mb_strlen($_POST ['ming'],'UTF8')>2 ){
+                $error_message="【名】最多为2个字！";
+                $check_status=false;
+            }
+            elseif ($_POST['xingbie']==''){
+                $error_message="请选择【性别】！";
+                $check_status=false;
+            }
+            elseif ($_POST['xuexing']==''){
+                $error_message="请选择【血型】！";
+                $check_status=false;
+            }
+            else {
+                $error_message="操作成功";
+                $check_status=true;
+            }
+
+
+           // $this->assign('error_mesaaage',$error_message);
+
+            if ($check_status===true){
+                /* 把资料的值写到session中  */
+                $_SESSION ['xing'] = $_POST ['xing'] ;
+                $_SESSION ['ming'] =  $_POST ['ming'] ;
+                $_SESSION ['xingbie'] =  $_POST ['xingbie'] ;
+                $_SESSION ['xuexing'] = $_POST ['xuexing'] ;
+                $_SESSION ['nian'] =  $_POST ['nian'];
+                $_SESSION ['yue'] = $_POST ['yue'];
+                $_SESSION ['ri'] = $_POST ['ri'] ;
+                $_SESSION ['hh'] =  $_POST ['hh'];
+                $_SESSION ['mm'] =  $_POST ['mm'];
+            }
+            /* 数据格式变为json  */
+           $error_message= json_encode($error_message);
+            echo $error_message; return;
+
+        }
+
+   /* 传统算命首页 */
+    public function index () {
         /* 年 */
         $year = getYear ();
         $years = array ();
@@ -31,45 +92,28 @@ class CtsmAction extends Action
      $this->assign('_thisYear',$thisYear)->assign('_thisMonth',$thisMonth)->assign('_thisDay',$thisDay);
 
         /*判断是否填写资料  */
-        if (
+     if (
 
-                $_SESSION ['xing'] != ""
-                && $_SESSION ['ming'] != ""
-                && $_SESSION ['xingbie'] != ""
-                && $_SESSION ['nian'] != ""
-                && $_SESSION ['yue'] != ""
-                && $_SESSION ['ri'] != ""
-                && $_SESSION ['hh'] != ""
+             $_SESSION ['xing'] != ""
+             && $_SESSION ['ming'] != ""
+             && $_SESSION ['xingbie'] != ""
+             && $_SESSION ['nian'] != ""
+             && $_SESSION ['yue'] != ""
+             && $_SESSION ['ri'] != ""
+             && $_SESSION ['hh'] != "" ) {
 
-        ) {
+         $_message = "-----算命人的资料--------";
+         $this->assign ( 'message', $_message );
+         /*重新算命，销毁session*/
+         if ($_POST['restart']==1){
+             _restart();
+             echo "<script language=JavaScript> location.replace(location.href);</script>";
+         }
 
-            $_message = "-----算命人的资料--------";
-            $this->assign ( 'message', $_message );
-            /*重新算命，销毁session*/
-                    if ($_POST['restart']==1){
-                _restart();
-                echo "<script language=JavaScript> location.replace(location.href);</script>";
-            }
-            $this->display ( 'start' );
-        } else {
-            /* 把资料的值写到session中  */
-            $_SESSION ['xing'] = $_POST ['xing'] ;
-            $_SESSION ['ming'] =  $_POST ['ming'] ;
-            $_SESSION ['xingbie'] =  $_POST ['xingbie'] ;
-            $_SESSION ['xuexing'] = $_POST ['xuexing'] ;
-            $_SESSION ['nian'] =  $_POST ['nian'];
-            $_SESSION ['yue'] = $_POST ['yue'];
-            $_SESSION ['ri'] = $_POST ['ri'] ;
-            $_SESSION ['hh'] =  $_POST ['hh'];
-            $_SESSION ['mm'] =  $_POST ['mm'];
-            $_message = "-----请完善算命人的资料--------";
-            /* post本页不为空后刷新 */
-            if($_POST!=null){
-                echo "<script language=JavaScript> location.replace(location.href);</script>";
+         $this->display ( 'start' );
+     }
 
-            }
-     $this->display ( '' );
-        }
+        $this->display ( '' );
     }
 
     /* 生辰八字页面 */
@@ -193,7 +237,8 @@ class CtsmAction extends Action
            $this->display();
         }
         else {
-            $this->success('算命人资料填写不完整，请填写完整后进入！将跳转到主页', 'index.php?g=home&m=ctsm&a=index');
+
+           $this->success('算命人资料填写不完整，请填写完整后进入！将跳转到主页', 'index.php?g=home&m=ctsm&a=index',5);
         }
 
 
@@ -225,7 +270,7 @@ class CtsmAction extends Action
       $this->display('');
     }
       else{
-       $this->success('算命人资料填写不完整，请填写完整后进入！将跳转到主页', 'index.php?g=home&m=ctsm&a=index');
+       $this->success('算命人资料填写不完整，请填写完整后进入！将跳转到主页', 'index.php?g=home&m=ctsm&a=index',5);
       }
 }
     /* 日干论命页面 */
@@ -330,7 +375,7 @@ class CtsmAction extends Action
         $this->display('');
         }
         else{
-            $this->success('算命人资料填写不完整，请填写完整后进入！将跳转到主页', 'index.php?g=home&m=ctsm&a=index');
+            $this->success('算命人资料填写不完整，请填写完整后进入！将跳转到主页', 'index.php?g=home&m=ctsm&a=index',5);
         }
     }
 
@@ -352,7 +397,7 @@ class CtsmAction extends Action
         $this->assign('intro',$cglm[2]);//结果2
      $this->display('');
         }else{
-         $this->success('算命人资料填写不完整，请填写完整后进入！将跳转到主页', 'index.php?g=home&m=ctsm&a=index');
+         $this->success('算命人资料填写不完整，请填写完整后进入！将跳转到主页', 'index.php?g=home&m=ctsm&a=index',5);
         }
     }
     /* 姓名测试页面 */
@@ -475,7 +520,7 @@ class CtsmAction extends Action
 
   $this->display("");
        }else{
-            $this->success('算命人资料填写不完整，请填写完整后进入！将跳转到主页', 'index.php?g=home&m=ctsm&a=index');
+            $this->success('算命人资料填写不完整，请填写完整后进入！将跳转到主页', 'index.php?g=home&m=ctsm&a=index',5);
        }
 
     }
@@ -838,7 +883,7 @@ else {
 }
         }
         else{
-            $this->success('算命人资料填写不完整，请填写完整后进入！将跳转到主页', 'index.php?g=home&m=ctsm&a=index');
+            $this->success('算命人资料填写不完整，请填写完整后进入！将跳转到主页', 'index.php?g=home&m=ctsm&a=index',5);
         }
     }
     /* 姓氏起源页面 */

@@ -135,7 +135,7 @@
        <p><?php echo ($title); ?></p><?php echo ($content); ?>
 
     </td>
-    </TBODY></table>/
+    </TBODY></table>
 </div>
 <div id="right" class="layout"></div>
 </div>

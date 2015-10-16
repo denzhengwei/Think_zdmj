@@ -482,3 +482,9 @@ function sx($y,$m,$d){
     $sx = explode('|',$sx);
     return $sx[3];
 }
+global $nowTime;
+/* 标准时间+8中国时间 */
+$nowTime = time() + (800-(int)(date('O')))*36;
+global $tomorrow;
+$_tomorrow = time() +(1 * 24 * 60 * 60);
+$tomorrow=Date('Ymd',$_tomorrow);

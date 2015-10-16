@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>1</title>
+<title>电脑算命</title>
 <link rel="stylesheet" type="text/css" href="__ROOT__/Public/css/css.css" />
   <script src="__ROOT__/Public/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
   <script src="__ROOT__/Public/js/main.js" type="text/javascript"></script>
@@ -51,7 +51,7 @@
 </table>
 <hr/></div>
 <div id="bodydiv" class="layout">
-<div id="left" class="layout"><?php if(mokuai()=='ctsm' || mokuai()=='index' ): ?><div id="div_li1" class="menu" style="position:relative" >
+<div id="left" class="layout"><?php if(mokuai() == 'ctsm' || mokuai() == 'index' ): ?><div id="div_li1" class="menu" style="position:relative" >
     <input id="hidval1" type="hidden" value="0"/>
        <li class="second_li"><a  href="<?php echo U('home/ctsm/scbz');?>">生辰八字</a></li>
        <li class="second_li"><a  href="<?php echo U('home/ctsm/bzcs');?>">八字测算</a></li>
@@ -63,7 +63,7 @@
        <li class="second_li"><a  href="<?php echo U('home/ctsm/xsqy');?>">姓氏起源</a></li>
    </div>
 <hr class="left_hr"align="left"/><?php endif; ?>
-<?php if(mokuai()=='sxxzxx' || mokuai()=='index' ): ?><div id="div_li2" class="menu" >
+<?php if(mokuai() == 'sxxzxx' || mokuai() == 'index' ): ?><div id="div_li2" class="menu" >
        <input id="hidval2" type="hidden" value="0"/>
        <li class="second_li"><a href="index.php?g=home&m=sxxzxx&a=other&str=bj">星座保健</a></li>
        <li class="second_li"><a href="index.php?g=home&m=sxxzxx&a=other&str=eq">星座EQ</a></li>
@@ -75,7 +75,7 @@
        <li class="second_li"><a href="<?php echo U('home/sxxzxx/xzyc');?>">星座运程</a></li>
       </div>
 <hr class="left_hr"align="left"/><?php endif; ?>
-<?php if(mokuai()=='cqczjm' || mokuai()=='index' ): ?><div id="div_li3" class="menu" value="0">
+<?php if(mokuai() == 'cqczjm' || mokuai() == 'index' ): ?><div id="div_li3" class="menu" value="0">
         <input id="hidval3" type="hidden" value="0"/>
        <li class="second_li"><a href="index.php?g=home&m=cqczjm&a=index&sm=1" >关帝神签</a></li>
        <li class="second_li"><a href="index.php?g=home&m=cqczjm&a=index&sm=2" >观音灵签</a></li>
@@ -86,7 +86,7 @@
        <li class="second_li"><a href="index.php?g=home&m=cqczjm&a=index&sm=7" >周公解梦</a></li>
       </div>
 <hr class="left_hr"align="left"/><?php endif; ?>
-<?php if(mokuai()=='qinglv' || mokuai()=='index' ): ?><div id="div_li4"class="menu" value="0">
+<?php if(mokuai() == 'qinglv' || mokuai() == 'index' ): ?><div id="div_li4"class="menu" value="0">
        <input id="hidval4" type="hidden" value="0"/>
        <li class="second_li"><a href="index.php?g=home&m=qinglv&a=index&sm=1"> 星座组合</a></li>
        <li class="second_li"><a href="index.php?g=home&m=qinglv&a=index&sm=2">姓名配对</a></li>
@@ -96,7 +96,7 @@
       </div>
 
 <hr class="left_hr" align="left"/><?php endif; ?>
-<?php if(mokuai()=='yuce' || mokuai()=='index' ): ?><div id="div_li5"class="menu" value="0">
+<?php if(mokuai() == 'yuce' || mokuai() == 'index' ): ?><div id="div_li5"class="menu" value="0">
        <input id="hidval5" type="hidden" value="0"/>
        <li class="second_li"><a href="index.php?g=home&m=yuce&a=index&sm=1" >耳鸣</a></li>
        <li class="second_li"><a href="index.php?g=home&m=yuce&a=index&sm=2" >面热</a></li>

@@ -1,18 +1,17 @@
 <?php
 if (isset($update_xz) &&
-        ($content = getUrlContent('http://astro.sina.com.cn/pc/west/frame0_'.$update_xz.'_1.html')))
+        ($content = getUrlContent('http://vip.astro.sina.com.cn/astro/view/'.$update_xz.'/day/'.$tomorrow)))
 {
-preg_match("/<!-- SUDA_CODE_END -->.*<!-- Start  Wrating  -->/si", $content, $match);
+preg_match("/<body>.*<!-- 星座运势内容end -->/si", $content, $match);
 preg_match("/<li class=\"datea\">有效日期:(.*)<\/li>/i", $content, $dates);
 $yxqx = $dates[1];
-
 $match[0] = str_replace("\n", '', $match[0]);
 preg_match("/<div class=\"lotconts\">(.*)<\/div>/i", $match[0], $zhpg);
 $zhpg = $zhpg[1];
 $match[0] = str_replace("</div>", "\n", $match[0]);
 preg_match_all("/<h4>(.*)<\/h4>(.*)/i", $match[0], $match1);
 foreach($match1[1] as $k=>$m) {
-    switch(substr($m, 0, 8)) {
+    switch(mb_substr($m, 0, 4,'utf-8')) {
         case '综合运势':
             $zhys = substr_count($match1[2][$k], '<img');
             break;
@@ -56,10 +55,10 @@ $data=array(
         xysz=>$xysz,
         spxz=>$spxz,
         zhpg=>$zhpg,
-        update_date=>$update_xz+1
+        update_date=>$update_date
 );
-$user->where(array('id'=>$update_xz+1))->save();
-var_dump($update_xz+1);
+$_id=array_search($update_xz, $astroInfoEN)+1;
+$user->where(array('id'=>$_id))->setField($data);
    }
 /* $db->query ("update xzysnextday set
         yxqx=?,

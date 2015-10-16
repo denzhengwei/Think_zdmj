@@ -119,10 +119,10 @@
             <a href="index.php?g=home&m=sxxzxx&a=xzyc&type=week&xz=<?php echo ($xz); ?>">本周</a>
             <a href="index.php?g=home&m=sxxzxx&a=xzyc&type=month&xz=<?php echo ($xz); ?>">本月</a>
             <a href="index.php?g=home&m=sxxzxx&a=xzyc&type=year&xz=<?php echo ($xz); ?>">今年</a>
-            <a href="index.php?g=home&m=sxxzxx&a=xzyc&type=yearlove&xz=<?php echo ($xz); ?>">今年爱情运势</a>) </TD>
+            <a href="index.php?g=home&m=sxxzxx&a=xzyc&type=yearlove&xz=<?php echo ($xz); ?>">今年爱情运势</a></TD>
     </tr>
     <tr>
-        <TD class=new style="PADDING-BOTTOM: 1px" vAlign=top><span class="new" style="PADDING-BOTTOM: 1px">·
+        <TD class=new style="PADDING-BOTTOM: 1px" vAlign=top><span class="new" style="PADDING-BOTTOM: 1px">
             <a href="index.php?g=home&m=sxxzxx&a=xzyc&type=<?php echo ($yctype); ?>&xz=1">牡羊座</a>·
             <a href="index.php?g=home&m=sxxzxx&a=xzyc&type=<?php echo ($yctype); ?>&xz=2">金牛座</a>·
             <a href="index.php?g=home&m=sxxzxx&a=xzyc&type=<?php echo ($yctype); ?>&xz=3">双子座</a>·

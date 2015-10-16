@@ -1516,9 +1516,7 @@ function getUrlContent ($url)
     $hostName = $urlInfo['host'];
     $port = isset($urlInfo['port'])?$urlInfo['port']:80;
     $path = $urlInfo['path'];
-
     $ret = '';
-
     $fp = @fsockopen($hostName, $port, $errno, $errstr, 15);
     if ($fp) {
         $out = "GET $path HTTP/1.1\r\n";
@@ -1531,7 +1529,6 @@ function getUrlContent ($url)
         }
         fclose($fp);
     }
-    $ret=mb_convert_encoding($ret, "UTF-8", "GBK");
     return $ret;
 }
 /*替换换行符的过滤函数*/

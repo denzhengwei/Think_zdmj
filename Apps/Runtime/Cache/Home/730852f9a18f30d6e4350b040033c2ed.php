@@ -111,27 +111,59 @@
       </div><?php endif; ?></div>
 <div id="mid" class="layout">
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b1" style="table-layout:fixed;word-wrap:break-word;">
-    <TBODY>
-    <tr>
-        <TD class=new style="PADDING-BOTTOM: 8px" vAlign=top><p>
-            袁天罡称骨算命</p>
-            <p><?php echo ($cf); ?><span style="PADDING-BOTTOM: 1px"><?php echo ($xing); echo ($ming); ?></span>,根据您的生辰八字,经过测算，您的骨重为：<span class="red"><?php echo ($weight); ?></span> 两 命书如下(仅供参考)：</p>
-            <hr>
-            <div align="center" style="font-size:16px; font-weight:bold; color:#FF0000; line-height:40px">
-                <?php echo ($chenggucontent); ?>
-            </div>
-            <hr>
-            命书解释：<br>
-            <br> <font color="#0000FF">
-                <?php echo ($intro); ?></font><br>
-
-
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-
+    <tbody><tr>
+        <td width="79%" class="ttd"><span class="red">星座对对配:</span><br>
+            你相信<strong>星座配对</strong>吗？最佳的星座配能保证你的爱情浪漫永久吗？您认为星座是科学吗？星座真的有神奇力量吗？不管信或不信，测试一下看看先~~~~~<BR></td>
+        <td width="21%" class="ttd"><img src="./Public/images/pdxz.jpg" width="134" height="84"></td>
     </tr>
-    </TBODY>
-</TABLE></div>
+    <form name="form1"  method="post" action="">
+        <input type="hidden" name="act" value="ok" />
+        <tr>
+            <td colspan="2" class="new">
+                我的星座：
+                <SELECT name="p1" class="style3">
+                    <OPTION value=白羊座>白羊座</OPTION>
+                    <OPTION value=金牛座>金牛座</OPTION>
+                    <OPTION value=双子座>双子座</OPTION>
+                    <OPTION value=巨蟹座>巨蟹座</OPTION>
+                    <OPTION value=狮子座>狮子座</OPTION>
+                    <OPTION value=处女座>处女座</OPTION>
+                    <OPTION value=天秤座>天秤座</OPTION>
+                    <OPTION value=天蝎座>天蝎座</OPTION>
+                    <OPTION value=射手座>射手座</OPTION>
+                    <OPTION value=摩羯座>摩羯座</OPTION>
+                    <OPTION value=水瓶座>水瓶座</OPTION>
+                    <OPTION value=双鱼座>双鱼座</OPTION>
+                </SELECT>
+                他/她的星座
+                :
+                <SELECT name="p2" class="style3">
+                    <OPTION value=白羊座 selected>白羊座</OPTION>
+                    <OPTION value=金牛座>金牛座</OPTION>
+                    <OPTION value=双子座>双子座</OPTION>
+                    <OPTION value=巨蟹座>巨蟹座</OPTION>
+                    <OPTION value=狮子座>狮子座</OPTION>
+                    <OPTION value=处女座>处女座</OPTION>
+                    <OPTION value=天秤座>天秤座</OPTION>
+                    <OPTION value=天蝎座>天蝎座</OPTION>
+                    <OPTION value=射手座>射手座</OPTION>
+                    <OPTION value=摩羯座>摩羯座</OPTION>
+                    <OPTION value=水瓶座>水瓶座</OPTION>
+                    <OPTION value=双鱼座>双鱼座</OPTION>
+                </SELECT>
+                <input type="submit" name="Submit1" value="开始配对" style="cursor:hand;">
+    </form></td>
+    </tr>
+    <?php if(isset($_REQUEST['act']) and $_REQUEST['act'] == 'ok'): ?><tr bgcolor="#EFF8FE">
+        <td class="new" colspan="2" valign="middle">
+            <br>双方星座：<font color=blue><?php echo ($title); ?> </font><br><br>
+            <font color=red><?php echo ($content1); ?></font><br><br>
+            <?php echo ($content2); ?> <br>
+        </td>
+    </tr><?php endif; ?>
+    </tbody>
+</table>
+</div>
 <div id="right" class="layout"></div>
 </div>
 <div id="foot" class="layout">

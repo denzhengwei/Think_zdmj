@@ -153,7 +153,10 @@ class SxxzxxAction extends Action{
      $this->display();
  }
  public function xzyc(){
+     global $tomorrow;
      global $astroInfo;
+     global $astroInfoEN;
+     global $nowTime;
      $xing=$_SESSION['xing'];//session中的姓名，年月日
      $ming=$_SESSION['ming'];
      $nian1=$_SESSION['nian'];
@@ -164,15 +167,15 @@ class SxxzxxAction extends Action{
      $xz= isset($_REQUEST['xz'])?$_REQUEST['xz']:'';//是否设置‘xz‘——选择的星座。
      if ($xing<>"") {  //判断用户是否填写过资料 填写计算星座 否则默认为“牡羊座”
          $myxz=Constellation($nian1 . '-' . $yue1 . '-' . $ri1);
-
               } else{
          $myxz="牡羊座";
      }
+     //strtolower()把所有字符转换为小写
      switch (strtolower($yctype)) {//判断用户提交的选项 今天  明天 月 年。。。。
          case "nextday":
              $table = 'xzysnextday';
              $update_date = date('Y-m-d 00:00:00', $nowTime);
-             $inc_file = 'sinaUpdateTomorrow.php';
+             $inc_file = 'sinaUpdateTomorrow.php'; //注意，没有引用只是赋值
              break;
          case "week":
              $table = 'xzysweek';
@@ -200,38 +203,43 @@ class SxxzxxAction extends Action{
              $inc_file = 'sinaUpdateToday.php';
              break;
      }
-
      $loop=2;
-     while($loop-->0)
+     while($loop-->0)//循环执行2次
 
      {
      if($xz<>"") {
          $user=M("$table");
          $rs=$user->where(array('id'=>$xz))->select();
          $rs=$rs[0];
-
      } else {
          $user=M("$table");
          $rs=$user->where(array('xzmc'=>$myxz))->select();
          $rs=$rs[0];
      }
      $goToUpdate = true;
-     if(!$rs || $rs[0]['update_date']!=$update_date && $goToUpdate)
-
+     /* 没有查询到结果，或者更新日期和现在日期不相等， */
+     if(!$rs || $rs['update_date']!=$update_date && $goToUpdate)
       {
          $goToUpdate = false;
-         if ($xz<>"" && isset($astroInfo[$xz-1])){
-             $update_xz = $xz-1;
-         } elseif (false===($update_xz =array_search($myxz, $astroInfo))) {
+         if ($xz<>"" && isset($astroInfoEN[$xz-1])){
+             $update_xz = $astroInfoEN[$xz-1];
+
+         } elseif
+         (isset($myxz))
+         {
+            $_xz= array_search($myxz, $astroInfo);
+            $update_xz = $astroInfoEN[$_xz];
+         }
+         else
+         {
              unset($update_xz);
          }
-
          include_once(APP_PATH.'Common/xzyc/' . $inc_file);
-
      } else {
          break;
      }
      }
+
      $this->assign('myxz',$myxz);
      $this->assign('yctype', $yctype);
      $this->assign('xz', $xz);

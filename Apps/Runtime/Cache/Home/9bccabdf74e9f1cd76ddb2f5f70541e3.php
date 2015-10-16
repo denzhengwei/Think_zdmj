@@ -110,28 +110,69 @@
        <li class="second_li"><a href="index.php?g=home&m=yuce&a=index&sm=10" >指纹</a></li>
       </div><?php endif; ?></div>
 <div id="mid" class="layout">
-<table width="100%" border="0" cellspacing="0" cellpadding="0" class="b1" style="table-layout:fixed;word-wrap:break-word;">
+<table cellspacing="1" cellpadding="0" border="0" class="tablebgcolor4">
     <TBODY>
-    <tr>
-        <TD class=new style="PADDING-BOTTOM: 8px" vAlign=top><p>
-            袁天罡称骨算命</p>
-            <p><?php echo ($cf); ?><span style="PADDING-BOTTOM: 1px"><?php echo ($xing); echo ($ming); ?></span>,根据您的生辰八字,经过测算，您的骨重为：<span class="red"><?php echo ($weight); ?></span> 两 命书如下(仅供参考)：</p>
-            <hr>
-            <div align="center" style="font-size:16px; font-weight:bold; color:#FF0000; line-height:40px">
-                <?php echo ($chenggucontent); ?>
+    <?php if(!isset($list) and !count($list)): ?><script>
+        alert('没有找到相关解梦内容');window.close()</script>
+    <?php else: ?>
+    <TR class="tdbgcolor">
+        <TD height="25" align="right" width="100%">
+            共找到<FONT COLOR="#FF0000">
+            <?php echo ($allshu); ?></FONT>
+            个解梦结果，分为<font color="#FF0000">
+            <?php echo ($mpage); ?></font>
+            页，目前是第<font color="#FF0000">
+            <?php echo ($currentPage); ?></font>
+            页</TD>
+    </TR>
+    <TR class="tdbgcolor2">
+        <TD>
+            <div align="center">
+                <table border="0" width="100%" cellspacing="0" cellpadding="0">
+                    <tbody>
+                    <?php if(is_array($list)): foreach($list as $i=>$vo): if($vo["content"] != ''): ?><tr>
+                        <td style="line-height:200%">
+                            <font color="green">
+                              [  <?php echo ( $i+1);?>.<?php echo ($vo["jmlb"]); ?>]</font>
+                            <font color="red">
+                                （<?php echo ($vo["title"]); ?>）</font>
+                            <br />
+                       <?php echo ($vo["content"]); ?>
+                        </td>
+                    </tr><?php endif; endforeach; endif; ?>
+
+                    </tbody>
+                </table>
             </div>
-            <hr>
-            命书解释：<br>
-            <br> <font color="#0000FF">
-                <?php echo ($intro); ?></font><br>
+            <hr size="1" color="#d2d0d0" />
 
-
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-
-    </tr>
+            <!--分页开始-->
+            <div align="center">
+                <script>
+                     PageCount=<?php echo ($mpage); ?> ;//总页数r
+                     topage=<?php echo ($currentPage); ?> ;  //当前停留页
+                    if (topage>1){document.write("<a href='index.php?g=home&m=cqczjm&a=index&sm=8&act=<?php echo $_REQUEST["act"] ?>&word=<?php echo $word ?>&page=<?php echo $currentPage-1 ?>' title='上一页'> 上一页</a>");}
+                    for (var i=1; i <= PageCount; i++) {
+                        if (i <= topage+6 && i >= topage-6 || i==1 || i==PageCount){
+                            if (i > topage+7 || i < topage-5 && i!=1 && i!=2 ){document.write(" ... ");}
+                            if (topage==i){document.write("<font color=#d2d0d0> "+ i +" </font> ");}
+                            else{
+                                document.write(" <a href='index.php?g=home&m=cqczjm&a=index&sm=8&act=<?php echo ($_REQUEST['act']); ?>&word=<?php echo ($word); ?>&page="+i+"'> ["+ i +"]</a> ");
+                            }
+                        }
+                    }
+                   if (PageCount-topage>=1){document.write("<a href='index.php?g=home&m=cqczjm&a=index&sm=8&act=<?php echo $_REQUEST["act"]?>&word=<?php echo $word ?>&page=<?php echo $currentPage+1 ?>' title='下一页'>下一页</a>");}
+                </script>
+            </div>
+            <!--分页结束-->
+        </TD>
+    </TR><?php endif; ?>
     </TBODY>
-</TABLE></div>
+</table>
+<br />
+<a href="javascript:window.close()">
+    [关闭页面]</a>
+</div>
 <div id="right" class="layout"></div>
 </div>
 <div id="foot" class="layout">

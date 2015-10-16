@@ -110,10 +110,52 @@
        <li class="second_li"><a href="index.php?g=home&m=yuce&a=index&sm=10" >指纹</a></li>
       </div><?php endif; ?></div>
 <div id="mid" class="layout">
-<p><?php echo ($message); ?></p>
+<!--加载jquery.validate插件-->
+<script src="__ROOT__/Public/jquery/jquery.validate.js" type="text/javascript"></script>
+<!--中文提示-->
+<script>
+    /*验证算命资料的填写*/
+    $(function(){
+        $("#send").click(function(){
+            $.ajax({
+                type:"post",
+                url:"/index.php?g=home&m=ctsm&a=check",
+                data:{xing:$("#xing").val(),
+                    ming:$("#ming").val(),
+                    xingbie:$("#xingbie").val(),
+                    xuexing:$("#xuexing").val(),
+                    nian:$("#nian").val(),
+                    yue:$("#yue").val(),
+                    ri:$("#ri").val(),
+                    hh:$("#hh").val()
+                },
+                /*数据格式json*/
+              dataType: "json",
+                /*成功后*/
+                success:function(data){
+                    /*显示错误提示*/
+                    $("#error").html(data);
+                    /*如果操作成功刷新本页*/
+                    if(data=="操作成功"){
+                        location.reload();
+                    }
+                },
+                /*失败*/
+                error: function(){
+                    $("#error").html("数据出错请重新提交");
+                    //请求出错处理
+                }
+            })
+        })
 
+    })
+</script>
+
+
+<p><?php echo ($message); ?></p>
+<fieldset>
 <table width="100%" border="0" cellspacing="0" cellpadding="0" id="inputInfoTable" style="table-layout:fixed;word-wrap:break-word;">
-    <form method="post" action="" name="sm"  onSubmit="">  <TBODY>
+    <form method="post" action="" name="sm"  onSubmit="" id="startsm">  <TBODY>
     <tr>
         <TD class=ttop style="PADDING-BOTTOM: 1px" vAlign=top> 输入资料立刻开始免费电脑算命</TD>
     </tr> <tr>
@@ -127,14 +169,19 @@
             </a>&nbsp;<a title="不知道出生时间怎么办" style="CURSOR: hand" onClick="window.open('htm_nobirth.htm','nobirth','left=0,top=0,width=600,height=480,scrollbars=yes,resizable=no,status=no')" href="#nobirth"><font color="red">[不知道出生时间怎么办]</font></a>&nbsp;</div></TD>
     </tr>
     <tr>
-        <TD align="center" vAlign=top class=new style="PADDING-BOTTOM: 8px">姓：<input type="txt" name="xing" size="4" value="" onKeypress="if ((event.keyCode != 13 && event.keyCode < 160)) event.returnValue = false;">
-            名：<input type="txt" name="ming" size="4" value="" onKeypress="if ((event.keyCode != 13 && event.keyCode < 160)) event.returnValue = false;">
-            <select name="xingbie" size="1" style="font-size: 9pt">
+
+        <TD align="center" vAlign=top class=new style="PADDING-BOTTOM: 8px">
+            <p id="error" class="red" style="margin: 0px ; padding: 0px"></p>
+            <label for="xing">姓：</label>
+           <input  id="xing" type="txt" name="xing" size="4" value="" onKeypress="if ((event.keyCode != 13 && event.keyCode < 160)) event.returnValue = false;">
+            <label for="ming" >名：</label>
+            <input type="txt"  id="ming" name="ming" size="4" value="" onKeypress="if ((event.keyCode != 13 && event.keyCode < 160)) event.returnValue = false;">
+            <select id="xingbie" name="xingbie" size="1" style="font-size: 9pt">
                 <option value="" selected>性别</option>
                 <option value="男">男</option>
                 <option value="女">女</option>
             </select>
-            <select name="xuexing" size="1" style="font-size: 9pt">
+            <select id="xuexing" name="xuexing" size="1" style="font-size: 9pt">
                 <option value="">血型</option>
                 <option value="A">A型</option>
                 <option value="B">B型</option>
@@ -142,26 +189,26 @@
                 <option value="AB">AB型</option>
             </select>
             公历生日:
-            <select name="nian" size="1" style="font-size: 9pt">
+            <select id="nian" name="nian" size="1" style="font-size: 9pt">
                <?php if(is_array($years)): $k = 0; $__LIST__ = $years;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($k % 2 );++$k;?><option value=<?php echo ($vo); ?>><?php echo ($vo); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
             </select>年
-            <select size="1" name="yue" style="font-size: 9pt">
+            <select  id="yue" size="1" name="yue" style="font-size: 9pt">
                 <?php if(is_array($months)): $i = 0; $__LIST__ = $months;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value=<?php echo ($vo); ?>><?php echo ($vo); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
             </select>月
-            <select size="1" name="ri" style="font-size: 9pt">
+            <select  id="ri" size="1" name="ri" style="font-size: 9pt">
                 <?php if(is_array($days)): $i = 0; $__LIST__ = $days;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value=<?php echo ($vo); ?>><?php echo ($vo); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
             </select>日
-            <select size="1" name="hh" style="font-size: 9pt">
+            <select id="hh" size="1" name="hh" style="font-size: 9pt">
                 <?php if(is_array($hours)): $i = 0; $__LIST__ = $hours;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value=<?php echo ($vo); ?>><?php echo ($vo); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
             </select>点
-            <select size="1" name="mm" style="font-size: 9pt">
+            <select  id="mm" size="1" name="mm" style="font-size: 9pt">
                 <option value="0">未知</option>
                 <?php if(is_array($mins)): $i = 0; $__LIST__ = $mins;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value=<?php echo ($vo); ?>><?php echo ($vo); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
             </select>分 </TD>
     </tr>
     <tr>
         <TD align="center"  vAlign=middle class=new style="PADDING-BOTTOM: 8px">
-            &nbsp;<input type="submit" value="立刻算命" style='cursor:hand;COLOR: #ff0000;' class="button">
+            &nbsp;<input  id="send" type="button" value="提交资料立刻算命" style='cursor:hand;COLOR: #ff0000;' class="button"><br/><br/>
             <input type="button" value="黄道查询" onClick="(location='index.php?g=home&m=yuce&a=index&sm=6')" style="cursor:hand;" class="button" />
             <input type="button" value="生肖运程" onClick="(location='index.php?g=home&m=sxxzxx&a=index')" style="cursor:hand;" class="button" />
             <input type="button" value="星座运程" style='cursor:hand;' onClick="(location='index.php?g=home&m=sxxzxx&a=xzyc')" class="button">
@@ -170,6 +217,7 @@
         </TD></tr>
     </TBODY></form>
 </TABLE>
+    </fieldset>
 <p align="center"><img src="./public/images/bg/bagua.png" width="40%"></p></div>
 <div id="right" class="layout"></div>
 </div>

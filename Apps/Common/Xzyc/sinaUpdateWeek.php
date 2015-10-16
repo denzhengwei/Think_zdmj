@@ -1,6 +1,7 @@
 <?php
 //$content = file_get_contents('frame1_11.html');
-if (isset($update_xz) && ($content = getUrlContent('http://astro.sina.com.cn/pc/west/frame1_'.$update_xz.'.html'))) {
+if (isset($update_xz) &&
+        ($content = getUrlContent('http://vip.astro.sina.com.cn/astro/view/'.$update_xz.'/weekly/'))) {
 preg_match("/<!-- SUDA_CODE_END -->.*<!-- Start  Wrating  -->/si", $content, $match);
 preg_match("/<li class=\"notes\">(.*)<\/li>/i", $content, $notes);
 preg_match("/<li class=\"date\">有效日期:(.*)<\/li>/i", $content, $dates);
@@ -10,8 +11,10 @@ $yxqx= $dates[1];
 $match[0] = str_replace("\n", '', $match[0]);
 $match[0] = str_replace("</div>", "\n", $match[0]);
 preg_match_all("/<h4>(.*)<\/h4>(.*)/i", $match[0], $match1);
+
+
 foreach($match1[1] as $k=>$m) {
-    switch(substr($m, 0, 8)) {
+    switch(mb_substr($m, 0, 4,'utf-8')) {
         case '整体运势':
             $ztzs = substr_count($m, '<img');
             $ztys = $match1[2][$k];
@@ -87,7 +90,7 @@ hmsm   = ?
          $hmri,
          "<p>$hmsm"
         ,$update_date, $update_xz+1)); */
-$user=M('xzysday');
+$user=M('xzysweek');
 $data=array(
 yxqx   =>$yxqx,
 title  =>$title,
@@ -106,8 +109,9 @@ hxri   =>$hxri,
 hxsm   => "<p>$hxsm",
 hmri   =>$hmri,
 hmsm   =>"<p>$hmsm",
-        update_date=>$update_xz+1
+        update_date=>$update_date
 );
-$user->where(array('id'=>$update_xz+1))->save();
+$_id=array_search($update_xz, $astroInfoEN)+1;
+$user->where(array('id'=>$_id))->setField($data);
 }
 ?>
