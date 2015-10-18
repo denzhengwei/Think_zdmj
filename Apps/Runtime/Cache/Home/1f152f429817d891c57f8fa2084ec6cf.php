@@ -36,16 +36,134 @@
 
 </table>
 </div><?php endif; ?></div>
-<div id="topmenu" class="layout">
+<div id="topmenu" class="layout"><script type="text/javascript">
+    /*主菜单鼠标经过的变化*/
+    $(function () {
+        $(".top").hover(
+                function () {
+                    $(this).addClass("hover");
+                },
+                function () {
+                    $(this).removeClass("hover");
+                }
+        )
+    })
+    /*$(function () {
+        $("#top_menu_main").hover(
+                function(){
+
+                    $("#top_menu_main").addClass("hover");
+
+
+                },
+                function(){
+
+                    $("#top_menu_main").removeClass("hover")
+
+                }
+        )
+*//**//*
+        $("#top_menu_1").hover(
+                function(){
+
+                    $("#top_menu_1").addClass("hover");
+                    $("#top_menu_1").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_1").removeClass("hover")
+                    $("#top_menu_1").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_2").hover(
+                function(){
+
+                    $("#top_menu_2").addClass("hover");
+                    $("#top_menu_2").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_2").removeClass("hover")
+                    $("#top_menu_2").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_3").hover(
+                function(){
+
+                    $("#top_menu_3").addClass("hover");
+                    $("#top_menu_3").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_3").removeClass("hover")
+                    $("#top_menu_3").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_3").hover(
+                function(){
+
+                    $("#top_menu_3").addClass("hover");
+                    $("#top_menu_3").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_3").removeClass("hover")
+                    $("#top_menu_3").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_4").hover(
+                function(){
+
+                    $("#top_menu_4").addClass("hover");
+                    $("#top_menu_4").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_4").removeClass("hover")
+                    $("#top_menu_4").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_5").hover(
+                function(){
+
+                    $("#top_menu_5").addClass("hover");
+                    $("#top_menu_5").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_5").removeClass("hover")
+                    $("#top_menu_5").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_x").hover(
+                function(){
+
+                    $("#top_menu_x").addClass("hover");
+                    $("#top_menu_x").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_x").removeClass("hover")
+                    $("#top_menu_x").addClass("top");
+                }
+        )
+    })*/
+</script>
 <table id="top_menu" align="center">
     <tr>
-        <td class="top" id="top_menu_main"><a href="<?php echo U('home/index/index');?>">网站首页</a></td>
-        <td class="top" id="top_menu_1"><a href="<?php echo U('home/ctsm/index');?>">传统算命</a></td>
-        <td class="top" id="top_menu_2"><a href="<?php echo U('home/sxxzxx/index');?>"> 生肖/星座/血型</a></td>
-        <td class="top" id="top_menu_3"><a href="<?php echo U('home/cqczjm/index');?>" >抽签/测字/解梦</a></td>
-        <td class="top" id="top_menu_4"><a href="<?php echo U('home/qinglv/index');?>" >恋爱指南</a></td>
-        <td class="top" id="top_menu_5"><a href=" <?php echo U('home/yuce/index');?>">民俗预测</a></td>
-        <td class="top" id="top_menu_x"><a href="index.php?g=home&m=yuce&a=index&sm=6">黄道吉日</a></td>
+        <td class="top" id="top_menu_main"><a href="<?php echo U('home/index/index');?>"><button class="button"> 网站首页</button></a></td>
+        <td class="top" id="top_menu_1"><a href="<?php echo U('home/ctsm/index');?>"><button class="button">传统算命</button></a></td>
+        <td class="top" id="top_menu_2"><a href="<?php echo U('home/sxxzxx/index');?>"><button class="button"> 生肖/星座/血型</button></a></td>
+        <td class="top" id="top_menu_3"><a href="<?php echo U('home/cqczjm/index');?>" ><button class="button">抽签/测字/解梦</button></a></td>
+        <td class="top" id="top_menu_4"><a href="<?php echo U('home/qinglv/index');?>" ><button class="button">恋爱指南</button></a></td>
+        <td class="top" id="top_menu_5"><a href=" <?php echo U('home/yuce/index');?>"><button class="button">民俗预测</button></a></td>
+        <td class="top" id="top_menu_x"><a href="index.php?g=home&m=yuce&a=index&sm=6"><button class="button">黄道吉日</button></a></td>
     </tr>
 
 </table>
@@ -112,9 +230,9 @@
 <div id="mid" class="layout">
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b1" style="table-layout:fixed;word-wrap:break-word;">
     <tbody><tr>
-        <td width="79%" class="ttd"><span class="red">星座对对配:</span><br>
+        <td width="79%" class="ttd"><span class="green">星座对对配:</span><br>
             你相信<strong>星座配对</strong>吗？最佳的星座配能保证你的爱情浪漫永久吗？您认为星座是科学吗？星座真的有神奇力量吗？不管信或不信，测试一下看看先~~~~~<BR></td>
-        <td width="21%" class="ttd"><img src="./Public/images/pdxz.jpg" width="134" height="84"></td>
+        <td width="21%" class="ttd"><img src="./Public/images/pdxz.jpg" width="168" height="84"></td>
     </tr>
     <form name="form1"  method="post" action="index.php?g=home&m=qinglv&a=index&sm=1">
         <input type="hidden" name="act" value="ok" />
@@ -197,9 +315,9 @@
 </SCRIPT>
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b1" style="table-layout:fixed;word-wrap:break-word;">
     <tbody><tr>
-        <td width="79%" class="ttd"><span class="red">姓名配对关系提示:</span><br>
+        <td width="79%" class="ttd"><span class="green">姓名配对关系提示:</span><br>
             姓名当中究竟隐藏了多少奥秘，可能至今也没有人能完全说破，这里有个趣味游戏，通过姓名笔划数看看你和爱人的关系究竟怎样——</td>
-        <td width="21%" class="ttd"><img src="./Public/images/pd_name.jpg" width="139" height="104"></td>
+        <td width="21%" class="ttd"><img src="./Public/images/pd_name.jpg" width="168" height="104"></td>
     </tr>
     <form name="form1" onSubmit="return Check(this)" method="post" action="index.php?g=home&m=qinglv&a=index&sm=2">
         <input type="hidden" name="act" value="ok" />
@@ -216,9 +334,9 @@
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b1" style="table-layout:fixed;word-wrap:break-word;">
     <tbody><tr>
-        <td width="81%" class="ttd"><span class="red">姓名五格配对评分:</span><br>
+        <td width="81%" class="ttd"><span class="green">姓名五格配对评分:</span><br>
             根据《易经》的"象"、"数"理论，依据姓名的笔画数和一定规则建立起来天格、地格、人格、总格、外格等五格数理关系，并运用阴阳五行相生相克理论，来推算的各方面运势。 </td>
-        <td width="19%" class="ttd"><img src="./Public/images/xmpd.jpg" width="105" height="140"></td>
+        <td width="19%" class="ttd"><img src="./Public/images/xmpd.jpg" width="152" height="140"></td>
     </tr>
     <form name="form1" onSubmit="return Check(this)" method="post" action="index.php?g=home&m=qinglv&a=index&sm=5">
         <input type="hidden" name="act" value="ok" />
@@ -246,9 +364,9 @@
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b1" style="table-layout:fixed;word-wrap:break-word;">
     <tbody><tr>
-        <td width="81%" class="ttd"><span class="red">生肖配对:</span><br>
+        <td width="81%" class="ttd"><span class="green">生肖配对:</span><br>
             属相有鼠、牛、虎、兔、龙、蛇、马、羊、猴、鸡、狗、猪十二种。属相又都是由五行来区分的，而五行则存在着相生相克的道理。相生的属相较能和睦相处，而相克的属相就不那么……了。您是否还对您的爱情犹豫不决啊，那就进来看看你们的生肖配不配吧！<BR></td>
-        <td width="19%" class="ttd"><img src="./Public/images/sxpd.jpg" width="120" height="90"></td>
+        <td width="19%" class="ttd"><img src="./Public/images/sxpd.jpg" width="152" height="120"></td>
     </tr>
     <form name="form1"  method="post" action="index.php?g=home&m=qinglv&a=index&sm=4">
         <input type="hidden" name="act" value="sxok" />
@@ -291,9 +409,9 @@
     </tbody>
 </table>  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b1" style="table-layout:fixed;word-wrap:break-word;">
     <tbody><tr>
-        <td width="79%" class="ttd"><span class="red">血型配对:</span><br>
+        <td width="79%" class="ttd"><span class="green">血型配对:</span><br>
             血型配对，根据血型测试您和恋人的缘分和婚姻！ <BR></td>
-        <td width="21%" class="ttd"><img src="./Public/images/xxpd.jpg" width="140" height="94"></td>
+        <td width="21%" class="ttd"><img src="./Public/images/xxpd.jpg" width="169" height="94"></td>
     </tr>
     <form name="form1"  method="post" action="index.php?g=home&m=qinglv&a=index&sm=4">
         <input type="hidden" name="act" value="xxok" />
@@ -320,9 +438,9 @@
     </tbody>
 </table> <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b1" style="table-layout:fixed;word-wrap:break-word;">
     <tbody><tr>
-        <td width="79%" class="ttd"><span class="red">QQ号码关系提示:</span><br>
+        <td width="79%" class="ttd"><span class="green">QQ号码关系提示:</span><br>
             想知道QQ好友跟我的关系吗？马上进行这个趣味小测试吧~~~ ^_^</td>
-        <td width="21%" class="ttd"><img src="./Public/images/qqpd.jpg" width="120" height="90"></td>
+        <td width="21%" class="ttd"><img src="./Public/images/qqpd.jpg" width="169" height="90"></td>
     </tr><SCRIPT language=javascript>
         <!--
         function Check2(theForm2)

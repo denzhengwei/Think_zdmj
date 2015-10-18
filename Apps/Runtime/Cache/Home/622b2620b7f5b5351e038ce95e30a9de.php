@@ -229,112 +229,45 @@
       </div><?php endif; ?></div>
 <div id="mid" class="layout">
 
-<script>
-    /*验证算命资料的填写*/
-    $(function(){
-        $("#send").click(function(){
-            $.ajax({
-                type:"post",
-                url:"/index.php?g=home&m=ctsm&a=check",
-                data:{xing:$("#xing").val(),
-                    ming:$("#ming").val(),
-                    xingbie:$("#xingbie").val(),
-                    xuexing:$("#xuexing").val(),
-                    nian:$("#nian").val(),
-                    yue:$("#yue").val(),
-                    ri:$("#ri").val(),
-                    hh:$("#hh").val()
-                },
-                /*数据格式json*/
-              dataType: "json",
-                /*成功后*/
-                success:function(data){
-                    /*显示错误提示*/
-                    $("#error").html(data);
-                    /*如果操作成功刷新本页*/
-                    if(data=="操作成功"){
-                        location.reload();
-                    }
-                },
-                /*失败*/
-                error: function(){
-                    $("#error").html("数据出错请重新提交");
-                    //请求出错处理
-                }
-            })
-        })
-
-    })
-</script>
-
-
-<p><?php echo ($message); ?></p>
-<fieldset>
-<table width="100%" border="0" cellspacing="0" cellpadding="0" id="inputInfoTable" style="table-layout:fixed;word-wrap:break-word;">
-    <form method="post" action="" name="sm"  onSubmit="" id="startsm">  <TBODY>
-    <tr>
-        <TD class=ttop style="PADDING-BOTTOM: 1px" vAlign=top> 输入资料立刻开始免费电脑算命</TD>
-    </tr> <tr>
-        <TD class=new style="PADDING-BOTTOM: 8px" vAlign=top><font class="green"><b>&nbsp;算命说明：</b>
-        </font>姓名必须输入中文，生日必须输入公历（公历即阳历/新历，农历即阴历/旧历。例如今天为<?php echo ($_thisYear); ?>年<?php echo ($_thisMonth); ?>月<?php echo ($_thisDay); ?>日，这就是公历。）如果不分析血型，血型可任选；如果不分析八字等，出生时分可任选；不影响其它测试结果。进入系统后可体验数十种强大的算命功能！
-          </TD>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="b1" style="table-layout:fixed;word-wrap:break-word;">
+    <tbody><tr>
+        <td width="79%" class="ttd"><span class="red">眼跳预测:</span>
+            <br>
+            眼皮跳跳，是祸是福？是灾是喜？想知道是情人想你，呃，还是老妈在念叨？又或者是老板要找你“谈话”？！别急别急，有关于眼跳吉凶、眼跳释意、眼跳征兆等的一切，眼跳释义都会告诉你哦。</td>
+        <td width="21%" class="ttd"><img src="./Public/images/yt.jpg" width="140" height="140"></td>
     </tr>
-    <tr>
-        <TD class=new style="PADDING-BOTTOM: 8px" vAlign=top><div align="center">
-            <a title="如果您只知道生日的农历日期，不要紧，请点这里去查询公历日期" style="CURSOR: hand" onClick="window.open('wannianli.htm','nongli','left=0,top=0,width=780,height=540,scrollbars=no,resizable=no,status=no')" href="#wnl"><font class="green">[只知道农历请点此查公历]</font>
-            </a>&nbsp;<a title="不知道出生时间怎么办" style="CURSOR: hand" onClick="window.open('htm_nobirth.htm','nobirth','left=0,top=0,width=600,height=480,scrollbars=yes,resizable=no,status=no')" href="#nobirth"><font class="green">[不知道出生时间怎么办]</font></a>&nbsp;</div></TD>
-    </tr>
-    <tr>
+    <form name="form1" onSubmit="return submitchecken()" method="post" action="">
+        <input type="hidden" name="act" value="ok" />
+        <tr>
+            <td colspan="2" class="new">选择眼睛：
 
-        <TD align="center" vAlign=top class=new style="PADDING-BOTTOM: 8px">
-            <p id="error" class="red" style="margin: 0px ; padding: 0px"></p>
-            <label for="xing">姓：</label>
-           <input  id="xing" type="txt" name="xing" size="4" value="" onKeypress="if ((event.keyCode != 13 && event.keyCode < 160)) event.returnValue = false;">
-            <label for="ming" >名：</label>
-            <input type="txt"  id="ming" name="ming" size="4" value="" onKeypress="if ((event.keyCode != 13 && event.keyCode < 160)) event.returnValue = false;">
-            <select id="xingbie" name="xingbie" size="1" style="font-size: 9pt">
-                <option value="" selected>性别</option>
-                <option value="男">男</option>
-                <option value="女">女</option>
-            </select>
-            <select id="xuexing" name="xuexing" size="1" style="font-size: 9pt">
-                <option value="">血型</option>
-                <option value="A">A型</option>
-                <option value="B">B型</option>
-                <option value="O">O型</option>
-                <option value="AB">AB型</option>
-            </select>
-            公历生日:
-            <select id="nian" name="nian" size="1" style="font-size: 9pt">
-               <?php if(is_array($years)): $k = 0; $__LIST__ = $years;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($k % 2 );++$k;?><option value=<?php echo ($vo); ?>><?php echo ($vo); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-            </select>年
-            <select  id="yue" size="1" name="yue" style="font-size: 9pt">
-                <?php if(is_array($months)): $i = 0; $__LIST__ = $months;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value=<?php echo ($vo); ?>><?php echo ($vo); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-            </select>月
-            <select  id="ri" size="1" name="ri" style="font-size: 9pt">
-                <?php if(is_array($days)): $i = 0; $__LIST__ = $days;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value=<?php echo ($vo); ?>><?php echo ($vo); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-            </select>日
-            <select id="hh" size="1" name="hh" style="font-size: 9pt">
-                <?php if(is_array($hours)): $i = 0; $__LIST__ = $hours;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value=<?php echo ($vo); ?>><?php echo ($vo); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-            </select>点
-            <select  id="mm" size="1" name="mm" style="font-size: 9pt">
-                <option value="0">未知</option>
-                <?php if(is_array($mins)): $i = 0; $__LIST__ = $mins;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value=<?php echo ($vo); ?>><?php echo ($vo); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-            </select>分 </TD>
+                <input id="fx" type="radio" CHECKED="" value="左" name="fx" />
+                左&nbsp;
+                <input id="fx" type="radio" value="右" name="fx" />
+                右&nbsp;&nbsp;眼跳时间：<select id="stime" style="WIDTH: 100px" name="stime" size="1">
+                    <option value="1" selected="">23-01[子时]</option>
+                    <option value="2">01-03[丑时]</option>
+                    <option value="3">03-05[寅时]</option>
+                    <option value="4">05-07[卯时]</option>
+                    <option value="5">07-09[辰时]</option>
+                    <option value="6">09-11[巳时]</option>
+                    <option value="7">11-13[午时]</option>
+                    <option value="8">13-15[未时]</option>
+                    <option value="9">15-17[申时]</option>
+                    <option value="10">17-19[酉时]</option>
+                    <option value="11">19-21[戌时]</option>
+                    <option value="12">21-23[亥时]</option>
+                </select> <input type="submit" value="开始分析" style="cursor:hand;" /></form></td>
     </tr>
-    <tr>
-        <TD align="center"  vAlign=middle class=new style="PADDING-BOTTOM: 8px">
-            &nbsp;<input  id="send" type="button" value="提交资料立刻算命" style='cursor:hand;' class="button"><br/><br/>
-            <input type="button" value="黄道查询" onClick="(location='index.php?g=home&m=yuce&a=index&sm=6')" style="cursor:hand;" class="button" />
-            <input type="button" value="生肖运程" onClick="(location='index.php?g=home&m=sxxzxx&a=index')" style="cursor:hand;" class="button" />
-            <input type="button" value="星座运程" style='cursor:hand;' onClick="(location='index.php?g=home&m=sxxzxx&a=xzyc')" class="button">
-            <input type="button" value="灵签解运" onClick="(location='index.php?g=home&m=cqczjm&a=index')" style="cursor:hand;" class="button" />
-            <input type="button" value="解梦测字" onClick="(location='index.php?g=home&m=cqczjm&a=index')" style="cursor:hand;" class="button" />
-        </TD></tr>
-    </TBODY></form>
-</TABLE>
-    </fieldset>
-<p align="center"><img src="./public/images/bg/bagua.png" width="40%"></p></div>
+
+    <?php if($rs): ?><tr>
+        <td class="new" colspan="2" valign="middle">
+            <br><br>&nbsp;预测结果如下：<br><br>&nbsp;<font color=blue><?php echo ($rs["content"]); ?></font><br><br>
+        </td>
+    </tr><?php endif; ?>
+    </tbody>
+</table>
+</div>
 <div id="right" class="layout"></div>
 </div>
 <div id="foot" class="layout">

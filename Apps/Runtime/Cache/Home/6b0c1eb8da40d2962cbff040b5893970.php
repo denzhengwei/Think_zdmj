@@ -36,16 +36,134 @@
 
 </table>
 </div><?php endif; ?></div>
-<div id="topmenu" class="layout">
+<div id="topmenu" class="layout"><script type="text/javascript">
+    /*主菜单鼠标经过的变化*/
+    $(function () {
+        $(".top").hover(
+                function () {
+                    $(this).addClass("hover");
+                },
+                function () {
+                    $(this).removeClass("hover");
+                }
+        )
+    })
+    /*$(function () {
+        $("#top_menu_main").hover(
+                function(){
+
+                    $("#top_menu_main").addClass("hover");
+
+
+                },
+                function(){
+
+                    $("#top_menu_main").removeClass("hover")
+
+                }
+        )
+*//**//*
+        $("#top_menu_1").hover(
+                function(){
+
+                    $("#top_menu_1").addClass("hover");
+                    $("#top_menu_1").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_1").removeClass("hover")
+                    $("#top_menu_1").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_2").hover(
+                function(){
+
+                    $("#top_menu_2").addClass("hover");
+                    $("#top_menu_2").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_2").removeClass("hover")
+                    $("#top_menu_2").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_3").hover(
+                function(){
+
+                    $("#top_menu_3").addClass("hover");
+                    $("#top_menu_3").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_3").removeClass("hover")
+                    $("#top_menu_3").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_3").hover(
+                function(){
+
+                    $("#top_menu_3").addClass("hover");
+                    $("#top_menu_3").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_3").removeClass("hover")
+                    $("#top_menu_3").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_4").hover(
+                function(){
+
+                    $("#top_menu_4").addClass("hover");
+                    $("#top_menu_4").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_4").removeClass("hover")
+                    $("#top_menu_4").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_5").hover(
+                function(){
+
+                    $("#top_menu_5").addClass("hover");
+                    $("#top_menu_5").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_5").removeClass("hover")
+                    $("#top_menu_5").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_x").hover(
+                function(){
+
+                    $("#top_menu_x").addClass("hover");
+                    $("#top_menu_x").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_x").removeClass("hover")
+                    $("#top_menu_x").addClass("top");
+                }
+        )
+    })*/
+</script>
 <table id="top_menu" align="center">
     <tr>
-        <td class="top" id="top_menu_main"><a href="<?php echo U('home/index/index');?>">网站首页</a></td>
-        <td class="top" id="top_menu_1"><a href="<?php echo U('home/ctsm/index');?>">传统算命</a></td>
-        <td class="top" id="top_menu_2"><a href="<?php echo U('home/sxxzxx/index');?>"> 生肖/星座/血型</a></td>
-        <td class="top" id="top_menu_3"><a href="<?php echo U('home/cqczjm/index');?>" >抽签/测字/解梦</a></td>
-        <td class="top" id="top_menu_4"><a href="<?php echo U('home/qinglv/index');?>" >恋爱指南</a></td>
-        <td class="top" id="top_menu_5"><a href=" <?php echo U('home/yuce/index');?>">民俗预测</a></td>
-        <td class="top" id="top_menu_x"><a href="index.php?g=home&m=yuce&a=index&sm=6">黄道吉日</a></td>
+        <td class="top" id="top_menu_main"><a href="<?php echo U('home/index/index');?>"><button class="button"> 网站首页</button></a></td>
+        <td class="top" id="top_menu_1"><a href="<?php echo U('home/ctsm/index');?>"><button class="button">传统算命</button></a></td>
+        <td class="top" id="top_menu_2"><a href="<?php echo U('home/sxxzxx/index');?>"><button class="button"> 生肖/星座/血型</button></a></td>
+        <td class="top" id="top_menu_3"><a href="<?php echo U('home/cqczjm/index');?>" ><button class="button">抽签/测字/解梦</button></a></td>
+        <td class="top" id="top_menu_4"><a href="<?php echo U('home/qinglv/index');?>" ><button class="button">恋爱指南</button></a></td>
+        <td class="top" id="top_menu_5"><a href=" <?php echo U('home/yuce/index');?>"><button class="button">民俗预测</button></a></td>
+        <td class="top" id="top_menu_x"><a href="index.php?g=home&m=yuce&a=index&sm=6"><button class="button">黄道吉日</button></a></td>
     </tr>
 
 </table>
@@ -141,25 +259,25 @@
                     <?php if(is_array($WeekName)): $i = 0; $__LIST__ = $WeekName;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value=<?php echo ($vo); ?>><?php echo ($vo); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                 </select>
                 <select name="tp" size="1">
-                    <option value="0" ="">宜</option>
-                    <option value="1" ="">忌</option>
+                    <option value="0" >宜</option>
+                    <option value="1" >忌</option>
                 </select>
                 <select name="word" size="1">
-                    <option value="开市" ="">开市</option>
-                    <option value="交易" ="">交易</option>
-                    <option value="嫁娶" ="">嫁娶</option>
-                    <option value="入宅" ="">入宅</option>
-                    <option value="入学" ="">入学</option>
-                    <option value="纳财" ="">纳财</option>
-                    <option value="订盟" ="">订盟</option>
-                    <option value="安门" ="">安门</option>
-                    <option value="出行" ="">出行</option>
-                    <option value="开光" ="">开光</option>
-                    <option value="求嗣" ="">求嗣</option>
-                    <option value="祈福" ="">祈福</option>
-                    <option value="破土" ="">破土</option>
-                    <option value="祭祀" ="">祭祀</option>
-                    <option value="安葬" ="">安葬</option>
+                    <option value="开市" >开市</option>
+                    <option value="交易" >交易</option>
+                    <option value="嫁娶" >嫁娶</option>
+                    <option value="入宅" >入宅</option>
+                    <option value="入学" >入学</option>
+                    <option value="纳财" >纳财</option>
+                    <option value="订盟" >订盟</option>
+                    <option value="安门" >安门</option>
+                    <option value="出行" >出行</option>
+                    <option value="开光" >开光</option>
+                    <option value="求嗣" >求嗣</option>
+                    <option value="祈福" >祈福</option>
+                    <option value="破土" >破土</option>
+                    <option value="祭祀" >祭祀</option>
+                    <option value="安葬" >安葬</option>
                 </select>
                 <input type="submit" name="Submit2" value="查询">
                 <input name="Submit22" type="button" style="color:#FF0000" onClick="(location='index.php?g=home&m=yuce&a=index&sm=6&act=xrz&word=嫁娶&upto=365&tp=0')" value="结婚吉日">

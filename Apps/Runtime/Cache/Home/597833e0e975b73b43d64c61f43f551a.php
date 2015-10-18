@@ -36,16 +36,134 @@
 
 </table>
 </div><?php endif; ?></div>
-<div id="topmenu" class="layout">
+<div id="topmenu" class="layout"><script type="text/javascript">
+    /*主菜单鼠标经过的变化*/
+    $(function () {
+        $(".top").hover(
+                function () {
+                    $(this).addClass("hover");
+                },
+                function () {
+                    $(this).removeClass("hover");
+                }
+        )
+    })
+    /*$(function () {
+        $("#top_menu_main").hover(
+                function(){
+
+                    $("#top_menu_main").addClass("hover");
+
+
+                },
+                function(){
+
+                    $("#top_menu_main").removeClass("hover")
+
+                }
+        )
+*//**//*
+        $("#top_menu_1").hover(
+                function(){
+
+                    $("#top_menu_1").addClass("hover");
+                    $("#top_menu_1").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_1").removeClass("hover")
+                    $("#top_menu_1").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_2").hover(
+                function(){
+
+                    $("#top_menu_2").addClass("hover");
+                    $("#top_menu_2").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_2").removeClass("hover")
+                    $("#top_menu_2").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_3").hover(
+                function(){
+
+                    $("#top_menu_3").addClass("hover");
+                    $("#top_menu_3").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_3").removeClass("hover")
+                    $("#top_menu_3").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_3").hover(
+                function(){
+
+                    $("#top_menu_3").addClass("hover");
+                    $("#top_menu_3").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_3").removeClass("hover")
+                    $("#top_menu_3").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_4").hover(
+                function(){
+
+                    $("#top_menu_4").addClass("hover");
+                    $("#top_menu_4").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_4").removeClass("hover")
+                    $("#top_menu_4").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_5").hover(
+                function(){
+
+                    $("#top_menu_5").addClass("hover");
+                    $("#top_menu_5").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_5").removeClass("hover")
+                    $("#top_menu_5").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_x").hover(
+                function(){
+
+                    $("#top_menu_x").addClass("hover");
+                    $("#top_menu_x").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_x").removeClass("hover")
+                    $("#top_menu_x").addClass("top");
+                }
+        )
+    })*/
+</script>
 <table id="top_menu" align="center">
     <tr>
-        <td class="top" id="top_menu_main"><a href="<?php echo U('home/index/index');?>">网站首页</a></td>
-        <td class="top" id="top_menu_1"><a href="<?php echo U('home/ctsm/index');?>">传统算命</a></td>
-        <td class="top" id="top_menu_2"><a href="<?php echo U('home/sxxzxx/index');?>"> 生肖/星座/血型</a></td>
-        <td class="top" id="top_menu_3"><a href="<?php echo U('home/cqczjm/index');?>" >抽签/测字/解梦</a></td>
-        <td class="top" id="top_menu_4"><a href="<?php echo U('home/qinglv/index');?>" >恋爱指南</a></td>
-        <td class="top" id="top_menu_5"><a href=" <?php echo U('home/yuce/index');?>">民俗预测</a></td>
-        <td class="top" id="top_menu_x"><a href="index.php?g=home&m=yuce&a=index&sm=6">黄道吉日</a></td>
+        <td class="top" id="top_menu_main"><a href="<?php echo U('home/index/index');?>"><button class="button"> 网站首页</button></a></td>
+        <td class="top" id="top_menu_1"><a href="<?php echo U('home/ctsm/index');?>"><button class="button">传统算命</button></a></td>
+        <td class="top" id="top_menu_2"><a href="<?php echo U('home/sxxzxx/index');?>"><button class="button"> 生肖/星座/血型</button></a></td>
+        <td class="top" id="top_menu_3"><a href="<?php echo U('home/cqczjm/index');?>" ><button class="button">抽签/测字/解梦</button></a></td>
+        <td class="top" id="top_menu_4"><a href="<?php echo U('home/qinglv/index');?>" ><button class="button">恋爱指南</button></a></td>
+        <td class="top" id="top_menu_5"><a href=" <?php echo U('home/yuce/index');?>"><button class="button">民俗预测</button></a></td>
+        <td class="top" id="top_menu_x"><a href="index.php?g=home&m=yuce&a=index&sm=6"><button class="button">黄道吉日</button></a></td>
     </tr>
 
 </table>
@@ -115,20 +233,19 @@
 <p>姓：<?php echo ($_SESSION ['xing']); ?></p>
 <p>名：<?php echo ($_SESSION ['ming']); ?></p>
 <p>出生日期：<?php echo ($_SESSION ['nian']); ?>年<?php echo ($_SESSION ['yue']); ?>月<?php echo ($_SESSION ['ri']); ?>日<?php echo ($_SESSION ['hh']); ?>时</p>
-<table id="start_ctsm">
-    <tr><td><a  href="<?php echo U('home/ctsm/scbz');?>">生辰八字</a></td>
-    <td><a  href="<?php echo U('home/ctsm/bzcs');?>">八字测算</a></td>
-    <td><a  href="<?php echo U('home/ctsm/rglm');?>">日干论命</a></td>
-    <td><a  href="<?php echo U('home/ctsm/cglm');?>">称骨论命</a></td>
-    <td><a  href="<?php echo U('home/ctsm/xmcs');?>">姓名测试</a></td>
-    <td><a  href="<?php echo U('home/ctsm/xmpd');?>">姓命配对</a></td>
-    <td><a  href="<?php echo U('home/ctsm/sbwr');?>">上辈为人</a></td>
-    <td><a  href="<?php echo U('home/ctsm/xsqy');?>">姓氏起源</a></td>
-    </tr>
-</table>
+
+    <a  href="<?php echo U('home/ctsm/scbz');?>"><button class="button"> 生辰八字</button></a>
+<a  href="<?php echo U('home/ctsm/bzcs');?>"><button class="button" >八字测算</button></a>
+      <a  href="<?php echo U('home/ctsm/cglm');?>">  <button class="button" >称骨论命</button></a>
+            <a  href="<?php echo U('home/ctsm/xmcs');?>"><button class="button" >姓名测试</button></a>
+               <a  href="<?php echo U('home/ctsm/xmpd');?>"><button class="button" >姓命配对</button></a>
+                  <a  href="<?php echo U('home/ctsm/sbwr');?>"><button class="button" >上辈为人</button></a>
+                  <a  href="<?php echo U('home/ctsm/xsqy');?>"><button class="button" >姓氏起源</button></a>
+
+
 <form action="" method="post">
     <input type="hidden" name="restart" value="1">
-    <input type="submit" value="(换人)重新算命">
+    <input type="submit" value="(换人)重新算命" style="background-color: firebrick ;color: white">
 </form>
 <p align="center"><img src="./public/images/bg/bagua.png" width="40%"></p></div>
 <div id="right" class="layout"></div>

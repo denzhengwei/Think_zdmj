@@ -25,7 +25,7 @@
 </SCRIPT>
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b1" style="table-layout:fixed;word-wrap:break-word;">
     <tbody><tr>
-        <td width="79%" class="ttd"><span class="red">QQ号码关系提示:</span><br>
+        <td width="79%" class="ttd"><span class="green">QQ号码关系提示:</span><br>
             想知道QQ好友跟我的关系吗？马上进行这个趣味小测试吧~~~ ^_^</td>
         <td width="21%" class="ttd"><img src="./Public/images/qqpd.jpg" width="120" height="90"></td>
     </tr>
@@ -39,12 +39,12 @@
                 <input name="qq2" type="text" id="qq2" size="20"  onKeyUp="value=value.replace(/[^\d]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" />
                 <input type="submit" name="Submit1" value="开始测试" style="cursor:hand;"></form></td>
     </tr>
-    <? if (isset($smarty.request.act) && $smarty.request.act=="ok") ?>
-    <tr bgcolor="#EFF8FE">
+    <if condition="isset($_REQUEST['act']) && $_REQUEST['act']=='ok'" >
+    <tr >
         <td class="new" colspan="2" valign="middle">
             <br>双方QQ：<font color=blue>{$strname1}&nbsp;{$strname2} </font><br><br>
-            <font color=cc6600>关系揭密：</font>{$intro} <font color=red>(仅供娱乐)</font><br><br>
+            <font color=cc6600>关系揭密：</font>{$intro} <font color=green>(仅供娱乐)</font><br><br>
         </td>
-    </tr><? /if ?>
+    </tr></if >
     </tbody>
 </table>

@@ -42,23 +42,23 @@
                 <img src=./Public/images/sign{$picnum}.gif width=100 height=77 border=0>
             </a>
             <br>
-                          第{$gyclicknum}次
+                       <span class="red">第{$gyclicknum}次</span>
             <br>
-            需连续掷出三次圣杯，才是灵签！请点上面图标开始掷出圣杯
+           需连续掷出三次圣杯，才是灵签！<span class="red">继续请点上面图标</span>开始掷出圣杯
                </if>
             <br>
                    <if condition=" $gyclicknum eq 3 and $gysmile neq 4 and $jieqian eq ''"   >
                 <a href="index.php?g=home&m=cqczjm&a=index&sm=2&act=jq&gyqid={$num}">
             <font color=blue>
-                恭喜，您连续掷出了三次圣杯，请点这里察看签词！</font>
+             恭喜，您连续掷出了三次圣杯，请点这里察看签词！</font>
         </a>
 
-            需连续掷出三次圣杯，才是灵签！
+
                        </if>
               <if  condition="$gysmile eq 4">
             <a href=/index.php?g=home&m=cqczjm&a=index&sm=2">
-                <font color=red>
-                    您掷出笑杯了，此签不准，请点这里重新抽签！</font>
+
+                    您掷出<span class="red">笑杯</span> 了，此签不准，请点这里重新抽签！
             </a>
             <br>
               </if>

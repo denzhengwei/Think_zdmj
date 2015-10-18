@@ -1,4 +1,27 @@
 @CHARSET "UTF-8";
+.top button{
+	font-family:楷体;
+	padding:0px;
+	margin:0px;
+	 height:50px;
+	width: 150px;
+	font-size: 20px;
+	color: #553300;
+}
+.hover{
+	padding-top: 20px;
+
+	height: 80px;
+}
+.button_hover{
+	padding: 10px;
+
+}
+.button{
+	background-color:transparent;
+	color: #220066;
+
+}
 .layout{
 	/*border-color: #339900;
 	border-style: solid;*/
@@ -16,6 +39,8 @@
 	font-size: 12px;
 }
 #topmenu{
+
+
 	font-family: 楷体;
 	width: 100%;
 	margin: 0px;
@@ -23,6 +48,7 @@
 	float: left;
 }
 #left{
+
 	width: 19%;
 	float: left;
 	font-family: 楷体;
@@ -46,11 +72,13 @@
 	float:left;
 }
 .top{
-	border-style:none dotted none none;
+	border-style: none;
+
 }
 #top_menu{
 	font-size: 28px;
 	word-wrap: break-word;
+
 }
 .red{
 	color: red;
@@ -61,6 +89,7 @@
 #top_menu_table{
 	border: none;
 	font-size: 14px;
+
 
 }
 
@@ -307,7 +336,7 @@ a:link, a:active, a:visited {
 
 a:hover {
 	color:#9999CC;
-	text-decoration:underline;
+	text-decoration:none;
 }
 
 #Layer1 #logo {

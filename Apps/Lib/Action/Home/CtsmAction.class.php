@@ -44,8 +44,6 @@ class CtsmAction extends Action
             }
 
 
-           // $this->assign('error_mesaaage',$error_message);
-
             if ($check_status===true){
                 /* 把资料的值写到session中  */
                 $_SESSION ['xing'] = $_POST ['xing'] ;
@@ -61,7 +59,6 @@ class CtsmAction extends Action
             /* 数据格式变为json  */
            $error_message= json_encode($error_message);
             echo $error_message; return;
-
         }
 
    /* 传统算命首页 */
@@ -100,7 +97,8 @@ class CtsmAction extends Action
              && $_SESSION ['nian'] != ""
              && $_SESSION ['yue'] != ""
              && $_SESSION ['ri'] != ""
-             && $_SESSION ['hh'] != "" ) {
+             && $_SESSION ['hh'] != "" )
+      {
 
          $_message = "-----算命人的资料--------";
          $this->assign ( 'message', $_message );
@@ -112,10 +110,10 @@ class CtsmAction extends Action
 
          $this->display ( 'start' );
      }
-
+else {
         $this->display ( '' );
     }
-
+    }
     /* 生辰八字页面 */
     public function scbz(){
         if(checkSession()){

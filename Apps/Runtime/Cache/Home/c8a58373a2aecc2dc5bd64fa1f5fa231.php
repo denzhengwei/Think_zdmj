@@ -36,16 +36,134 @@
 
 </table>
 </div><?php endif; ?></div>
-<div id="topmenu" class="layout">
+<div id="topmenu" class="layout"><script type="text/javascript">
+    /*主菜单鼠标经过的变化*/
+    $(function () {
+        $(".top").hover(
+                function () {
+                    $(this).addClass("hover");
+                },
+                function () {
+                    $(this).removeClass("hover");
+                }
+        )
+    })
+    /*$(function () {
+        $("#top_menu_main").hover(
+                function(){
+
+                    $("#top_menu_main").addClass("hover");
+
+
+                },
+                function(){
+
+                    $("#top_menu_main").removeClass("hover")
+
+                }
+        )
+*//**//*
+        $("#top_menu_1").hover(
+                function(){
+
+                    $("#top_menu_1").addClass("hover");
+                    $("#top_menu_1").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_1").removeClass("hover")
+                    $("#top_menu_1").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_2").hover(
+                function(){
+
+                    $("#top_menu_2").addClass("hover");
+                    $("#top_menu_2").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_2").removeClass("hover")
+                    $("#top_menu_2").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_3").hover(
+                function(){
+
+                    $("#top_menu_3").addClass("hover");
+                    $("#top_menu_3").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_3").removeClass("hover")
+                    $("#top_menu_3").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_3").hover(
+                function(){
+
+                    $("#top_menu_3").addClass("hover");
+                    $("#top_menu_3").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_3").removeClass("hover")
+                    $("#top_menu_3").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_4").hover(
+                function(){
+
+                    $("#top_menu_4").addClass("hover");
+                    $("#top_menu_4").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_4").removeClass("hover")
+                    $("#top_menu_4").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_5").hover(
+                function(){
+
+                    $("#top_menu_5").addClass("hover");
+                    $("#top_menu_5").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_5").removeClass("hover")
+                    $("#top_menu_5").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_x").hover(
+                function(){
+
+                    $("#top_menu_x").addClass("hover");
+                    $("#top_menu_x").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_x").removeClass("hover")
+                    $("#top_menu_x").addClass("top");
+                }
+        )
+    })*/
+</script>
 <table id="top_menu" align="center">
     <tr>
-        <td class="top" id="top_menu_main"><a href="<?php echo U('home/index/index');?>">网站首页</a></td>
-        <td class="top" id="top_menu_1"><a href="<?php echo U('home/ctsm/index');?>">传统算命</a></td>
-        <td class="top" id="top_menu_2"><a href="<?php echo U('home/sxxzxx/index');?>"> 生肖/星座/血型</a></td>
-        <td class="top" id="top_menu_3"><a href="<?php echo U('home/cqczjm/index');?>" >抽签/测字/解梦</a></td>
-        <td class="top" id="top_menu_4"><a href="<?php echo U('home/qinglv/index');?>" >恋爱指南</a></td>
-        <td class="top" id="top_menu_5"><a href=" <?php echo U('home/yuce/index');?>">民俗预测</a></td>
-        <td class="top" id="top_menu_x"><a href="index.php?g=home&m=yuce&a=index&sm=6">黄道吉日</a></td>
+        <td class="top" id="top_menu_main"><a href="<?php echo U('home/index/index');?>"><button class="button"> 网站首页</button></a></td>
+        <td class="top" id="top_menu_1"><a href="<?php echo U('home/ctsm/index');?>"><button class="button">传统算命</button></a></td>
+        <td class="top" id="top_menu_2"><a href="<?php echo U('home/sxxzxx/index');?>"><button class="button"> 生肖/星座/血型</button></a></td>
+        <td class="top" id="top_menu_3"><a href="<?php echo U('home/cqczjm/index');?>" ><button class="button">抽签/测字/解梦</button></a></td>
+        <td class="top" id="top_menu_4"><a href="<?php echo U('home/qinglv/index');?>" ><button class="button">恋爱指南</button></a></td>
+        <td class="top" id="top_menu_5"><a href=" <?php echo U('home/yuce/index');?>"><button class="button">民俗预测</button></a></td>
+        <td class="top" id="top_menu_x"><a href="index.php?g=home&m=yuce&a=index&sm=6"><button class="button">黄道吉日</button></a></td>
     </tr>
 
 </table>
@@ -152,7 +270,7 @@
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="b1" style="table-layout:fixed;word-wrap:break-word;">
     <tbody><tr>
-        <td width="79%" class="ttd"><span class="red">诸葛神数:</span><br><br>
+        <td width="79%" class="ttd"><span class="green">诸葛神数:</span><br><br>
             诸葛神数相传是三国时代刘备的军师诸葛亮所作。
             根据历史记载，诸葛亮上懂天文，下晓地理，料事如神，用兵用人，皆恰到好处。
             诸葛亮每遇难题，必暗自用一种独到的占卜法。心要诚，手要净，焚香向天祷告，然后，在纸上写三个字。这三个字，即是天灵与人心灵交流，也就是说，你的心事已得上天了解，而上天会对你作出指示。所以万万不可存“玩一玩”的心态。

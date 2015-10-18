@@ -1,5 +1,4 @@
 <?php
-//echo "12321";
 return array(
 	//'配置项'=>'配置值'
         'TMPL_FILE_DEPR' => '/',

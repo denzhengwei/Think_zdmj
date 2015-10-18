@@ -36,16 +36,134 @@
 
 </table>
 </div><?php endif; ?></div>
-<div id="topmenu" class="layout">
+<div id="topmenu" class="layout"><script type="text/javascript">
+    /*主菜单鼠标经过的变化*/
+    $(function () {
+        $(".top").hover(
+                function () {
+                    $(this).addClass("hover");
+                },
+                function () {
+                    $(this).removeClass("hover");
+                }
+        )
+    })
+    /*$(function () {
+        $("#top_menu_main").hover(
+                function(){
+
+                    $("#top_menu_main").addClass("hover");
+
+
+                },
+                function(){
+
+                    $("#top_menu_main").removeClass("hover")
+
+                }
+        )
+*//**//*
+        $("#top_menu_1").hover(
+                function(){
+
+                    $("#top_menu_1").addClass("hover");
+                    $("#top_menu_1").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_1").removeClass("hover")
+                    $("#top_menu_1").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_2").hover(
+                function(){
+
+                    $("#top_menu_2").addClass("hover");
+                    $("#top_menu_2").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_2").removeClass("hover")
+                    $("#top_menu_2").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_3").hover(
+                function(){
+
+                    $("#top_menu_3").addClass("hover");
+                    $("#top_menu_3").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_3").removeClass("hover")
+                    $("#top_menu_3").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_3").hover(
+                function(){
+
+                    $("#top_menu_3").addClass("hover");
+                    $("#top_menu_3").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_3").removeClass("hover")
+                    $("#top_menu_3").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_4").hover(
+                function(){
+
+                    $("#top_menu_4").addClass("hover");
+                    $("#top_menu_4").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_4").removeClass("hover")
+                    $("#top_menu_4").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_5").hover(
+                function(){
+
+                    $("#top_menu_5").addClass("hover");
+                    $("#top_menu_5").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_5").removeClass("hover")
+                    $("#top_menu_5").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_x").hover(
+                function(){
+
+                    $("#top_menu_x").addClass("hover");
+                    $("#top_menu_x").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_x").removeClass("hover")
+                    $("#top_menu_x").addClass("top");
+                }
+        )
+    })*/
+</script>
 <table id="top_menu" align="center">
     <tr>
-        <td class="top" id="top_menu_main"><a href="<?php echo U('home/index/index');?>">网站首页</a></td>
-        <td class="top" id="top_menu_1"><a href="<?php echo U('home/ctsm/index');?>">传统算命</a></td>
-        <td class="top" id="top_menu_2"><a href="<?php echo U('home/sxxzxx/index');?>"> 生肖/星座/血型</a></td>
-        <td class="top" id="top_menu_3"><a href="<?php echo U('home/cqczjm/index');?>" >抽签/测字/解梦</a></td>
-        <td class="top" id="top_menu_4"><a href="<?php echo U('home/qinglv/index');?>" >恋爱指南</a></td>
-        <td class="top" id="top_menu_5"><a href=" <?php echo U('home/yuce/index');?>">民俗预测</a></td>
-        <td class="top" id="top_menu_x"><a href="index.php?g=home&m=yuce&a=index&sm=6">黄道吉日</a></td>
+        <td class="top" id="top_menu_main"><a href="<?php echo U('home/index/index');?>"><button class="button"> 网站首页</button></a></td>
+        <td class="top" id="top_menu_1"><a href="<?php echo U('home/ctsm/index');?>"><button class="button">传统算命</button></a></td>
+        <td class="top" id="top_menu_2"><a href="<?php echo U('home/sxxzxx/index');?>"><button class="button"> 生肖/星座/血型</button></a></td>
+        <td class="top" id="top_menu_3"><a href="<?php echo U('home/cqczjm/index');?>" ><button class="button">抽签/测字/解梦</button></a></td>
+        <td class="top" id="top_menu_4"><a href="<?php echo U('home/qinglv/index');?>" ><button class="button">恋爱指南</button></a></td>
+        <td class="top" id="top_menu_5"><a href=" <?php echo U('home/yuce/index');?>"><button class="button">民俗预测</button></a></td>
+        <td class="top" id="top_menu_x"><a href="index.php?g=home&m=yuce&a=index&sm=6"><button class="button">黄道吉日</button></a></td>
     </tr>
 
 </table>
@@ -168,7 +286,7 @@
         <TD vAlign=top class=ttd style="PADDING-BOTTOM: 1px"><A href="index.php?g=home&m=yuce&a=index&sm=5">总是会莫名的心惊，为了它，你总烦躁不安，告诉自己要镇定下来。到底心惊预测着什么，心惊的原因，心惊的征兆是什么，快来看看心惊释义怎么说吧！</A></TD>
     </tr>
     <tr>
-        <TD vAlign=top class=ttd style="PADDING-BOTTOM: 1px"><img src="./Public/images/em.jpg" width="90" height="90"></TD>
+        <TD vAlign=top class=ttd style="PADDING-BOTTOM: 1px"><img src="./Public/images/em.gif" width="90" height="90"></TD>
         <TD vAlign=top class=ttd style="PADDING-BOTTOM: 1px"><a href="index.php?g=home&m=yuce&a=index&sm=1" class="red">耳鸣预测</a></TD>
         <TD vAlign=top class=ttd style="PADDING-BOTTOM: 1px"><A href="index.php?g=home&m=yuce&a=index&sm=1">耳朵里好象有“小蜜蜂”在“嗡嗡嗡”，或者时刻像在听“摇滚乐”？你这是耳鸣现象啦！为什么会耳鸣呢？当然有科学的解释，也有一些是科学所不能告诉你的部分哦^_^ 通过耳鸣占卜，看看这种耳鸣预测出你将来会发生什么事情哦。！</A></TD>
     </tr>

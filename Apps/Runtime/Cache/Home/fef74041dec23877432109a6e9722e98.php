@@ -36,16 +36,134 @@
 
 </table>
 </div><?php endif; ?></div>
-<div id="topmenu" class="layout">
+<div id="topmenu" class="layout"><script type="text/javascript">
+    /*主菜单鼠标经过的变化*/
+    $(function () {
+        $(".top").hover(
+                function () {
+                    $(this).addClass("hover");
+                },
+                function () {
+                    $(this).removeClass("hover");
+                }
+        )
+    })
+    /*$(function () {
+        $("#top_menu_main").hover(
+                function(){
+
+                    $("#top_menu_main").addClass("hover");
+
+
+                },
+                function(){
+
+                    $("#top_menu_main").removeClass("hover")
+
+                }
+        )
+*//**//*
+        $("#top_menu_1").hover(
+                function(){
+
+                    $("#top_menu_1").addClass("hover");
+                    $("#top_menu_1").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_1").removeClass("hover")
+                    $("#top_menu_1").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_2").hover(
+                function(){
+
+                    $("#top_menu_2").addClass("hover");
+                    $("#top_menu_2").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_2").removeClass("hover")
+                    $("#top_menu_2").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_3").hover(
+                function(){
+
+                    $("#top_menu_3").addClass("hover");
+                    $("#top_menu_3").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_3").removeClass("hover")
+                    $("#top_menu_3").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_3").hover(
+                function(){
+
+                    $("#top_menu_3").addClass("hover");
+                    $("#top_menu_3").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_3").removeClass("hover")
+                    $("#top_menu_3").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_4").hover(
+                function(){
+
+                    $("#top_menu_4").addClass("hover");
+                    $("#top_menu_4").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_4").removeClass("hover")
+                    $("#top_menu_4").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_5").hover(
+                function(){
+
+                    $("#top_menu_5").addClass("hover");
+                    $("#top_menu_5").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_5").removeClass("hover")
+                    $("#top_menu_5").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_x").hover(
+                function(){
+
+                    $("#top_menu_x").addClass("hover");
+                    $("#top_menu_x").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_x").removeClass("hover")
+                    $("#top_menu_x").addClass("top");
+                }
+        )
+    })*/
+</script>
 <table id="top_menu" align="center">
     <tr>
-        <td class="top" id="top_menu_main"><a href="<?php echo U('home/index/index');?>">网站首页</a></td>
-        <td class="top" id="top_menu_1"><a href="<?php echo U('home/ctsm/index');?>">传统算命</a></td>
-        <td class="top" id="top_menu_2"><a href="<?php echo U('home/sxxzxx/index');?>"> 生肖/星座/血型</a></td>
-        <td class="top" id="top_menu_3"><a href="<?php echo U('home/cqczjm/index');?>" >抽签/测字/解梦</a></td>
-        <td class="top" id="top_menu_4"><a href="<?php echo U('home/qinglv/index');?>" >恋爱指南</a></td>
-        <td class="top" id="top_menu_5"><a href=" <?php echo U('home/yuce/index');?>">民俗预测</a></td>
-        <td class="top" id="top_menu_x"><a href="index.php?g=home&m=yuce&a=index&sm=6">黄道吉日</a></td>
+        <td class="top" id="top_menu_main"><a href="<?php echo U('home/index/index');?>"><button class="button"> 网站首页</button></a></td>
+        <td class="top" id="top_menu_1"><a href="<?php echo U('home/ctsm/index');?>"><button class="button">传统算命</button></a></td>
+        <td class="top" id="top_menu_2"><a href="<?php echo U('home/sxxzxx/index');?>"><button class="button"> 生肖/星座/血型</button></a></td>
+        <td class="top" id="top_menu_3"><a href="<?php echo U('home/cqczjm/index');?>" ><button class="button">抽签/测字/解梦</button></a></td>
+        <td class="top" id="top_menu_4"><a href="<?php echo U('home/qinglv/index');?>" ><button class="button">恋爱指南</button></a></td>
+        <td class="top" id="top_menu_5"><a href=" <?php echo U('home/yuce/index');?>"><button class="button">民俗预测</button></a></td>
+        <td class="top" id="top_menu_x"><a href="index.php?g=home&m=yuce&a=index&sm=6"><button class="button">黄道吉日</button></a></td>
     </tr>
 
 </table>
@@ -135,7 +253,7 @@
            </TD>
     </tr>
     <tr>
-        <TD align="left" class=new style="PADDING-BOTTOM: 1px"><span class="red">星座详解</span>·
+        <TD align="left" class=new style="PADDING-BOTTOM: 1px"><span class="green">星座详解</span>·
             <a href="?g=home&m=sxxzxx&a=index&flag=4&astro=白羊座">牡羊座</a>·
             <a href="?g=home&m=sxxzxx&a=index&flag=4&astro=金牛座">金牛座</a>·
             <a href="?g=home&m=sxxzxx&a=index&flag=4&astro=双子座">双子座</a>·
@@ -158,7 +276,7 @@
         <td width="100%" colspan="6" class="ttop"><?php echo ($_thisYear); ?>年12生肖运势抢先播报</td>
     </tr>
     <tr>
-        <td colspan="6" class="new2"><span class="red">·你知道十二生肖<?php echo ($_thisYear); ?>年会走什么好运吗？发财？升迁？还是遇桃花？快来点击查看属于你的<?php echo ($_thisYear); ?>生肖运程吧！</span></td>
+        <td colspan="6" class="new2"><span class="green">·你知道十二生肖<?php echo ($_thisYear); ?>年会走什么好运吗？发财？升迁？还是遇桃花？快来点击查看属于你的<?php echo ($_thisYear); ?>生肖运程吧！</span></td>
     </tr>
     <tr>
         <td class="new"><a href="?g=home&m=sxxzxx&a=index&flag=12&sx=鼠" target="_blank"><img src="./Public/images/sx1.gif" width="90" height="80" border="0"></a></td>
@@ -210,7 +328,7 @@
             |<a href="index.php?g=home&m=sxxzxx&a=xzyc&type=yearlove&xz=<?php echo ($xz); ?>">今年爱情运势</a>|
     </tr>
     <tr>
-        <td colspan="2" class="new"><span class="red">星座查询:</span></td>
+        <td colspan="2" class="new"><span class="green">星座查询:</span></td>
     </tr>
     <tr>
         <td width="49%" class="new">
@@ -252,7 +370,7 @@
             <input name="" type="submit" value="星座+血型"></p>
         </form></td>
     </tr><tr>
-        <td colspan="2" class="new"><span class="red">生日密码-生日花语:</span></td>
+        <td colspan="2" class="new"><span class="green">生日密码-生日花语:</span></td>
     </tr>
     <tr>
         <td class="new">
@@ -276,7 +394,7 @@
             <input name="" type="submit" value="查询" class="bot01"   /></p>
         </form></td>
     </tr>      <tr>
-        <td colspan="2" class="new"><span class="red">星盘分析:</span></td>
+        <td colspan="2" class="new"><span class="green">星盘分析:</span></td>
     </tr>  <tr>
         <td width="49%" class="new">
             <form action=?g=home&m=sxxzxx&a=index& method=post target=_blank>
@@ -386,7 +504,7 @@
         </form></td>
         <td class="new">&nbsp;</td>
     </tr>  <tr>
-        <td colspan="2" class="new"><span class="red">星座配对:</span></td>
+        <td colspan="2" class="new"><span class="green">星座配对:</span></td>
     </tr>  <tr>
         <td width="49%" class="new"><form action=?g=home&m=sxxzxx&a=index& method=post target=_blank>
             <input name=flag type=hidden id="flag" value=1>
@@ -488,7 +606,7 @@
             <input type="submit" value="情侣速配">
         </form></td>
     </tr>     <tr>
-        <td colspan="2" class="new"><span class="red">生肖血型:</span></td>
+        <td colspan="2" class="new"><span class="green">生肖血型:</span></td>
     </tr>  <tr>
         <td width="49%" class="new"><form action=?g=home&m=sxxzxx&a=index& method=post target=_blank>
             <input type=hidden name=flag value=5><select name=xiao style="width:176px;">

@@ -1,7 +1,7 @@
 <?php
 $voyear=array();//显示的可选年份 现在年份加5年（!数据库没更新）
 $now=getYear();
-for($i=2009;$i<=$now+5;$i++){
+for($i=$now;$i<=$now+5;$i++){
 $voyear[]=$i;
 }
 $this->assign('voyear',$voyear);//12个月

@@ -54,7 +54,7 @@
     {$wgjx}
     <tbody><tr>
         <td width="81%" class="ttd">
-            <span class="red">姓名五格配对评分:</span><br>
+            <span class="green">姓名五格配对评分:</span><br>
             根据《易经》的"象"、"数"理论，依据姓名的笔画数和一定规则建立起来天格、地格、人格、总格、外格等五格数理关系，并运用阴阳五行相生相克理论，来推算的各方面运势。 </td>
         <td width="19%" class="ttd"><img src="./Public/images/xmpd.jpg" width="105" height="140"></td>
     </tr>
@@ -101,130 +101,130 @@
     </tr></tbody>
 </table>
 <if condition="isset($_REQUEST['act']) and $_REQUEST['act'] eq  'ok'" >
-<table width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#5391EE"  style="MARGIN-BOTTOM: 10px; table-layout:fixed;word-wrap:break-word;">
+<table width="100%" border="0" cellpadding="2" cellspacing="1"   style="MARGIN-BOTTOM: 10px; table-layout:fixed;word-wrap:break-word;">
     <tbody><tr>
-        <td colspan="3" class=new bgcolor="#FFFFFF">姓名：{$name1}  性别：{$sex1}  </td>
+        <td colspan="3" class=new>姓名：{$name1}  性别：{$sex1}  </td>
     </tr>
     <tr>
-        <td bgcolor="#FFFFFF"><table width="100%" border="0" cellpadding="2" cellspacing="1"  style="MARGIN-BOTTOM: 10px; table-layout:fixed;word-wrap:break-word;">
+        <td><table width="100%" border="0" cellpadding="2" cellspacing="1"  style="MARGIN-BOTTOM: 10px; table-layout:fixed;word-wrap:break-word;">
             <tbody>
             <tr>
-                <td bgcolor="#FFFFFF"></td>
-                <td align="center" bgcolor="#FFFFFF"><font color="ababab">繁体</font></td>
-                <td align="center" bgcolor="#FFFFFF"><font color="ababab">拼音</font></td>
-                <td align="center" bgcolor="#FFFFFF"><font color="ababab">笔划</font></td>
-                <td align="center" bgcolor="#FFFFFF"><font color="ababab">五行</font></td>
+                <td></td>
+                <td align="center"><font >繁体</font></td>
+                <td align="center"><font >拼音</font></td>
+                <td align="center"><font >笔划</font></td>
+                <td align="center"><font >五行</font></td>
             </tr>
             <tr>
-                <td  align="center" bgcolor="#FFFFFF" class="new2">{$nxing1}</td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa">{$nxing1|GbToBig}</font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa">{$nxing11|pinyin}</font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{$bihua1}</td>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{$nxing11|getzywh}</td>
+                <td  align="center" class="new2">{$nxing1}</td>
+                <td align="center" class="new2"><font >{$nxing1|GbToBig}</font></td>
+                <td align="center" class="new2"><font >{$nxing11|pinyin}</font></td>
+                <td align="center" class="new2">{$bihua1}</td>
+                <td align="center" class="new2">{$nxing11|getzywh}</td>
             </tr>
             <if condition=" $nxing2 neq ''">
             <tr>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{$nxing2}</td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa">{$nxing2|GbToBig}</font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa">{$nxing22|pinyin}</font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{$bihua2}</td>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{$nxing22|getzywh}</td>
+                <td align="center" class="new2">{$nxing2}</td>
+                <td align="center" class="new2"><font >{$nxing2|GbToBig}</font></td>
+                <td align="center" class="new2"><font >{$nxing22|pinyin}</font></td>
+                <td align="center" class="new2">{$bihua2}</td>
+                <td align="center" class="new2">{$nxing22|getzywh}</td>
             </tr>
             </if >
             <tr>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{$nming1}</td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa">{$nming1|GbToBig}</font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa">{$nming12|pinyin}</font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{$bihua3}</td>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{$nming12|getzywh }</td>
+                <td align="center" class="new2">{$nming1}</td>
+                <td align="center" class="new2"><font >{$nming1|GbToBig}</font></td>
+                <td align="center" class="new2"><font >{$nming12|pinyin}</font></td>
+                <td align="center" class="new2">{$bihua3}</td>
+                <td align="center" class="new2">{$nming12|getzywh }</td>
             </tr>
             <if condition="$nming2 neq '' ">
                 <tr>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{$nming2}</td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"> {$nming2|GbToBig}</font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa">{$nming22|pinyin}</font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{$bihua4 }</td>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{$nming22|getzywh}</td>
+                <td align="center" class="new2">{$nming2}</td>
+                <td align="center" class="new2"><font > {$nming2|GbToBig}</font></td>
+                <td align="center" class="new2"><font >{$nming22|pinyin}</font></td>
+                <td align="center" class="new2">{$bihua4 }</td>
+                <td align="center" class="new2">{$nming22|getzywh}</td>
             </tr>
             </if >
             </tbody>
         </table></td>
-        <td width="25%" colspan="-3" align="center" bgcolor="#FFFFFF"  class="new2">天格-&gt;{$tiange1}({$tiange1|getsancai})
+        <td width="25%" colspan="-3" align="center"  class="new2">天格-&gt;{$tiange1}({$tiange1|getsancai})
             ->(<font color=red>{$tgjx}</font>)<br />
             <p>人格-&gt; {$renge1} ({$renge1|getsancai})
                 ->(<font color=red>{$rgjx}</font>)</p><p>地格-&gt; {$dige1}({$dige1|getsancai})
                 ->(<font color=red>{$dgjx}</font>)</p></td>
-        <td width="25%"  class="new2" align="center" bgcolor="#FFFFFF">外格-&gt;{$waige1} ({$waige1|getsancai})
+        <td width="25%"  class="new2" align="center">外格-&gt;{$waige1} ({$waige1|getsancai})
             ->(<font color=red> {$wgjx} </font>)<br />
             <p>　</p>        <p>总格-&gt; {$zhongge1} ({$zhongge1|getsancai})
                 ->(<font color=red>{$zgjx}</font>)</p></td>
     </tr>
     <tr>
-        <td colspan="3" class=new bgcolor="#FFFFFF">姓名蕴含的个性分析：{$xg1}</td>
+        <td colspan="3" class=new>姓名蕴含的个性分析：{$xg1}</td>
     </tr>
     </tbody>
 </table>
 
-<table width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#5391EE"  style="MARGIN-BOTTOM: 10px; table-layout:fixed;word-wrap:break-word;">
+<table width="100%" border="0" cellpadding="2" cellspacing="1"   style="MARGIN-BOTTOM: 10px; table-layout:fixed;word-wrap:break-word;">
     <tbody> <tr>
-        <td colspan="3" class=new bgcolor="#FFFFFF">姓名：{$name2}  性别：{$sex2}  </td>
+        <td colspan="3" class=new>姓名：{$name2}  性别：{$sex2}  </td>
     </tr>
     <tr>
-        <td bgcolor="#FFFFFF"><table width="100%" border="0" cellpadding="2" cellspacing="1"  style="MARGIN-BOTTOM: 10px; table-layout:fixed;word-wrap:break-word;">
+        <td><table width="100%" border="0" cellpadding="2" cellspacing="1"  style="MARGIN-BOTTOM: 10px; table-layout:fixed;word-wrap:break-word;">
             <tbody>
             <tr>
-                <td bgcolor="#FFFFFF"></td>
-                <td align="center" bgcolor="#FFFFFF"><font color="ababab">繁体</font></td>
-                <td align="center" bgcolor="#FFFFFF"><font color="ababab">拼音</font></td>
-                <td align="center" bgcolor="#FFFFFF"><font color="ababab">笔划</font></td>
-                <td align="center" bgcolor="#FFFFFF"><font color="ababab">五行</font></td>
+                <td></td>
+                <td align="center"><font >繁体</font></td>
+                <td align="center"><font >拼音</font></td>
+                <td align="center"><font >笔划</font></td>
+                <td align="center"><font >五行</font></td>
             </tr>
             <tr>
-                <td  align="center" bgcolor="#FFFFFF" class="new2">{$n2xing1}</td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa">{$n2xing1|GbToBig}</font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa">{$n2xing11|pinyin}</font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{$nbihua1}</td>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{$n2xing11|getzywh}</td>
+                <td  align="center" class="new2">{$n2xing1}</td>
+                <td align="center" class="new2"><font >{$n2xing1|GbToBig}</font></td>
+                <td align="center" class="new2"><font >{$n2xing11|pinyin}</font></td>
+                <td align="center" class="new2">{$nbihua1}</td>
+                <td align="center" class="new2">{$n2xing11|getzywh}</td>
             </tr>
             <tr>
                 <if condition="$n2xing2 neq ''">
-                    <td align="center" bgcolor="#FFFFFF" class="new2">{$n2xing2}</td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa">{$n2xing2|GbToBig}</font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa">{$n2xing22|pinyin}</font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{$nbihua2}</td>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{$n2xing22|getzywh}</td>
+                    <td align="center" class="new2">{$n2xing2}</td>
+                <td align="center" class="new2"><font >{$n2xing2|GbToBig}</font></td>
+                <td align="center" class="new2"><font >{$n2xing22|pinyin}</font></td>
+                <td align="center" class="new2">{$nbihua2}</td>
+                <td align="center" class="new2">{$n2xing22|getzywh}</td>
                 </if >
             </tr>
             <tr>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{$n2ming1}</td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa">{$n2ming1|GbToBig}</font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa">{$n2ming12|pinyin}</font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{$nbihua3}</td>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{$n2ming12|getzywh}</td>
+                <td align="center" class="new2">{$n2ming1}</td>
+                <td align="center" class="new2"><font >{$n2ming1|GbToBig}</font></td>
+                <td align="center" class="new2"><font >{$n2ming12|pinyin}</font></td>
+                <td align="center" class="new2">{$nbihua3}</td>
+                <td align="center" class="new2">{$n2ming12|getzywh}</td>
             </tr>
             <if condition="$n2ming2 neq ''">
                 <tr>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{$n2ming2}</td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa">{$n2ming2|GbToBig}</font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa">{$n2ming22|pinyin}</font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{$nbihua4}</td>
-                <td align="center" bgcolor="#FFFFFF" class="new2">{$n2ming22|getzywh}</td>
+                <td align="center" class="new2">{$n2ming2}</td>
+                <td align="center" class="new2"><font >{$n2ming2|GbToBig}</font></td>
+                <td align="center" class="new2"><font >{$n2ming22|pinyin}</font></td>
+                <td align="center" class="new2">{$nbihua4}</td>
+                <td align="center" class="new2">{$n2ming22|getzywh}</td>
             </tr>
             </if>
             </tbody>
         </table></td>
-        <td width="25%" colspan="-3" align="center" bgcolor="#FFFFFF"  class="new2">天格-&gt; {$ntiange1} ({$ntiange1|getsancai})
+        <td width="25%" colspan="-3" align="center"  class="new2">天格-&gt; {$ntiange1} ({$ntiange1|getsancai})
             ->(<font color=red>{$tgjx2}</font>)<br />
             <p>人格-&gt; {$nrenge1} ({$nrenge1|getsancai})
                 ->(<font color=red>{$rgjx2}</font>)</p>        <p>地格-&gt;{$ndige1}({$ndige1|getsancai})
                 ->(<font color=red>{$dgjx2}</font>)</p></td>
-        <td width="25%"  class="new2" align="center" bgcolor="#FFFFFF">外格-&gt; {$nwaige1}({$nwaige1|getsancai})
+        <td width="25%"  class="new2" align="center">外格-&gt; {$nwaige1}({$nwaige1|getsancai})
             ->(<font color=red>{$wgjx2}</font>)<br />
             <p>　</p>        <p>总格-&gt; {$nzhongge1} ({$nzhongge1|getsancai})
                 ->(<font color=red>{$zgjx2}</font>)</p></td>
     </tr>
     <tr>
-        <td colspan="3" class=new bgcolor="#FFFFFF">姓名蕴含的个性分析{$xg2}</td>
+        <td colspan="3" class=new>姓名蕴含的个性分析{$xg2}</td>
     </tr>
     </tbody>
 </table>

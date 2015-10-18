@@ -36,16 +36,134 @@
 
 </table>
 </div><?php endif; ?></div>
-<div id="topmenu" class="layout">
+<div id="topmenu" class="layout"><script type="text/javascript">
+    /*主菜单鼠标经过的变化*/
+    $(function () {
+        $(".top").hover(
+                function () {
+                    $(this).addClass("hover");
+                },
+                function () {
+                    $(this).removeClass("hover");
+                }
+        )
+    })
+    /*$(function () {
+        $("#top_menu_main").hover(
+                function(){
+
+                    $("#top_menu_main").addClass("hover");
+
+
+                },
+                function(){
+
+                    $("#top_menu_main").removeClass("hover")
+
+                }
+        )
+*//**//*
+        $("#top_menu_1").hover(
+                function(){
+
+                    $("#top_menu_1").addClass("hover");
+                    $("#top_menu_1").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_1").removeClass("hover")
+                    $("#top_menu_1").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_2").hover(
+                function(){
+
+                    $("#top_menu_2").addClass("hover");
+                    $("#top_menu_2").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_2").removeClass("hover")
+                    $("#top_menu_2").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_3").hover(
+                function(){
+
+                    $("#top_menu_3").addClass("hover");
+                    $("#top_menu_3").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_3").removeClass("hover")
+                    $("#top_menu_3").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_3").hover(
+                function(){
+
+                    $("#top_menu_3").addClass("hover");
+                    $("#top_menu_3").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_3").removeClass("hover")
+                    $("#top_menu_3").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_4").hover(
+                function(){
+
+                    $("#top_menu_4").addClass("hover");
+                    $("#top_menu_4").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_4").removeClass("hover")
+                    $("#top_menu_4").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_5").hover(
+                function(){
+
+                    $("#top_menu_5").addClass("hover");
+                    $("#top_menu_5").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_5").removeClass("hover")
+                    $("#top_menu_5").addClass("top");
+                }
+        )
+        *//**//*
+        $("#top_menu_x").hover(
+                function(){
+
+                    $("#top_menu_x").addClass("hover");
+                    $("#top_menu_x").removeClass("top")
+                },
+                function(){
+
+                    $("#top_menu_x").removeClass("hover")
+                    $("#top_menu_x").addClass("top");
+                }
+        )
+    })*/
+</script>
 <table id="top_menu" align="center">
     <tr>
-        <td class="top" id="top_menu_main"><a href="<?php echo U('home/index/index');?>">网站首页</a></td>
-        <td class="top" id="top_menu_1"><a href="<?php echo U('home/ctsm/index');?>">传统算命</a></td>
-        <td class="top" id="top_menu_2"><a href="<?php echo U('home/sxxzxx/index');?>"> 生肖/星座/血型</a></td>
-        <td class="top" id="top_menu_3"><a href="<?php echo U('home/cqczjm/index');?>" >抽签/测字/解梦</a></td>
-        <td class="top" id="top_menu_4"><a href="<?php echo U('home/qinglv/index');?>" >恋爱指南</a></td>
-        <td class="top" id="top_menu_5"><a href=" <?php echo U('home/yuce/index');?>">民俗预测</a></td>
-        <td class="top" id="top_menu_x"><a href="index.php?g=home&m=yuce&a=index&sm=6">黄道吉日</a></td>
+        <td class="top" id="top_menu_main"><a href="<?php echo U('home/index/index');?>"><button class="button"> 网站首页</button></a></td>
+        <td class="top" id="top_menu_1"><a href="<?php echo U('home/ctsm/index');?>"><button class="button">传统算命</button></a></td>
+        <td class="top" id="top_menu_2"><a href="<?php echo U('home/sxxzxx/index');?>"><button class="button"> 生肖/星座/血型</button></a></td>
+        <td class="top" id="top_menu_3"><a href="<?php echo U('home/cqczjm/index');?>" ><button class="button">抽签/测字/解梦</button></a></td>
+        <td class="top" id="top_menu_4"><a href="<?php echo U('home/qinglv/index');?>" ><button class="button">恋爱指南</button></a></td>
+        <td class="top" id="top_menu_5"><a href=" <?php echo U('home/yuce/index');?>"><button class="button">民俗预测</button></a></td>
+        <td class="top" id="top_menu_x"><a href="index.php?g=home&m=yuce&a=index&sm=6"><button class="button">黄道吉日</button></a></td>
     </tr>
 
 </table>
@@ -114,47 +232,47 @@
 <table width="100%" border="0" cellpadding="0" cellspacing="0"   style="MARGIN-BOTTOM: 10px; table-layout:fixed;word-wrap:break-word;">
     <tbody>
     <tr>
-        <td colspan="5" bgcolor="#FFFFFF"><table height='100%' width="100%" border="0" cellpadding="0" cellspacing="0"  style="border:1px 0 1px 0; table-layout:fixed;word-wrap:break-word;">
-            <tbody>
+        <td colspan="5" ><table height='100%' width="100%" border="0" cellpadding="0" cellspacing="0"  style="border:1px 0 1px 0; table-layout:fixed;word-wrap:break-word;">
+
             <tr>
-                <td bgcolor="#FFFFFF"></td>
-                <td align="center" bgcolor="#FFFFFF"><font color="ababab">繁体</font></td>
-                <td align="center" bgcolor="#FFFFFF"><font color="ababab">拼音</font></td>
-                <td align="center" bgcolor="#FFFFFF"><font color="ababab">康熙笔划</font></td>
-                <td align="center" bgcolor="#FFFFFF"><font color="ababab">字意五行</font></td>
+                <td></td>
+                <td align="center" ><font >繁体</font></td>
+                <td align="center" ><font >拼音</font></td>
+                <td align="center" ><font >康熙笔划</font></td>
+                <td align="center" ><font >字意五行</font></td>
             </tr>
             <tr>
-                <td  align="center" bgcolor="#FFFFFF" class="new2"><?php echo ($xing1); ?></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?php echo (gbtobig($xing1)); ?></font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?php echo (pinyin($xing1)); ?></font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo (getnum($xing1)); ?></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo (getzywh($xing1)); ?></td>
+                <td  align="center"  class="new2"><?php echo ($xing1); ?></td>
+                <td align="center"  class="new2"><font ><?php echo (gbtobig($xing1)); ?></font></td>
+                <td align="center"  class="new2"><font ><?php echo (pinyin($xing1)); ?></font></td>
+                <td align="center"  class="new2"><?php echo (getnum($xing1)); ?></td>
+                <td align="center"  class="new2"><?php echo (getzywh($xing1)); ?></td>
             </tr>
             <tr>
-                  <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo ($xing2); ?></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?php echo (gbtobig($xing2)); ?></font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?php echo (pinyin($xing2)); ?></font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo (getnum($xing2 )); ?></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo (getzywh($xing2)); ?></td>
+                  <td align="center"  class="new2"><?php echo ($xing2); ?></td>
+                <td align="center"  class="new2"><font ><?php echo (gbtobig($xing2)); ?></font></td>
+                <td align="center"  class="new2"><font ><?php echo (pinyin($xing2)); ?></font></td>
+                <td align="center"  class="new2"><?php echo (getnum($xing2 )); ?></td>
+                <td align="center"  class="new2"><?php echo (getzywh($xing2)); ?></td>
             </tr><?/if}
             <tr>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo ($ming1); ?></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?php echo (gbtobig($ming1)); ?></font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?php echo (pinyin($ming1)); ?></font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo (getnum($ming1 )); ?></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo (getzywh($ming1)); ?></td>
+                <td align="center"  class="new2"><?php echo ($ming1); ?></td>
+                <td align="center"  class="new2"><font ><?php echo (gbtobig($ming1)); ?></font></td>
+                <td align="center"  class="new2"><font ><?php echo (pinyin($ming1)); ?></font></td>
+                <td align="center"  class="new2"><?php echo (getnum($ming1 )); ?></td>
+                <td align="center"  class="new2"><?php echo (getzywh($ming1)); ?></td>
             </tr>
           <tr>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo ($ming2); ?></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?php echo (gbtobig($ming2)); ?></font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><font color="aaaaaa"><?php echo (pinyin($ming2)); ?></font></td>
-                <td align="center" bgcolor="#FFFFFF" class="new2"><?php echo (getnum($ming2 )); ?></td><td align="center" bgcolor="#FFFFFF" class="new2"><?php echo (getzywh($ming2)); ?></td>
+                <td align="center"  class="new2"><?php echo ($ming2); ?></td>
+                <td align="center"  class="new2"><font ><?php echo (gbtobig($ming2)); ?></font></td>
+                <td align="center"  class="new2"><font ><?php echo (pinyin($ming2)); ?></font></td>
+                <td align="center"  class="new2"><?php echo (getnum($ming2 )); ?></td><td align="center"  class="new2"><?php echo (getzywh($ming2)); ?></td>
             </tr><?/if}
             </tbody>
         </table></td>
-        <td width="25%"  class="new2" align="center" bgcolor="#FFFFFF">天格-&gt; <?php echo ($tiange); ?> (<?php echo (getsancai($tiange)); ?>)<br />
+        <td width="25%"  class="new2" align="center" >天格-&gt; <?php echo ($tiange); ?> (<?php echo (getsancai($tiange)); ?>)<br />
             <p>人格-&gt; <?php echo ($renge); ?> (<?php echo (getsancai($renge)); ?>)</p>        <p>地格-&gt; <?php echo ($dige); ?> (<?php echo (getsancai($dige)); ?>)</p></td>
-        <td width="25%"  class="new2" align="center" bgcolor="#FFFFFF">外格-&gt; <?php echo ($waige); ?> (<?php echo (getsancai($waige)); ?>)<br />
+        <td width="25%"  class="new2" align="center" >外格-&gt; <?php echo ($waige); ?> (<?php echo (getsancai($waige)); ?>)<br />
             <p>　</p>        <p>总格-&gt; <?php echo ($zhongge); ?> (<?php echo (getsancai($zhongge)); ?>)</p></td>
     </tr>
     </tbody>
