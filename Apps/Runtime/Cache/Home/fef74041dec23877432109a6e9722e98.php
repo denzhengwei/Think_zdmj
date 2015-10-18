@@ -39,125 +39,23 @@
 <div id="topmenu" class="layout"><script type="text/javascript">
     /*主菜单鼠标经过的变化*/
     $(function () {
-        $(".top").hover(
+        $(".button").hover(
                 function () {
                     $(this).addClass("hover");
+                    $(this).removeClass("button")
                 },
                 function () {
                     $(this).removeClass("hover");
+                    $(this).addClass("button");
                 }
         )
     })
-    /*$(function () {
-        $("#top_menu_main").hover(
-                function(){
 
-                    $("#top_menu_main").addClass("hover");
-
-
-                },
-                function(){
-
-                    $("#top_menu_main").removeClass("hover")
-
-                }
-        )
-*//**//*
-        $("#top_menu_1").hover(
-                function(){
-
-                    $("#top_menu_1").addClass("hover");
-                    $("#top_menu_1").removeClass("top")
-                },
-                function(){
-
-                    $("#top_menu_1").removeClass("hover")
-                    $("#top_menu_1").addClass("top");
-                }
-        )
-        *//**//*
-        $("#top_menu_2").hover(
-                function(){
-
-                    $("#top_menu_2").addClass("hover");
-                    $("#top_menu_2").removeClass("top")
-                },
-                function(){
-
-                    $("#top_menu_2").removeClass("hover")
-                    $("#top_menu_2").addClass("top");
-                }
-        )
-        *//**//*
-        $("#top_menu_3").hover(
-                function(){
-
-                    $("#top_menu_3").addClass("hover");
-                    $("#top_menu_3").removeClass("top")
-                },
-                function(){
-
-                    $("#top_menu_3").removeClass("hover")
-                    $("#top_menu_3").addClass("top");
-                }
-        )
-        *//**//*
-        $("#top_menu_3").hover(
-                function(){
-
-                    $("#top_menu_3").addClass("hover");
-                    $("#top_menu_3").removeClass("top")
-                },
-                function(){
-
-                    $("#top_menu_3").removeClass("hover")
-                    $("#top_menu_3").addClass("top");
-                }
-        )
-        *//**//*
-        $("#top_menu_4").hover(
-                function(){
-
-                    $("#top_menu_4").addClass("hover");
-                    $("#top_menu_4").removeClass("top")
-                },
-                function(){
-
-                    $("#top_menu_4").removeClass("hover")
-                    $("#top_menu_4").addClass("top");
-                }
-        )
-        *//**//*
-        $("#top_menu_5").hover(
-                function(){
-
-                    $("#top_menu_5").addClass("hover");
-                    $("#top_menu_5").removeClass("top")
-                },
-                function(){
-
-                    $("#top_menu_5").removeClass("hover")
-                    $("#top_menu_5").addClass("top");
-                }
-        )
-        *//**//*
-        $("#top_menu_x").hover(
-                function(){
-
-                    $("#top_menu_x").addClass("hover");
-                    $("#top_menu_x").removeClass("top")
-                },
-                function(){
-
-                    $("#top_menu_x").removeClass("hover")
-                    $("#top_menu_x").addClass("top");
-                }
-        )
-    })*/
 </script>
 <table id="top_menu" align="center">
+
     <tr>
-        <td class="top" id="top_menu_main"><a href="<?php echo U('home/index/index');?>"><button class="button"> 网站首页</button></a></td>
+        <td class="top" id="top_menu_main"><a href="<?php echo U('home/index/index');?>"><button class="button" >网站首页</button></a></td>
         <td class="top" id="top_menu_1"><a href="<?php echo U('home/ctsm/index');?>"><button class="button">传统算命</button></a></td>
         <td class="top" id="top_menu_2"><a href="<?php echo U('home/sxxzxx/index');?>"><button class="button"> 生肖/星座/血型</button></a></td>
         <td class="top" id="top_menu_3"><a href="<?php echo U('home/cqczjm/index');?>" ><button class="button">抽签/测字/解梦</button></a></td>
