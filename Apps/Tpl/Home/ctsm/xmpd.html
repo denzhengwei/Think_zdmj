@@ -75,13 +75,26 @@ $('#ajax_post').click(function () {
             <input name="name1" type="text" id="name1" value="{$xing1}{$xing11}{$ming1}{$ming11}" />
             &nbsp;
             <select size="1" name="xing1">
-                <option value="1" <if condition="$xing2 eq false">selected="selected"</if>>单姓</option>
-                <option value="2" <if condition="$xing2 neq '' ">selected="selected"</if>>复姓</option>
+                <if condition="$xing11 eq ''">
+                    <option value="1"selected="selected">单姓</option>
+                    <option value="2">复姓</option>
+                </if>
+                <if condition="$xing11 neq ''">
+                    <option value="1">单姓</option>
+                    <option value="2" selected="selected">复姓</option>
+                </if>
             </select>
             &nbsp;
             <select size="1" name="sex1" id="sex1">
-                <option value="男"> <if condition="$xingbi eq '男'"> selected="selected"</if>男性</option>
-                <option value="女"><if condition="$xingbie eq '女'"> selected="selected"</if>女性</option>
+                <if condition="$xingbie eq '男'">
+                    <option value="男" selected="selected">男性</option>
+                    <option value="女">女性</option>
+                </if>
+                <if condition="$xingbie eq '女'">
+                    <option value="男" >男性</option>
+                    <option value="女" selected="selected">女性</option>
+                </if>
+
             </select><br /><br /><div id="fs11" style="display:none">
                 <div class="divh2"></div>公历/阳历生日：
                 <select size="1" name="y1">
@@ -118,9 +131,17 @@ $('#ajax_post').click(function () {
             </select>
             &nbsp;
             <select size="1" name="sex2">
-                <option value="男" <if condition='$xingbie eq "女"' >selected="selected"</if>>男性</option>
-                <option value="女" <if condition='$xingbie eq "男"' >selected="selected"</if>>女性</option>
-            </select><input type="hidden" name="act" value="ok" /><br /><br /><div id="fs21" style="display:none">
+
+                    <if condition="$xingbie eq '男'">
+                        <option value="男">男性</option>
+                        <option value="女"  selected="selected">女性</option>
+                    </if>
+                    <if condition="$xingbie eq '女'">
+                        <option value="男" selected="selected" >男性</option>
+                        <option value="女" >女性</option>
+                    </if>
+            </select>
+            <input type="hidden" name="act" value="ok" /><br /><br /><div id="fs21" style="display:none">
                 公历/阳历生日：
                 <select size="1" name="y2">
                     {<volist name='years' id='vo' key='k'>

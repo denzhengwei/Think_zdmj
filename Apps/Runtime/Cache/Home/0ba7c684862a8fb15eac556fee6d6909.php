@@ -39,125 +39,23 @@
 <div id="topmenu" class="layout"><script type="text/javascript">
     /*主菜单鼠标经过的变化*/
     $(function () {
-        $(".top").hover(
+        $(".button").hover(
                 function () {
                     $(this).addClass("hover");
+                    $(this).removeClass("button")
                 },
                 function () {
                     $(this).removeClass("hover");
+                    $(this).addClass("button");
                 }
         )
     })
-    /*$(function () {
-        $("#top_menu_main").hover(
-                function(){
 
-                    $("#top_menu_main").addClass("hover");
-
-
-                },
-                function(){
-
-                    $("#top_menu_main").removeClass("hover")
-
-                }
-        )
-*//**//*
-        $("#top_menu_1").hover(
-                function(){
-
-                    $("#top_menu_1").addClass("hover");
-                    $("#top_menu_1").removeClass("top")
-                },
-                function(){
-
-                    $("#top_menu_1").removeClass("hover")
-                    $("#top_menu_1").addClass("top");
-                }
-        )
-        *//**//*
-        $("#top_menu_2").hover(
-                function(){
-
-                    $("#top_menu_2").addClass("hover");
-                    $("#top_menu_2").removeClass("top")
-                },
-                function(){
-
-                    $("#top_menu_2").removeClass("hover")
-                    $("#top_menu_2").addClass("top");
-                }
-        )
-        *//**//*
-        $("#top_menu_3").hover(
-                function(){
-
-                    $("#top_menu_3").addClass("hover");
-                    $("#top_menu_3").removeClass("top")
-                },
-                function(){
-
-                    $("#top_menu_3").removeClass("hover")
-                    $("#top_menu_3").addClass("top");
-                }
-        )
-        *//**//*
-        $("#top_menu_3").hover(
-                function(){
-
-                    $("#top_menu_3").addClass("hover");
-                    $("#top_menu_3").removeClass("top")
-                },
-                function(){
-
-                    $("#top_menu_3").removeClass("hover")
-                    $("#top_menu_3").addClass("top");
-                }
-        )
-        *//**//*
-        $("#top_menu_4").hover(
-                function(){
-
-                    $("#top_menu_4").addClass("hover");
-                    $("#top_menu_4").removeClass("top")
-                },
-                function(){
-
-                    $("#top_menu_4").removeClass("hover")
-                    $("#top_menu_4").addClass("top");
-                }
-        )
-        *//**//*
-        $("#top_menu_5").hover(
-                function(){
-
-                    $("#top_menu_5").addClass("hover");
-                    $("#top_menu_5").removeClass("top")
-                },
-                function(){
-
-                    $("#top_menu_5").removeClass("hover")
-                    $("#top_menu_5").addClass("top");
-                }
-        )
-        *//**//*
-        $("#top_menu_x").hover(
-                function(){
-
-                    $("#top_menu_x").addClass("hover");
-                    $("#top_menu_x").removeClass("top")
-                },
-                function(){
-
-                    $("#top_menu_x").removeClass("hover")
-                    $("#top_menu_x").addClass("top");
-                }
-        )
-    })*/
 </script>
 <table id="top_menu" align="center">
+
     <tr>
-        <td class="top" id="top_menu_main"><a href="<?php echo U('home/index/index');?>"><button class="button"> 网站首页</button></a></td>
+        <td class="top" id="top_menu_main"><a href="<?php echo U('home/index/index');?>"><button class="button" >网站首页</button></a></td>
         <td class="top" id="top_menu_1"><a href="<?php echo U('home/ctsm/index');?>"><button class="button">传统算命</button></a></td>
         <td class="top" id="top_menu_2"><a href="<?php echo U('home/sxxzxx/index');?>"><button class="button"> 生肖/星座/血型</button></a></td>
         <td class="top" id="top_menu_3"><a href="<?php echo U('home/cqczjm/index');?>" ><button class="button">抽签/测字/解梦</button></a></td>
@@ -232,7 +130,8 @@
 <table width="100%" border="0" cellpadding="0" cellspacing="0"   style="MARGIN-BOTTOM: 10px; table-layout:fixed;word-wrap:break-word;">
     <tbody>
     <tr>
-        <td colspan="5" ><table height='100%' width="100%" border="0" cellpadding="0" cellspacing="0"  style="border:1px 0 1px 0; table-layout:fixed;word-wrap:break-word;">
+        <td colspan="5" >
+            <table height='100%' width="100%" border="0" cellpadding="0" cellspacing="0"  style="border:1px 0 1px 0; table-layout:fixed;word-wrap:break-word;">
 
             <tr>
                 <td></td>
@@ -254,7 +153,7 @@
                 <td align="center"  class="new2"><font ><?php echo (pinyin($xing2)); ?></font></td>
                 <td align="center"  class="new2"><?php echo (getnum($xing2 )); ?></td>
                 <td align="center"  class="new2"><?php echo (getzywh($xing2)); ?></td>
-            </tr><?/if}
+            </tr>
             <tr>
                 <td align="center"  class="new2"><?php echo ($ming1); ?></td>
                 <td align="center"  class="new2"><font ><?php echo (gbtobig($ming1)); ?></font></td>
@@ -267,8 +166,8 @@
                 <td align="center"  class="new2"><font ><?php echo (gbtobig($ming2)); ?></font></td>
                 <td align="center"  class="new2"><font ><?php echo (pinyin($ming2)); ?></font></td>
                 <td align="center"  class="new2"><?php echo (getnum($ming2 )); ?></td><td align="center"  class="new2"><?php echo (getzywh($ming2)); ?></td>
-            </tr><?/if}
-            </tbody>
+            </tr>
+
         </table></td>
         <td width="25%"  class="new2" align="center" >天格-&gt; <?php echo ($tiange); ?> (<?php echo (getsancai($tiange)); ?>)<br />
             <p>人格-&gt; <?php echo ($renge); ?> (<?php echo (getsancai($renge)); ?>)</p>        <p>地格-&gt; <?php echo ($dige); ?> (<?php echo (getsancai($dige)); ?>)</p></td>
@@ -342,7 +241,7 @@
         <TD class=ttd>
 
             <font color="#0000FF">对三才数理的影响:</font> 您的姓名三才配置为：<font color="#ff0000"><?php echo ($sancai); ?></font>。它具有如下数理诱导力，据此会对人生产生一定的影响。</TD>
-    </tr><tr><td class=ttd><?php echo ($scyy); ?> (<?$scjx})
+    </tr><tr><td class=ttd><?php echo ($scyy); ?> (<?php echo ($scjx); ?>)
     </td></tr><tr><td class=new><?php echo ($sancaicontent); ?>
     </td></tr>
     </TBODY>
@@ -352,10 +251,10 @@
     <tr>
         <TD width="24%" class=ttd>
             <font color="#0000FF">对基础运的影响:</font></TD>
-        <TD width="76%" class=ttd><?php echo ($jcy); ?> <?$jcyjx}</TD>
+        <TD width="76%" class=ttd><?php echo ($jcy); ?> <?php echo ($jcyjx); ?></TD>
     </tr><tr><td class=ttd>
         <font color="#0000FF">对成功运的影响:</font></td>
-        <td class=ttd><?php echo ($cgy); ?> <?$cgyjx}</td>
+        <td class=ttd><?php echo ($cgy); ?> <?php echo ($cgyjx); ?></td>
     </tr>
     <tr><td class=ttd>
         <font color="#0000FF">对人际关系的影响:</font></td>

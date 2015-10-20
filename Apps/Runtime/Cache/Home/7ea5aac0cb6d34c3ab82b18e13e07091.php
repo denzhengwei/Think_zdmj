@@ -39,125 +39,23 @@
 <div id="topmenu" class="layout"><script type="text/javascript">
     /*主菜单鼠标经过的变化*/
     $(function () {
-        $(".top").hover(
+        $(".button").hover(
                 function () {
                     $(this).addClass("hover");
+                    $(this).removeClass("button")
                 },
                 function () {
                     $(this).removeClass("hover");
+                    $(this).addClass("button");
                 }
         )
     })
-    /*$(function () {
-        $("#top_menu_main").hover(
-                function(){
 
-                    $("#top_menu_main").addClass("hover");
-
-
-                },
-                function(){
-
-                    $("#top_menu_main").removeClass("hover")
-
-                }
-        )
-*//**//*
-        $("#top_menu_1").hover(
-                function(){
-
-                    $("#top_menu_1").addClass("hover");
-                    $("#top_menu_1").removeClass("top")
-                },
-                function(){
-
-                    $("#top_menu_1").removeClass("hover")
-                    $("#top_menu_1").addClass("top");
-                }
-        )
-        *//**//*
-        $("#top_menu_2").hover(
-                function(){
-
-                    $("#top_menu_2").addClass("hover");
-                    $("#top_menu_2").removeClass("top")
-                },
-                function(){
-
-                    $("#top_menu_2").removeClass("hover")
-                    $("#top_menu_2").addClass("top");
-                }
-        )
-        *//**//*
-        $("#top_menu_3").hover(
-                function(){
-
-                    $("#top_menu_3").addClass("hover");
-                    $("#top_menu_3").removeClass("top")
-                },
-                function(){
-
-                    $("#top_menu_3").removeClass("hover")
-                    $("#top_menu_3").addClass("top");
-                }
-        )
-        *//**//*
-        $("#top_menu_3").hover(
-                function(){
-
-                    $("#top_menu_3").addClass("hover");
-                    $("#top_menu_3").removeClass("top")
-                },
-                function(){
-
-                    $("#top_menu_3").removeClass("hover")
-                    $("#top_menu_3").addClass("top");
-                }
-        )
-        *//**//*
-        $("#top_menu_4").hover(
-                function(){
-
-                    $("#top_menu_4").addClass("hover");
-                    $("#top_menu_4").removeClass("top")
-                },
-                function(){
-
-                    $("#top_menu_4").removeClass("hover")
-                    $("#top_menu_4").addClass("top");
-                }
-        )
-        *//**//*
-        $("#top_menu_5").hover(
-                function(){
-
-                    $("#top_menu_5").addClass("hover");
-                    $("#top_menu_5").removeClass("top")
-                },
-                function(){
-
-                    $("#top_menu_5").removeClass("hover")
-                    $("#top_menu_5").addClass("top");
-                }
-        )
-        *//**//*
-        $("#top_menu_x").hover(
-                function(){
-
-                    $("#top_menu_x").addClass("hover");
-                    $("#top_menu_x").removeClass("top")
-                },
-                function(){
-
-                    $("#top_menu_x").removeClass("hover")
-                    $("#top_menu_x").addClass("top");
-                }
-        )
-    })*/
 </script>
 <table id="top_menu" align="center">
+
     <tr>
-        <td class="top" id="top_menu_main"><a href="<?php echo U('home/index/index');?>"><button class="button"> 网站首页</button></a></td>
+        <td class="top" id="top_menu_main"><a href="<?php echo U('home/index/index');?>"><button class="button" >网站首页</button></a></td>
         <td class="top" id="top_menu_1"><a href="<?php echo U('home/ctsm/index');?>"><button class="button">传统算命</button></a></td>
         <td class="top" id="top_menu_2"><a href="<?php echo U('home/sxxzxx/index');?>"><button class="button"> 生肖/星座/血型</button></a></td>
         <td class="top" id="top_menu_3"><a href="<?php echo U('home/cqczjm/index');?>" ><button class="button">抽签/测字/解梦</button></a></td>
@@ -304,13 +202,18 @@ $('#ajax_post').click(function () {
             <input name="name1" type="text" id="name1" value="<?php echo ($xing1); echo ($xing11); echo ($ming1); echo ($ming11); ?>" />
             &nbsp;
             <select size="1" name="xing1">
-                <option value="1" <?php if($xing2 == false): ?>selected="selected"<?php endif; ?>>单姓</option>
-                <option value="2" <?php if($xing2 != '' ): ?>selected="selected"<?php endif; ?>>复姓</option>
+                <?php if($xing11 == ''): ?><option value="1"selected="selected">单姓</option>
+                    <option value="2">复姓</option><?php endif; ?>
+                <?php if($xing11 != ''): ?><option value="1">单姓</option>
+                    <option value="2" selected="selected">复姓</option><?php endif; ?>
             </select>
             &nbsp;
             <select size="1" name="sex1" id="sex1">
-                <option value="男"> <?php if($xingbi == '男'): ?>selected="selected"<?php endif; ?>男性</option>
-                <option value="女"><?php if($xingbie == '女'): ?>selected="selected"<?php endif; ?>女性</option>
+                <?php if($xingbie == '男'): ?><option value="男" selected="selected">男性</option>
+                    <option value="女">女性</option><?php endif; ?>
+                <?php if($xingbie == '女'): ?><option value="男" >男性</option>
+                    <option value="女" selected="selected">女性</option><?php endif; ?>
+
             </select><br /><br /><div id="fs11" style="display:none">
                 <div class="divh2"></div>公历/阳历生日：
                 <select size="1" name="y1">
@@ -337,9 +240,13 @@ $('#ajax_post').click(function () {
             </select>
             &nbsp;
             <select size="1" name="sex2">
-                <option value="男" <?php if($xingbie == "女"): ?>selected="selected"<?php endif; ?>>男性</option>
-                <option value="女" <?php if($xingbie == "男"): ?>selected="selected"<?php endif; ?>>女性</option>
-            </select><input type="hidden" name="act" value="ok" /><br /><br /><div id="fs21" style="display:none">
+
+                    <?php if($xingbie == '男'): ?><option value="男">男性</option>
+                        <option value="女"  selected="selected">女性</option><?php endif; ?>
+                    <?php if($xingbie == '女'): ?><option value="男" selected="selected" >男性</option>
+                        <option value="女" >女性</option><?php endif; ?>
+            </select>
+            <input type="hidden" name="act" value="ok" /><br /><br /><div id="fs21" style="display:none">
                 公历/阳历生日：
                 <select size="1" name="y2">
                     {<?php if(is_array($years)): $k = 0; $__LIST__ = $years;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($k % 2 );++$k;?><option value=<?php echo ($vo); ?>><?php echo ($vo); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>}

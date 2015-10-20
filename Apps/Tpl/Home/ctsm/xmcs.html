@@ -3,7 +3,8 @@
 <table width="100%" border="0" cellpadding="0" cellspacing="0"   style="MARGIN-BOTTOM: 10px; table-layout:fixed;word-wrap:break-word;">
     <tbody>
     <tr>
-        <td colspan="5" ><table height='100%' width="100%" border="0" cellpadding="0" cellspacing="0"  style="border:1px 0 1px 0; table-layout:fixed;word-wrap:break-word;">
+        <td colspan="5" >
+            <table height='100%' width="100%" border="0" cellpadding="0" cellspacing="0"  style="border:1px 0 1px 0; table-layout:fixed;word-wrap:break-word;">
 
             <tr>
                 <td></td>
@@ -25,7 +26,7 @@
                 <td align="center"  class="new2"><font >{$xing2|pinyin}</font></td>
                 <td align="center"  class="new2">{$xing2 |getnum}</td>
                 <td align="center"  class="new2">{$xing2|getzywh}</td>
-            </tr><?/if}
+            </tr>
             <tr>
                 <td align="center"  class="new2">{$ming1}</td>
                 <td align="center"  class="new2"><font >{$ming1|GbToBig}</font></td>
@@ -38,8 +39,8 @@
                 <td align="center"  class="new2"><font >{$ming2|GbToBig}</font></td>
                 <td align="center"  class="new2"><font >{$ming2|pinyin}</font></td>
                 <td align="center"  class="new2">{$ming2 | getnum}</td><td align="center"  class="new2">{$ming2|getzywh}</td>
-            </tr><?/if}
-            </tbody>
+            </tr>
+
         </table></td>
         <td width="25%"  class="new2" align="center" >天格-&gt; {$tiange} ({$tiange|getsancai})<br />
             <p>人格-&gt; {$renge} ({$renge|getsancai})</p>        <p>地格-&gt; {$dige} ({$dige|getsancai})</p></td>
@@ -113,7 +114,7 @@
         <TD class=ttd>
 
             <font color="#0000FF">对三才数理的影响:</font> 您的姓名三才配置为：<font color="#ff0000">{$sancai}</font>。它具有如下数理诱导力，据此会对人生产生一定的影响。</TD>
-    </tr><tr><td class=ttd>{$scyy} (<?$scjx})
+    </tr><tr><td class=ttd>{$scyy} ({$scjx})
     </td></tr><tr><td class=new>{$sancaicontent}
     </td></tr>
     </TBODY>
@@ -123,10 +124,10 @@
     <tr>
         <TD width="24%" class=ttd>
             <font color="#0000FF">对基础运的影响:</font></TD>
-        <TD width="76%" class=ttd>{$jcy} <?$jcyjx}</TD>
+        <TD width="76%" class=ttd>{$jcy} {$jcyjx}</TD>
     </tr><tr><td class=ttd>
         <font color="#0000FF">对成功运的影响:</font></td>
-        <td class=ttd>{$cgy} <?$cgyjx}</td>
+        <td class=ttd>{$cgy} {$cgyjx}</td>
     </tr>
     <tr><td class=ttd>
         <font color="#0000FF">对人际关系的影响:</font></td>
