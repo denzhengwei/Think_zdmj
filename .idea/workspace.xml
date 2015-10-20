@@ -37,11 +37,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mid.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mid.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Apps/Tpl/Layout/mid.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.464286" vertical-offset="0" max-vertical-offset="532">
-              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.38577586" vertical-offset="68" max-vertical-offset="532">
+              <caret line="13" column="67" selection-start-line="13" selection-start-column="67" selection-end-line="13" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -77,12 +77,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/qinglv/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-119.42857" vertical-offset="0" max-vertical-offset="4864">
+              <caret line="176" column="86" selection-start-line="176" selection-start-column="86" selection-end-line="176" selection-end-column="86" />
+              <folding>
+                <element signature="n#style#0;n#TD#0;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/index/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="175.0" vertical-offset="7009" max-vertical-offset="7486">
+              <caret line="111" column="39" selection-start-line="111" selection-start-column="39" selection-end-line="111" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Apps/Tpl/Layout/head.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.913793" vertical-offset="0" max-vertical-offset="494">
+              <caret line="15" column="86" selection-start-line="15" selection-start-column="85" selection-end-line="15" selection-end-column="86" />
+              <folding>
+                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#if#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#if#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#if#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#if#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#2;n#table#0;n#div#0;n#if#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/yuce/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57327586" vertical-offset="855" max-vertical-offset="1349">
-              <caret line="59" column="121" selection-start-line="59" selection-start-column="121" selection-end-line="59" selection-end-column="121" />
+            <state vertical-scroll-proportion="-4.75" vertical-offset="114" max-vertical-offset="1349">
+              <caret line="13" column="96" selection-start-line="13" selection-start-column="96" selection-end-line="13" selection-end-column="96" />
               <folding>
+                <element signature="n#style#0;n#TD#0;n#tr#4;n#TBODY#0;n#table#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#TD#0;n#tr#10;n#TBODY#0;n#table#1;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -106,7 +145,6 @@
         <option value="$PROJECT_DIR$/Apps/Tpl/Home/index/index.html" />
         <option value="$PROJECT_DIR$/Apps/Tpl/Home/sxxzxx/content.html" />
         <option value="$PROJECT_DIR$/Apps/Tpl/Layout/foot.html" />
-        <option value="$PROJECT_DIR$/Apps/Tpl/Layout/head.html" />
         <option value="$PROJECT_DIR$/Apps/Tpl/Layout/left.html" />
         <option value="$PROJECT_DIR$/Apps/Tpl/Home/sxxzxx/other.html" />
         <option value="$PROJECT_DIR$/Apps/Tpl/Home/sxxzxx/xzyc.html" />
@@ -139,12 +177,13 @@
         <option value="$PROJECT_DIR$/Apps/Tpl/Home/yuce/hdjr.html" />
         <option value="$PROJECT_DIR$/Apps/Tpl/Home/cqczjm/guanyin.html" />
         <option value="$PROJECT_DIR$/Apps/Tpl/Layout/topmenu.html" />
-        <option value="$PROJECT_DIR$/Apps/Tpl/Home/qinglv/index.html" />
         <option value="$PROJECT_DIR$/Apps/Tpl/Home/ctsm/xmcs.html" />
         <option value="$PROJECT_DIR$/Apps/Tpl/Home/ctsm/xmpd.html" />
-        <option value="$PROJECT_DIR$/Apps/Tpl/Layout/mid.html" />
         <option value="$PROJECT_DIR$/Public/css/css.css" />
         <option value="$PROJECT_DIR$/Apps/Tpl/Home/yuce/index.html" />
+        <option value="$PROJECT_DIR$/Apps/Tpl/Home/qinglv/index.html" />
+        <option value="$PROJECT_DIR$/Apps/Tpl/Layout/head.html" />
+        <option value="$PROJECT_DIR$/Apps/Tpl/Layout/mid.html" />
       </list>
     </option>
   </component>
@@ -339,6 +378,58 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sxxzxx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Think_zdmj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Think_zdmj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tpl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Think_zdmj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Think_zdmj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tpl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="index" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -696,15 +787,15 @@
       <workItem from="1444960837463" duration="21616000" />
       <workItem from="1445002591928" duration="1788000" />
       <workItem from="1445174247478" duration="2800000" />
-      <workItem from="1445304555484" duration="5810000" />
+      <workItem from="1445304555484" duration="9734000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="539484000" />
+    <option name="totallyTimeSpent" value="543408000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-15" y="0" width="1382" height="744" extended-state="0" />
+    <frame x="-15" y="0" width="1382" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -901,13 +992,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.035916824" vertical-offset="0" max-vertical-offset="7486">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Apps/Tpl/Layout/jump.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.9642856" vertical-offset="497" max-vertical-offset="1311">
@@ -926,13 +1010,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5294118" vertical-offset="171" max-vertical-offset="494">
           <caret line="18" column="76" selection-start-line="18" selection-start-column="76" selection-end-line="18" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/sxxzxx/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33105803" vertical-offset="929" max-vertical-offset="8170">
-          <caret line="54" column="42" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1118,14 +1195,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/qinglv/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5258621" vertical-offset="3803" max-vertical-offset="4845">
-          <caret line="213" column="97" selection-start-line="213" selection-start-column="97" selection-end-line="213" selection-end-column="97" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/ctsm/xmpd.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3275862" vertical-offset="1178" max-vertical-offset="5073">
@@ -1137,26 +1206,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Apps/Tpl/Layout/head.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="665">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Apps/Tpl/Layout/topmenu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4779874" vertical-offset="0" max-vertical-offset="665">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="380">
-          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -1169,10 +1222,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Apps/Tpl/Layout/mid.html">
+    <entry file="file://$PROJECT_DIR$/Public/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.464286" vertical-offset="0" max-vertical-offset="532">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="380">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/sxxzxx/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.9482758" vertical-offset="2394" max-vertical-offset="8170">
+          <caret line="54" column="42" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -1187,11 +1248,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/yuce/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57327586" vertical-offset="855" max-vertical-offset="1349">
-          <caret line="59" column="121" selection-start-line="59" selection-start-column="121" selection-end-line="59" selection-end-column="121" />
+        <state vertical-scroll-proportion="-4.75" vertical-offset="114" max-vertical-offset="1349">
+          <caret line="13" column="96" selection-start-line="13" selection-start-column="96" selection-end-line="13" selection-end-column="96" />
           <folding>
+            <element signature="n#style#0;n#TD#0;n#tr#4;n#TBODY#0;n#table#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#TD#0;n#tr#10;n#TBODY#0;n#table#1;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/qinglv/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-119.42857" vertical-offset="0" max-vertical-offset="4864">
+          <caret line="176" column="86" selection-start-line="176" selection-start-column="86" selection-end-line="176" selection-end-column="86" />
+          <folding>
+            <element signature="n#style#0;n#TD#0;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apps/Tpl/Home/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="175.0" vertical-offset="7009" max-vertical-offset="7486">
+          <caret line="111" column="39" selection-start-line="111" selection-start-column="39" selection-end-line="111" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apps/Tpl/Layout/head.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.913793" vertical-offset="0" max-vertical-offset="494">
+          <caret line="15" column="86" selection-start-line="15" selection-start-column="85" selection-end-line="15" selection-end-column="86" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#if#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#if#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#if#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#if#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#2;n#table#0;n#div#0;n#if#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apps/Tpl/Layout/mid.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38577586" vertical-offset="68" max-vertical-offset="532">
+          <caret line="13" column="67" selection-start-line="13" selection-start-column="67" selection-end-line="13" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>

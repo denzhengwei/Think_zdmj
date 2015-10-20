@@ -26,19 +26,10 @@
     </tr>
         <tr>
             <td class="red"style="background-color: transparent ; border: none">冲:<?php echo ($_SESSION[jinrihuangli]['cong']); ?>&nbsp</td>
-            <td class="red"style="background-color: transparent ; border: none">
-                <A href="javascript:" class="red" onClick="window.external.AddFavorite('http://www.zhidianmijin.com','免费算命')">
-                    [<u class="red">将【本站】在线算命加入收藏夹！</u>]</A>
-            </td>
-
-        </tr>
-        <tr>
-
-
         </tr>
 
 </table>
-</div><?php endif; ?></div>s
+</div><?php endif; ?></div>
 <div id="topmenu" class="layout"><script type="text/javascript">
     /*主菜单鼠标经过的变化*/
     $(function () {
