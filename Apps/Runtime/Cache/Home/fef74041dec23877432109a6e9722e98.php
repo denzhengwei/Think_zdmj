@@ -2,7 +2,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>电脑算命</title>
+  <meta name="description" content="时来运来免费在线算命，占卜，八字，生辰八字，生男生女预测，日干，称骨，黄历，生肖，姓名，星座，黄道吉日，恋爱预测，恋爱测算，
+  星座运势，抽签，眼皮跳，指纹算命"/>
+  <meta name="keywords" content="时来运来,免费在线算命，占卜，八字，日干，称骨，黄历，生肖，姓名，星座"/>
+<title>时来运来-在线算命-解梦-星座</title>
 <link rel="stylesheet" type="text/css" href="__ROOT__/Public/css/css.css" />
   <script src="__ROOT__/Public/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
   <script src="__ROOT__/Public/js/main.js" type="text/javascript"></script>
@@ -35,7 +38,7 @@
         </tr>
 
 </table>
-</div><?php endif; ?></div>
+</div><?php endif; ?></div>s
 <div id="topmenu" class="layout"><script type="text/javascript">
     /*主菜单鼠标经过的变化*/
     $(function () {
