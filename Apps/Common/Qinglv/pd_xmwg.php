@@ -9,7 +9,6 @@ if (mb_substr($xing,1,1,'utf-8') <> ""){
 }
 $this->assign("xingtype",$xingtype);
 }
-var_dump($name);
 if (isset($_POST["act"]) && $_POST["act"]=="ok") {
     //'处理用户信息;
 /*   无用：  $tiange=0;

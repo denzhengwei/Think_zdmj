@@ -109,8 +109,13 @@ function _restart(){
 }
 /* 时间格式 */
 function caltime(){
+    if ($_SESSION['mm']!=''){
     $caltime=$_SESSION['nian'].
     "-".$_SESSION['yue']."-".$_SESSION['ri'].' '.$_SESSION['hh'].":".$_SESSION['mm'].":"."0";
+    }else {
+        $caltime=$_SESSION['nian'].
+        "-".$_SESSION['yue']."-".$_SESSION['ri'].' '.$_SESSION['hh'].":"."0".":"."0";
+    }
     return $caltime;
 }
 function hhcal($caltime)

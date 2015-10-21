@@ -120,26 +120,40 @@
        <li class="second_li"><a href="index.php?g=home&m=yuce&a=index&sm=10" >指纹</a></li>
       </div><?php endif; ?></div>
 <div id="mid" class="layout">
-<p><?php echo ($message); ?></p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="b1" style="table-layout:fixed;word-wrap:break-word;">
+    <tbody><tr>
+        <td width="79%" class="ttd"><span class="red">喷嚏预测:</span>
+            <br>
+            真的是一想、二骂、三念叨吗？这可是受到当时磁场的影响。喷嚏预测，告诉你打喷嚏的预兆，来看个究竟吧！ 。</td>
+        <td width="21%" class="ttd"><img src="./Public/images/ptyc.gif" width="122" height="126"></td>
+    </tr>
+    <form name="form1" onSubmit="return submitchecken()" method="post" action="">
+        <input type="hidden" name="act" value="ok" />
+        <tr>
+            <td colspan="2" class="new">&nbsp;喷嚏时间：
+                <select id="stime" style="WIDTH: 100px" name="stime" size="1">
+                <option value="1" selected="">23-01[子时]</option>
+                <option value="2">01-03[丑时]</option>
+                <option value="3">03-05[寅时]</option>
+                <option value="4">05-07[卯时]</option>
+                <option value="5">07-09[辰时]</option>
+                <option value="6">09-11[巳时]</option>
+                <option value="7">11-13[午时]</option>
+                <option value="8">13-15[未时]</option>
+                <option value="9">15-17[申时]</option>
+                <option value="10">17-19[酉时]</option>
+                <option value="11">19-21[戌时]</option>
+                <option value="12">21-23[亥时]</option>
+            </select> <input type="submit" value="开始分析" style="cursor:hand;" /></form></td>
+    </tr>
 
-<p>姓：<?php echo ($_SESSION ['xing']); ?></p>
-<p>名：<?php echo ($_SESSION ['ming']); ?></p>
-<p>出生日期：<?php echo ($_SESSION ['nian']); ?>年<?php echo ($_SESSION ['yue']); ?>月<?php echo ($_SESSION ['ri']); ?>日<?php echo ($_SESSION ['hh']); ?>时</p>
-
-    <a  href="<?php echo U('home/ctsm/scbz');?>"><button class="button"> 生辰八字</button></a>
-<a  href="<?php echo U('home/ctsm/bzcs');?>"><button class="button" >八字测算</button></a>
-      <a  href="<?php echo U('home/ctsm/cglm');?>">  <button class="button" >称骨论命</button></a>
-            <a  href="<?php echo U('home/ctsm/xmcs');?>"><button class="button" >姓名测试</button></a>
-               <a  href="<?php echo U('home/ctsm/xmpd');?>"><button class="button" >姓命配对</button></a>
-                  <a  href="<?php echo U('home/ctsm/sbwr');?>"><button class="button" >上辈为人</button></a>
-                  <a  href="<?php echo U('home/ctsm/xsqy');?>"><button class="button" >姓氏起源</button></a>
-
-
-<form action="" method="post">
-    <input type="hidden" name="restart" value="1">
-    <input type="submit" value="(换人)重新算命" style="background-color: firebrick ;color: white">
-</form>
-<p align="center"><img src="./public/images/bg/bagua.png" width="40%"></p></div>
+    <?php if($rs): ?><tr>
+        <td class="new" colspan="2" valign="middle">
+            <br><br>&nbsp;预测结果如下：<br><br>&nbsp;<font color=blue><?php echo ($rs["content"]); ?></font><br><br>
+        </td>
+    </tr><?php endif; ?>
+    </tbody>
+</table></div>
 <div id="right" class="layout"></div>
 </div>
 <div id="foot" class="layout">

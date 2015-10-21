@@ -120,26 +120,80 @@
        <li class="second_li"><a href="index.php?g=home&m=yuce&a=index&sm=10" >指纹</a></li>
       </div><?php endif; ?></div>
 <div id="mid" class="layout">
-<p><?php echo ($message); ?></p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="b1" style="table-layout:fixed;word-wrap:break-word;">
+    <tbody>
+<?php if($jieqian != ''): ?><tr>
+        <td align="center" class="new">
+            <img src="./Public/images/gy/<?php echo ($gyqid); ?>.gif">
+            <br>
+            <hr>
+        </td>
+    </tr>
+    <tr>
+        <td class="new">
+            观音解签：<?php echo ($jieqian); ?>
+            <br>
+            <br>
+            <A href="index.php?g=home&m=cqczjm&a=index&sm=2">
+                <font color=red>
+                    点击这里返回抽签首页！</font>
+            </A>
+        </td>
+    </tr>
+   <?php else: ?>
+    <tr>
+        <td align="center" class="new">
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="152" height="240">
+                <param name="movie" value="./Public/images/gy.swf" />
+                <param name="quality" value="high" />
+                <embed src="./Public/images/gy.swf" quality="high" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="152" height="240">
+                </embed>
+            </object>
+        </td>
+        <td width="50%" align="center" class="new">
+              <?php if($_REQUEST['act'] == ok and $jieqian == ''): ?>您刚抽了第&nbsp;<font style="color: #FF0000;FONT-SIZE: 26px;font-weight: bold;">
+            <?php echo ($num); ?></font>
+            &nbsp;签<br>
+            <br><?php endif; ?>
+                      <?php if( $gyclicknum < 3 and $gysmile != 4 and $num != '' and $jieqian == ''): ?><a href="index.php?g=home&m=cqczjm&a=index&sm=2&act=ok&gyclicknum=<?php echo ($gyclicknum+1); ?>&gyqid=<?php echo ($num); ?>" title="首先请您心无杂念，然后点这里开始擲出聖杯">
+                <img src=./Public/images/sign<?php echo ($picnum); ?>.gif width=100 height=77 border=0>
+            </a>
+            <br>
+                       <span class="red">第<?php echo ($gyclicknum); ?>次</span>
+            <br>
+           需连续掷出三次圣杯，才是灵签！<span class="red">继续请点上面图标</span>开始掷出圣杯<?php endif; ?>
+            <br>
+                   <?php if( $gyclicknum == 3 and $gysmile != 4 and $jieqian == ''): ?><a href="index.php?g=home&m=cqczjm&a=index&sm=2&act=jq&gyqid=<?php echo ($num); ?>">
+            <font color=blue>
+             恭喜，您连续掷出了三次圣杯，请点这里察看签词！</font>
+        </a><?php endif; ?>
+              <?php if($gysmile == 4): ?><a href=/index.php?g=home&m=cqczjm&a=index&sm=2">
 
-<p>姓：<?php echo ($_SESSION ['xing']); ?></p>
-<p>名：<?php echo ($_SESSION ['ming']); ?></p>
-<p>出生日期：<?php echo ($_SESSION ['nian']); ?>年<?php echo ($_SESSION ['yue']); ?>月<?php echo ($_SESSION ['ri']); ?>日<?php echo ($_SESSION ['hh']); ?>时</p>
+                    您掷出<span class="red">笑杯</span> 了，此签不准，请点这里重新抽签！
+            </a>
+            <br><?php endif; ?>
+             <?php if($num == ''and $jieqian == '' ): ?><br>
+            <a href="index.php?g=home&m=cqczjm&a=index&sm=2&act=ok" title="首先请您心无杂念，然后点这里开始抽签">
+                <img src="./Public/images/qian.gif" width="97" height="189" border="0" />
+            </a>
+            <DIV align="left" class="new2">
+                1.抽签前先合手默念“救苦救难 观音菩萨”三遍。
+                <br />
+                2.默念自己姓名，出生时辰，年龄，现在居住地址。<br />
+                3.请求指点事情，如婚姻、事业、运程、流年、工作、财运......等。
+                <br />
+                4.点上面的签筒开始抽签！</DIV>
 
-    <a  href="<?php echo U('home/ctsm/scbz');?>"><button class="button"> 生辰八字</button></a>
-<a  href="<?php echo U('home/ctsm/bzcs');?>"><button class="button" >八字测算</button></a>
-      <a  href="<?php echo U('home/ctsm/cglm');?>">  <button class="button" >称骨论命</button></a>
-            <a  href="<?php echo U('home/ctsm/xmcs');?>"><button class="button" >姓名测试</button></a>
-               <a  href="<?php echo U('home/ctsm/xmpd');?>"><button class="button" >姓命配对</button></a>
-                  <a  href="<?php echo U('home/ctsm/sbwr');?>"><button class="button" >上辈为人</button></a>
-                  <a  href="<?php echo U('home/ctsm/xsqy');?>"><button class="button" >姓氏起源</button></a>
+       </td>
 
+        <td class="new" align="center">
+            <img src="./Public/images/guanyin.jpg" width="145" height="240" border="0" />
+        </td><?php endif; ?>
+    </tr><?php endif; ?>
+    </tbody>
 
-<form action="" method="post">
-    <input type="hidden" name="restart" value="1">
-    <input type="submit" value="(换人)重新算命" style="background-color: firebrick ;color: white">
-</form>
-<p align="center"><img src="./public/images/bg/bagua.png" width="40%"></p></div>
+</table>
+</div>
 <div id="right" class="layout"></div>
 </div>
 <div id="foot" class="layout">

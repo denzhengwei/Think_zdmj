@@ -128,6 +128,7 @@ else {
             $caltime= caltime();//设置时间格式，获取时间戳；
             $nonglist= hhcal($caltime);//获取农历数据
             $nongarray = explode('|',$nonglist);//分割数据
+            var_dump($caltime);
             $nian2=$nongarray[0];//农历年，传入模板
             $this->assign('nian2',$nian2);
             $yue2=$nongarray[1];//农历月，传入模板

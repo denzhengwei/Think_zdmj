@@ -5,7 +5,7 @@ class YuceAction extends Action{
         $_REQUEST['sm'] = isset($_REQUEST['sm']) ? (int)$_REQUEST['sm'] : 0;
         switch ($_REQUEST['sm']) {
             case 1:
-                include(APP_PATH.'Common/yuce/'. '/emyc.php');
+                include(APP_PATH.'Common/Yuce/'. '/emyc.php');
                 break;
             case 2:
                 include(APP_PATH.'Common/yuce/'. '/myyc.php');
