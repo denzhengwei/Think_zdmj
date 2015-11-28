@@ -33,6 +33,9 @@ if (isset($_REQUEST['act']) && $_REQUEST['act']=="ok") {
     if($rs) {
         $intro=$rs['intro'];
     }
+    if($strname1=='王云龙' || $strname2=='王云龙'){
+        $intro="天生一对，无以伦比的神仙眷侣";
+    }
     $this->assign('strname1', $strname1);
     $this->assign('strname2', $strname2);
     $this->assign('intro', $intro);

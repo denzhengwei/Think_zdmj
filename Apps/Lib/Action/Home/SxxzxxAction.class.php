@@ -78,6 +78,7 @@ class SxxzxxAction extends Action{
                     $this->assign('_thisYear', $thisYear);
                 }
                 $title = $thisYear . "年十二生肖运势--" . $_REQUEST['sx'];
+
             }
             $content=xxs($title);
             $this->assign('content',$content)->assign('title',$title);
