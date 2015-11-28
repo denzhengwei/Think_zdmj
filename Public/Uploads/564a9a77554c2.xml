@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--   全局字符。 以STR_XXXX定义. -->
+    <string name="STR_TITLE_CARD_TEM_MANAGE">名片模板管理</string>
+    <string name="URL_EDIT_CARD_TEM">名片模板设计</string>
+    <string name="URL_SEND_CARD">名片发送</string>
+    <string name="URL_SEND_CARD_LIST">名片发送列表</string>
+    <string name="URL_CARD_TEMP_LIST">名片模板列表</string>
+<!--  发送名片页面 -->
+    <string name="STR_SEND_COMPANY_CARD">名片发送</string>
+    <string name="TEL_DEL_NO_TEMPID">未获得资源Id</string>
+    <string name="STR_VCARD_INFORMATION">名片信息</string>
+    <string name="STR_INPUT_USERER_NAME">发送给用户</string>
+    <string name="STR_INPUT_USERER_VALUE">请选择用户</string>
+    <string name="STR_SEND_VCARD_SUMBIT">确定</string>
+    <string name="STR_SEND_VCARD_RESET">取消</string>
+    <string name="STR_DEL_TEMP_YES_NO">确定要删除所选名片？</string>
+    <string name="STR_DEL_TEMP_SUCC">你已成功删除所选名片</string>
+    <string name="STR_DEL_TEMP_FAIL">删除名片失败</string>
+    <string name="STR_PLEASE_CREATE_COMPANY_TEMP">请创建企业模板文件</string>
+    <string name="STR_COMPANY_VCARD_EMPAY">名片信息中每项都为必填项</string>
+    <string name="STR_CREATE_COMPANY_VCARD_FAIL">创建企业名片失败</string>
+    <string name="STR_SEND_COMPANY_VCARD_FAIL">企业名片发送失败</string>
+    <string name="STR_SEND_USER_EMPTY">发送给用户项必填</string>
+    <string name="STR_ADD_SUCCESS">成功发送企业名片</string>
+    <string name="STR_PLEASE_CREAT_COMPANY_USER">请创建企业用户</string>
+<!--  已发送列表页面 -->
+    <string name="TITLE_SEND_VCARD_LIST">名片发送列表</string>
+    <string name="STR_INFO_SEND_CARD_LIST">名片发送列表</string>
+    <string name="STR_INFO_NAME">用户名</string>
+    <string name="STR_INFO_TEMP">模板</string>
+    <string name="STR_INFO_EMAIL">邮箱</string>
+    <string name="STR_INFO_PHONE">手机</string>
+    <string name="STR_INFO_TIME">发放时间</string>
+    <string name="STR_EXPORT_CARD_LIST">导出列表</string>
+    <string name="BTN_INFO_BACK">返回</string>
+    <string name="STR_PLEASE_SEND_COMPANY_CARD">请给员工发送企业名片</string>
+<!--  模板列表页面 -->
+    <string name="TITLE_VCARD_TEMP_LIST">名片模板列表</string>
+    <string name="STR_INFO_TEMP_CODE">模板编号</string>
+    <string name="STR_INFO_TEMP_IMG">模板内容</string>
+    <string name="STR_INFO_TEMP_CTIME">创建时间</string>
+    <string name="STR_INFO_TEMP_ACT">操作</string>
+    <string name="STR_Y_M_D">%s年%s月%s日</string>
+    <string name="STR_PLEASE_CREATE_CARD_TEMP">请创建企业名片模板</string>
+<!--  名片模板编辑页 -->
+    <string name="TITLE_VCARD_TEMP_EDIT">名片模板编辑</string>
+  
+  <!-- !!! 2015-08-28 补充修改内容放在后面 !!!  -->
+</resources>
